@@ -1,0 +1,24 @@
+{
+  "name": "@viaa/avo2-types",
+  "version": "0.0.1",
+  "description": "This repo contains the object types that are used to communicate between the NodeJS service and the React client apps.",
+  "types": "types",
+  "scripts": {
+    "test": "dtslint types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viaacode/avo2-types.git"
+  },
+  "author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
+  "contributors": [
+    "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "dtslint": "0.3.0",
+    "tslint": "5.16.0",
+    "tslint-config-airbnb": "5.11.1",
+    "typescript": "3.4.5"
+  }
+}
