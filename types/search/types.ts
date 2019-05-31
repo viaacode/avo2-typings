@@ -1,3 +1,5 @@
+// TODO use interface from avo2-types package
+
 export interface Filters {
 	query: string;
 	'administrative_type.filter': string[]; //    Type
@@ -5,8 +7,8 @@ export interface Filters {
 	'lom_context.filter': string[]; //            Domein
 	dcterms_issued: {
 		// Uitzenddatum
-		gte: string; // ISO date string
-		lte: string; // ISO date string
+		gte: string;
+		lte: string;
 	};
 	lom_languages: string[]; //          Taal
 	'lom_keywords.filter': string[]; //           Onderwerp
@@ -14,8 +16,8 @@ export interface Filters {
 	'dc_titles_serie.filter': string[]; //        Serie
 	fragment_duration_seconds: {
 		// Duur
-		gte: number;
-		lte: number;
+		gte: string | number; // String on the client, but converted to number when sent to backend
+		lte: string | number; // String on the client, but converted to number when sent to backend
 	};
 	'original_cp.filter': string[]; //            Aanbieder
 }
@@ -56,11 +58,11 @@ export interface SearchResultItem {
 	administrative_external_id: string;
 }
 
-interface OptionProps {
+export interface OptionProp {
 	option_name: string;
 	option_count: number;
 }
 
 export interface FilterOptions {
-	[prop: string]: OptionProps[];
+	[prop: string]: OptionProp[];
 }
