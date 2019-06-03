@@ -13,25 +13,27 @@ export interface Filters {
 	keyword: string[];
 	subject: string[]; // Vak
 	serie: string[];
-	duration: {
-		gte: string | number; // String on the client, but converted to number when sent to backend
-		lte: string | number; // String on the client, but converted to number when sent to backend
-	};
 	provider: string[];
+}
+
+export interface FilterOptionSearch {
+	type: string;
+	educationLevel: string;
+	domain: string;
+	language: string;
+	keyword: string;
+	subject: string; // Vak
+	serie: string;
+	provider: string;
 }
 
 export interface SearchRequest {
 	// Used on client to verify request structure
 	filters?: Partial<Filters>;
+	filterOptionSearch?: Partial<FilterOptionSearch>;
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
-	size: number;
-}
-
-export interface SearchFilterOptionsRequest {
-	filterName: keyof Filters;
-	query: string;
 	size: number;
 }
 
