@@ -2,30 +2,36 @@
 
 export interface Filters {
 	query: string;
-	'administrative_type.filter': string[]; //    Type
-	'lom_typical_age_range.filter': string[]; //  Onderwijs niveau
-	'lom_context.filter': string[]; //            Domein
-	dcterms_issued: {
-		// Uitzenddatum
+	type: string[];
+	educationLevel: string[];
+	domain: string[];
+	broadcastDate: {
 		gte: string;
 		lte: string;
 	};
-	lom_languages: string[]; //          Taal
-	'lom_keywords.filter': string[]; //           Onderwerp
-	'lom_classification.filter': string[]; //     Vak
-	'dc_titles_serie.filter': string[]; //        Serie
-	fragment_duration_seconds: {
-		// Duur
+	language: string[];
+	keyword: string[];
+	subject: string[]; // Vak
+	serie: string[];
+	duration: {
 		gte: string | number; // String on the client, but converted to number when sent to backend
 		lte: string | number; // String on the client, but converted to number when sent to backend
 	};
-	'original_cp.filter': string[]; //            Aanbieder
+	provider: string[];
 }
 
 export interface SearchRequest {
 	// Used on client to verify request structure
 	filters?: Partial<Filters>;
+	orderProperty?: SearchOrderProperty;
+	orderDirection?: SearchOrderDirection;
 	from: number;
+	size: number;
+}
+
+export interface SearchFilterOptionsRequest {
+	filterName: keyof Filters;
+	query: string;
 	size: number;
 }
 
@@ -66,3 +72,11 @@ export interface OptionProp {
 export interface FilterOptions {
 	[prop: string]: OptionProp[];
 }
+
+export type SearchOrderProperty =
+	| 'relevance'
+	| 'views'
+	| 'broadcastDate'
+	| 'addedDate'
+	| 'editDate';
+export type SearchOrderDirection = 'asc' | 'desc';
