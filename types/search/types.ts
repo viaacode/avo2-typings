@@ -37,12 +37,6 @@ export interface SearchRequest {
 	size: number;
 }
 
-export interface SearchFilterOptionsRequest {
-	filterName: keyof Filters;
-	query: string;
-	size: number;
-}
-
 export interface SearchResponse {
 	results: SearchResultItem[];
 	count: number;
