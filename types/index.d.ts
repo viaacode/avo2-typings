@@ -2,17 +2,17 @@
 
 // TypeScript Version: 2.1
 
-import { IStatusResponse } from './status/types';
-import { IFilterItem, IFilterRequest, IFilterResponse, IFilters } from './search/types';
+import * as statusTypes from './status/types';
+import * as searchTypes from './search/types';
 
 export namespace Avo {
 	namespace Core {
-		type StatusResponse = IStatusResponse;
+		type StatusResponse = statusTypes.StatusResponse;
 	}
 	namespace Search {
-		type FilterRequest = IFilterRequest;
-		type Filters = IFilters;
-		type FilterResponse = IFilterResponse;
-		type FilterItem = IFilterItem;
+		type SearchRequest = searchTypes.SearchRequest;
+		type Filters = searchTypes.Filters;
+		type SearchResponse = searchTypes.SearchResponse;
+		type SearchResultItem = searchTypes.SearchResultItem;
 	}
 }
