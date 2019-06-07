@@ -8,7 +8,7 @@ Every type in this package is namespaces under `Avo`.
 ### How to include ###
 
 ```typescript
-import { Avo } from "avo2-types";
+import { Avo } from "@viaa/avo2-types";
 
 ...
 ```
@@ -16,14 +16,11 @@ import { Avo } from "avo2-types";
 ### How to use ###
 
 ```typescript
-...
-
-const apiStatus: Avo.IStatusResponse = {
+const apiStatus: Avo.Status.Response = {
     success: true,
     version: "1.0.0",
+    data: new Date(),
 }
-
-...
 ```
 
 ## Status ##

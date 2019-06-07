@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "lib": ["es6"],
-        "noImplicitAny": true,
+	"compilerOptions": {
+		"module": "commonjs",
+		"lib": ["es6"],
+		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"noUnusedLocals": false,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
 		"noEmit": true,
-        "baseUrl": ".",
+		"baseUrl": ".",
 		"paths": {
 			"avo2-types": ["."]
 		}

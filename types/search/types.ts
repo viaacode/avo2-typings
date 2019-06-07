@@ -1,6 +1,4 @@
-// TODO use interface from avo2-types package
-
-export interface Filters {
+export interface SearchFilters {
 	query: string;
 	type: string[];
 	educationLevel: string[];
@@ -11,26 +9,25 @@ export interface Filters {
 	};
 	language: string[];
 	keyword: string[];
-	subject: string[]; // Vak
+	subject: string[];
 	serie: string[];
 	provider: string[];
 }
 
-export interface FilterOptionSearch {
+export interface SearchFilterOptionSearch {
 	type: string;
 	educationLevel: string;
 	domain: string;
 	language: string;
 	keyword: string;
-	subject: string; // Vak
+	subject: string;
 	serie: string;
 	provider: string;
 }
 
 export interface SearchRequest {
-	// Used on client to verify request structure
-	filters?: Partial<Filters>;
-	filterOptionSearch?: Partial<FilterOptionSearch>;
+	filters?: Partial<SearchFilters>;
+	filterOptionSearch?: Partial<SearchFilterOptionSearch>;
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
@@ -66,13 +63,13 @@ export interface SearchResultItem {
 	administrative_external_id: string;
 }
 
-export interface OptionProp {
+export interface SearchOptionProp {
 	option_name: string;
 	option_count: number;
 }
 
 export interface FilterOptions {
-	[prop: string]: OptionProp[];
+	[prop: string]: SearchOptionProp[];
 }
 
 export type SearchOrderProperty =
@@ -81,4 +78,5 @@ export type SearchOrderProperty =
 	| 'broadcastDate'
 	| 'addedDate'
 	| 'editDate';
+
 export type SearchOrderDirection = 'asc' | 'desc';
