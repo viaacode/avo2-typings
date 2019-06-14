@@ -21,36 +21,36 @@ pipeline {
                 }
             }
         }
-
-
-
         stage('npm install') {
             steps {
                 script {
                     openshift.withCluster() {
                         openshift.withProject("shared-components") {
-			   sh'''#!/bin/bash
-			    npm install
-			    '''
-		                  
+                  			   sh'''#!/bin/bash
+                            if [ -f /tmp/.npmrc ]; then
+                              rm /tmp/.npmrc
+                            fi
+                            npm --registry=https://registry.npmjs.org install
+                  			    '''
                         }
                     }
                 } // script
             } // steps
         } // stage
-   
+
 
   	stage('Publish') {
             steps {
-
                 script {
                     openshift.withCluster() {
                         openshift.withProject("shared-components") {
-				
                              	echo "Publishing package to registry"
-			     	sh '''#/bin/bash
-			   	  npm --registry http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-group/ install
-		                '''
+                  			     	sh '''#/bin/bash
+                                  cp /home/jenkins/.npm-global/etc/npmrc /tmp/.npmrc
+                                  npm publish
+                                  echo "removing .npmrc for install if node is the same we need to set registry for push nexus not seems to like @viaa:registry=.."
+                                  rm /tmp/.npmrc
+                  	              '''
                         }
                     }
                 } // script
