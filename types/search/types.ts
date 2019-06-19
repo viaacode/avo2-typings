@@ -1,4 +1,4 @@
-export interface SearchFilters {
+export interface Filters {
 	query: string;
 	type: ContentType[];
 	educationLevel: string[];
@@ -6,7 +6,7 @@ export interface SearchFilters {
 	broadcastDate: DateRange;
 	language: string[];
 	keyword: string[];
-	subject: string[];
+	subject: string[]; // Vak
 	serie: string[];
 	provider: string[];
 }
@@ -24,14 +24,14 @@ export interface FilterOptionSearch {
 	domain: string;
 	language: string;
 	keyword: string;
-	subject: string;
+	subject: string; // Vak
 	serie: string;
 	provider: string;
 }
 
 export interface SearchRequest {
-	filters?: Partial<SearchFilters>;
-	filterOptionSearch?: Partial<SearchFilterOptionSearch>;
+	filters?: Partial<Filters>;
+	filterOptionSearch?: Partial<FilterOptionSearch>;
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
@@ -67,13 +67,13 @@ export interface SearchResultItem {
 	administrative_external_id: string;
 }
 
-export interface SearchOptionProp {
+export interface OptionProp {
 	option_name: string;
 	option_count: number;
 }
 
 export interface FilterOptions {
-	[prop: string]: SearchOptionProp[];
+	[prop: string]: OptionProp[];
 }
 
 export type SearchOrderProperty =
