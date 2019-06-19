@@ -1,12 +1,9 @@
 export interface SearchFilters {
 	query: string;
-	type: string[];
+	type: ContentType[];
 	educationLevel: string[];
 	domain: string[];
-	broadcastDate: {
-		gte: string;
-		lte: string;
-	};
+	broadcastDate: DateRange;
 	language: string[];
 	keyword: string[];
 	subject: string[];
@@ -14,8 +11,15 @@ export interface SearchFilters {
 	provider: string[];
 }
 
-export interface SearchFilterOptionSearch {
-	type: string;
+export type ContentType = 'collection' | 'video' | 'audio';
+
+export interface DateRange {
+	gte: string | '' | null | undefined;
+	lte: string | '' | null | undefined;
+}
+
+export interface FilterOptionSearch {
+	type: ContentType;
 	educationLevel: string;
 	domain: string;
 	language: string;
@@ -59,7 +63,7 @@ export interface SearchResultItem {
 	algemeen_briefing_id: string[];
 	fragment_duration_time: null;
 	fragment_duration_seconds: number;
-	administrative_type: string;
+	administrative_type: ContentType;
 	administrative_external_id: string;
 }
 
