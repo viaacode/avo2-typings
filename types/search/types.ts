@@ -1,3 +1,5 @@
+// TODO use interface from avo2-types package
+
 export interface Filters {
 	query: string;
 	type: ContentType[];
@@ -45,7 +47,7 @@ export interface SearchResponse {
 }
 
 export interface SearchResultItem {
-	pid: string;
+	external_id: string;
 	table_name: string;
 	dc_title: string;
 	dc_titles_serie: string;
