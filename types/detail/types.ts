@@ -1,4 +1,4 @@
-import { ContentType } from '../search/types';
+import { CoreContentType } from '../core/content';
 
 export interface DetailResponse {
 	id: string;
@@ -22,5 +22,5 @@ export interface DetailResponse {
 	briefing_id: string[];
 	duration_time: string;
 	duration_seconds: number;
-	administrative_type: ContentType;
+	administrative_type: CoreContentType;
 }

@@ -1,4 +1,4 @@
-export type SearchContentType = 'collection' | 'video' | 'audio';
+import { CoreContentType } from "../core/content";
 
 export interface SearchDateRange {
 	gte: string | '' | null | undefined;
@@ -6,7 +6,7 @@ export interface SearchDateRange {
 }
 
 export interface SearchFilterOption {
-	type: SearchContentType;
+	type: CoreContentType;
 	educationLevel: string;
 	domain: string;
 	language: string;
@@ -22,7 +22,7 @@ export interface SearchFilterOptions {
 
 export interface SearchFilters {
 	query: string;
-	type: SearchContentType[];
+	type: CoreContentType[];
 	educationLevel: string[];
 	domain: string[];
 	broadcastDate: SearchDateRange;
@@ -84,5 +84,5 @@ export interface SearchResultItem {
 	briefing_id: string[];
 	duration_time: string;
 	duration_seconds: number;
-	administrative_type: SearchContentType;
+	administrative_type: CoreContentType;
 }

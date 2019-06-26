@@ -1,9 +1,9 @@
 // TypeScript Version: 2.1
 
-import { DetailResponse } from './detail/detail';
+import { CoreContentType } from "./core/content";
+import { DetailResponse } from './detail/types';
 import {
 	SearchFilters,
-	SearchContentType,
 	SearchDateRange,
 	SearchFilterOption,
 	SearchRequest,
@@ -17,11 +17,13 @@ import {
 import { StatusResponse } from './status/types';
 
 export namespace Avo {
+	namespace Core {
+		type ContentType = CoreContentType;
+	}
 	namespace Detail {
 		type Response = DetailResponse
 	}
 	namespace Search {
-		type ContentType = SearchContentType;
 		type DateRange = SearchDateRange;
 		type FilterOption = SearchFilterOption;
 		type FilterOptions = SearchFilterOptions;
