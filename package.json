@@ -9,10 +9,6 @@
   "publishConfig": {
     "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viaacode/avo2-types.git"
-  },
   "author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
   "contributors": [
     "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
