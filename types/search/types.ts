@@ -1,39 +1,55 @@
-// TODO use interface from avo2-types package
+export type SearchContentType = 'collection' | 'video' | 'audio';
 
-export interface Filters {
-	query: string;
-	type: ContentType[];
-	educationLevel: string[];
-	domain: string[];
-	broadcastDate: DateRange;
-	language: string[];
-	keyword: string[];
-	subject: string[]; // Vak
-	serie: string[];
-	provider: string[];
-}
-
-export type ContentType = 'collection' | 'video' | 'audio';
-
-export interface DateRange {
+export interface SearchDateRange {
 	gte: string | '' | null | undefined;
 	lte: string | '' | null | undefined;
 }
 
-export interface FilterOptionSearch {
-	type: ContentType;
+export interface SearchFilterOption {
+	type: SearchContentType;
 	educationLevel: string;
 	domain: string;
 	language: string;
 	keyword: string;
-	subject: string; // Vak
+	subject: string;
 	serie: string;
 	provider: string;
 }
 
+export interface SearchFilterOptions {
+	[prop: string]: SearchOptionProp[];
+}
+
+export interface SearchFilters {
+	query: string;
+	type: SearchContentType[];
+	educationLevel: string[];
+	domain: string[];
+	broadcastDate: SearchDateRange;
+	language: string[];
+	keyword: string[];
+	subject: string[];
+	serie: string[];
+	provider: string[];
+}
+
+export interface SearchOptionProp {
+	option_name: string;
+	option_count: number;
+}
+
+export type SearchOrderDirection = 'asc' | 'desc';
+
+export type SearchOrderProperty =
+	| 'relevance'
+	| 'views'
+	| 'broadcastDate'
+	| 'addedDate'
+	| 'editDate';
+
 export interface SearchRequest {
-	filters?: Partial<Filters>;
-	filterOptionSearch?: Partial<FilterOptionSearch>;
+	filters?: Partial<SearchFilters>;
+	filterOptionSearch?: Partial<SearchFilterOption>;
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
@@ -43,7 +59,7 @@ export interface SearchRequest {
 export interface SearchResponse {
 	results: SearchResultItem[];
 	count: number;
-	aggregations: FilterOptions;
+	aggregations: SearchFilterOptions;
 }
 
 export interface SearchResultItem {
@@ -68,23 +84,5 @@ export interface SearchResultItem {
 	briefing_id: string[];
 	duration_time: string;
 	duration_seconds: number;
-	administrative_type: ContentType;
+	administrative_type: SearchContentType;
 }
-
-export interface OptionProp {
-	option_name: string;
-	option_count: number;
-}
-
-export interface FilterOptions {
-	[prop: string]: OptionProp[];
-}
-
-export type SearchOrderProperty =
-	| 'relevance'
-	| 'views'
-	| 'broadcastDate'
-	| 'addedDate'
-	| 'editDate';
-
-export type SearchOrderDirection = 'asc' | 'desc';

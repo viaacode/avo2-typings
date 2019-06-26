@@ -1,6 +1,5 @@
 import { ContentType } from '../search/types';
 
-// TODO ge  extend this with fields from graphql like views and bookmarks
 export interface DetailResponse {
 	id: string;
 	external_id?: string;
