@@ -13,7 +13,7 @@ import {
 	SearchOptionProp,
 	SearchFilterOptions,
 	SearchOrderProperty,
-	SearchOrderDirection, SearchFilterProperty
+	SearchOrderDirection,
 } from './search/types';
 import { StatusResponse } from './status/types';
 import { UserResponse } from './user/types';
