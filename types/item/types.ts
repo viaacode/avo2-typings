@@ -1,6 +1,6 @@
 import { CoreContentType } from '../core/content';
 
-export interface DetailResponse {
+export interface ItemResponse {
 	id: string;
 	external_id?: string;
 	administrative_external_id?: string;
