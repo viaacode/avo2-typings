@@ -33,8 +33,6 @@ export interface SearchFilters {
 	provider: string[];
 }
 
-export type SearchFilterProperty = keyof SearchFilters;
-
 export interface SearchOptionProp {
 	option_name: string;
 	option_count: number;

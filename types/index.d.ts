@@ -37,7 +37,7 @@ export namespace Avo {
 		type FilterOption = SearchFilterOption;
 		type FilterOptions = SearchFilterOptions;
 		type Filters = SearchFilters;
-		type FilterProp = SearchFilterProperty;
+		type FilterProp = keyof Filters;
 		type OptionProp = SearchOptionProp;
 		type OrderDirection = SearchOrderDirection;
 		type OrderProperty = SearchOrderProperty;
