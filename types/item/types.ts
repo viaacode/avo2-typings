@@ -1,26 +1,38 @@
 import { CoreContentType } from '../core/content';
 
 export interface ItemResponse {
-	id: string;
-	external_id?: string;
-	administrative_external_id?: string;
-	pid?: string;
-	table_name: string;
-	dc_title: string;
-	dc_titles_serie: string;
-	thumbnail_path: string;
-	original_cp: string;
-	original_cp_id: string;
+	bookmarks: null;
+	browse_path: string;
+	created_at: string;
+	depublish_at: null;
+	description: string;
+	duration: string;
+	expiry_date: null;
+	external_id: string;
+	id: number;
+	is_deleted: boolean;
+	is_orphaned: boolean;
+	is_published: boolean;
+	issued: string;
+	issued_edtf: string;
+	lom_classification: string[];
 	lom_context: string[];
+	lom_intendedenduserrole: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
-	dcterms_issued: string;
-	dcterms_abstract: string;
-	lom_classification: string[];
-	lom_typical_age_range: string[];
-	lom_intended_enduser_role: string[];
-	briefing_id: string[];
-	duration_time: string;
-	duration_seconds: number;
-	administrative_type: CoreContentType;
+	lom_typicalagerange: string[];
+	org_id: string;
+	publish_at: null;
+	series: string;
+	thumbnail_path: string;
+	title: string;
+	type: ItemType;
+	type_id: number;
+	updated_at: string;
+	views: null;
+}
+
+export interface ItemType {
+	label: CoreContentType;
+	id: number;
 }
