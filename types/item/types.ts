@@ -26,13 +26,8 @@ export interface ItemResponse {
 	series: string;
 	thumbnail_path: string;
 	title: string;
-	type: ItemType;
+	type: CoreContentType;
 	type_id: number;
 	updated_at: string;
 	views: null;
-}
-
-export interface ItemType {
-	label: CoreContentType;
-	id: number;
 }
