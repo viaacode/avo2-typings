@@ -22,6 +22,7 @@ export interface ItemResponse {
 	lom_languages: string[];
 	lom_typicalagerange: string[];
 	org_id: string;
+	org_name: string | null;
 	publish_at: null;
 	series: string;
 	thumbnail_path: string;
