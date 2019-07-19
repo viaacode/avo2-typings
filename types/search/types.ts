@@ -64,7 +64,7 @@ export interface SearchResponse {
 
 export interface SearchResultItem {
 	id: string;
-	external_id?: string;
+	external_id: string;
 	administrative_external_id?: string;
 	pid?: string;
 	table_name: string;
