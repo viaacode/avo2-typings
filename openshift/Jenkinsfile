@@ -46,6 +46,7 @@ pipeline {
                         openshift.withProject("shared-components") {
                              	echo "Publishing package to registry"
                   			     	sh '''#/bin/bash
+                                  rm -rf .git
                                   cp /home/jenkins/.npm-global/etc/npmrc /tmp/.npmrc
                                   npm --registry=http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/ publish
                                   echo "removing .npmrc for install if node is the same we need to set registry for push nexus not seems to like @viaa:registry=.."
