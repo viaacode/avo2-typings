@@ -85,7 +85,7 @@ Temporary Items
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
-
+.idea/*
 
 
 # SublimeText

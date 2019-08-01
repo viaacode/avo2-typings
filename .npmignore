@@ -1,0 +1,9 @@
+openshift/*
+.idea/*
+.git/*
+Jenkinsfile
+.editorconfig
+.env*
+*.tgz
+.npmrc
+.nvmrc
