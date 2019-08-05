@@ -3,7 +3,6 @@ import { CoreContentType } from '../core/content';
 
 export interface CollectionResponse {
 	fragments: CollectionFragment[];
-	description: string | null;
 	title: string;
 	is_public: boolean;
 	id: number;
@@ -18,6 +17,22 @@ export interface CollectionResponse {
 	is_migrated_collection: boolean;
 }
 
+export interface CollectionResponseMigration {
+	fragments: CollectionFragmentMigration[];
+	description: string | null;
+	title: string;
+	is_public: boolean;
+	id: number;
+	lom_references: any[] | null;
+	type_id: number;
+	d_ownerid: number;
+	owner?: UserResponse;
+	created_at: string;
+	updated_at: string;
+	organisation_id: string | null;
+	mediamosa_id: string;
+}
+
 export interface CollectionFragmentMigration {
 	id: number;
 	external_id: CollectionFragmentExternalId;
@@ -29,11 +44,24 @@ export interface CollectionFragmentMigration {
 	end_oc: number | null;
 }
 
+export type BlockType =
+	| 'Image'
+	| 'ImageTitleTextButton'
+	| 'Intro'
+	| 'Links'
+	| 'Quote'
+	| 'RichText'
+	| 'Subtitle'
+	| 'Title'
+	| 'TitleImageText'
+	| 'Video'
+	| 'VideoTitleTextButton';
+
 export interface CollectionFragment {
 	id: number;
 	created_at: string;
 	updated_at: string;
-	type: 'BlockImageTitleTextButton',
+	type: BlockType,
 	fields: FieldInfo[] // Stored as jsonb in postgres
 }
 
