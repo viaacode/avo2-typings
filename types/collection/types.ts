@@ -35,6 +35,7 @@ export interface CollectionResponseMigration {
 
 export interface CollectionFragmentMigration {
 	id: number;
+	collection_id: number;
 	external_id: CollectionFragmentExternalId;
 	mediamosa_id: string;
 	custom_title: string;
@@ -48,6 +49,7 @@ export interface CollectionFragmentMigration {
 
 export interface CollectionFragment {
 	id: number;
+	collection_id: number;
 	created_at: string;
 	updated_at: string;
 	type: BlockType,
