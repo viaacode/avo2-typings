@@ -1,5 +1,5 @@
 import { UserResponse } from '../user/types';
-import { CoreContentType } from '../core/content';
+import { BlockType, CoreContentType } from '../core/content';
 
 export interface CollectionResponse {
 	fragments: CollectionFragment[];
@@ -36,32 +36,22 @@ export interface CollectionResponseMigration {
 export interface CollectionFragmentMigration {
 	id: number;
 	external_id: CollectionFragmentExternalId;
+	mediamosa_id: string;
 	custom_title: string;
 	custom_description: string | null;
 	created_at: string;
 	updated_at: string;
 	start_oc: number | null;
 	end_oc: number | null;
+	position: number;
 }
-
-export type BlockType =
-	| 'Image'
-	| 'ImageTitleTextButton'
-	| 'Intro'
-	| 'Links'
-	| 'Quote'
-	| 'RichText'
-	| 'Subtitle'
-	| 'Title'
-	| 'TitleImageText'
-	| 'Video'
-	| 'VideoTitleTextButton';
 
 export interface CollectionFragment {
 	id: number;
 	created_at: string;
 	updated_at: string;
 	type: BlockType,
+	position: number;
 	fields: FieldInfo[] // Stored as jsonb in postgres
 }
 

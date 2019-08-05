@@ -2,7 +2,12 @@
 
 import { CoreContentType } from "./core/content";
 import { ItemResponse } from './item/types';
-import { CollectionFragment, CollectionFragmentExternalId, CollectionResponse } from './collection/types';
+import {
+	CollectionFragment,
+	CollectionFragmentExternalId, CollectionFragmentMigration,
+	CollectionResponse,
+	CollectionResponseMigration
+} from './collection/types';
 import {
 	SearchFilters,
 	SearchDateRange,
@@ -31,6 +36,8 @@ export namespace Avo {
 	namespace Collection {
 		type Response = CollectionResponse;
 		type Fragment = CollectionFragment;
+		type MigrateCollection = CollectionResponseMigration;
+		type MigrateCollectionFragment = CollectionFragmentMigration;
 		type ExternalId = CollectionFragmentExternalId;
 	}
 	namespace Search {
