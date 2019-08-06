@@ -157,6 +157,7 @@ export interface FieldInfo {
 	label: string;
 	editorType: 'string' | 'textarea' | 'imageuploader' | 'none'; // TODO add more
 	value: any;
+	position: number;
 	required?: boolean;
 }
 
