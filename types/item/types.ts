@@ -27,7 +27,11 @@ export interface ItemResponse {
 	series: string;
 	thumbnail_path: string;
 	title: string;
-	type: CoreContentType;
+	type: {
+		id: number;
+		label: CoreContentType;
+		__typename: string;
+	};
 	type_id: number;
 	updated_at: string;
 	views: null;
