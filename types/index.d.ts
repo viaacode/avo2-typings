@@ -2,7 +2,7 @@
 
 import { CoreContentType } from "./core/content";
 import { ItemResponse } from './item/types';
-import { CollectionFragment, CollectionFragmentExternalId, CollectionResponse } from './collection/types';
+import { CollectionFragment, CollectionFragmentExternalId, CollectionResponse, CollectionEditorsLabel, CollectionFragmentMigration, CollectionPermission, CollectionPermissionType, CollectionType } from './collection/types';
 import {
 	SearchFilters,
 	SearchDateRange,
@@ -16,7 +16,7 @@ import {
 	SearchOrderDirection,
 } from './search/types';
 import { StatusResponse } from './status/types';
-import { UserResponse } from './user/types';
+import { UserResponse, UserProfile, UserRole } from './user/types';
 
 export namespace Avo {
 	namespace Core {
@@ -27,11 +27,16 @@ export namespace Avo {
 	}
 	namespace User {
 		type Response = UserResponse;
+		type Role = UserRole;
+		type Profile = UserProfile;
 	}
 	namespace Collection {
 		type Response = CollectionResponse;
 		type Fragment = CollectionFragment;
 		type ExternalId = CollectionFragmentExternalId;
+		type EditorsLabel = CollectionEditorsLabel;
+		type Permission = CollectionPermission;
+		type PermissionType = CollectionPermissionType;
 	}
 	namespace Search {
 		type DateRange = SearchDateRange;
