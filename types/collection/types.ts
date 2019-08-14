@@ -1,7 +1,77 @@
 import { UserResponse } from '../user/types';
 import { CoreContentType } from '../core/content';
 
+export interface CollectionResponse {
+	id: number;
+	collection_fragments: CollectionFragment[];
+	collection_permissions: CollectionPermission[];
+	created_at: string;
+	updated_at: string;
+	is_public: boolean;
+	publish_at: string | null;
+	depublish_at: string | null;
+	external_id: string | null;
+	description: string | null;
+	collection_fragment_ids: number[] | null;
+	label_redactie_id: number | null;
+	label_redactie: CollectionEditorsLabel | null;
+	lom_classification: string[] | null;
+	lom_context: string[] | null;
+	lom_typicalagerange: string[] | null;
+	lom_intendedenduserrole: string[] | null;
+	lom_keywords: string[] | null;
+	lom_languages: string[] | null;
+	organisation_id: string;
+	owner_id: string;
+	owner: UserResponse;
+	thumbnail_path: string | null;
+	title: string;
+	type_id: number;
+	type: CollectionType;
+}
+
+export interface CollectionType {
+	id: number;
+	label: string;
+}
+
+export interface CollectionPermission {
+	id: number;
+	collection_id: number;
+	created_at: string;
+	user_id: string;
+	permission_type: number;
+	updated_at: string;
+}
+
+export interface CollectionPermissionType {
+	id: number;
+	label: string;
+}
+
+export interface CollectionEditorsLabel {
+	id: number;
+	alt_label: string;
+	created_at: string;
+	label: string;
+	updated_at: string;
+}
+
 export interface CollectionFragment {
+	id: number;
+	collection_id: number;
+	created_at: string;
+	custom_description: string | null;
+	custom_title: string | null;
+	end_oc: number | null;
+	external_id: string;
+	position: number;
+	start_oc: number | null;
+	updated_at: string;
+	use_custom_fields: boolean;
+}
+
+export interface CollectionFragmentMigration {
 	id: number;
 	external_id: CollectionFragmentExternalId;
 	custom_title: string;
@@ -10,22 +80,6 @@ export interface CollectionFragment {
 	updated_at: string;
 	start_oc: number | null;
 	end_oc: number | null;
-}
-
-export interface CollectionResponse {
-	fragments: CollectionFragment[];
-	description: string | null;
-	title: string;
-	is_public: boolean;
-	id: number;
-	lom_references: any[] | null;
-	type_id: number;
-	d_ownerid: number;
-	owner?: UserResponse;
-	created_at: string;
-	updated_at: string;
-	organisation_id: string | null;
-	mediamosa_id: string;
 }
 
 export interface CollectionFragmentExternalId {
