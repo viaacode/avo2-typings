@@ -47,6 +47,8 @@ export type SearchOrderProperty =
 	| 'addedDate'
 	| 'editDate';
 
+export type EsIndex = 'both' | 'items' | 'collections';
+
 export interface SearchRequest {
 	filters?: Partial<SearchFilters>;
 	filterOptionSearch?: Partial<SearchFilterOption>;
@@ -54,6 +56,7 @@ export interface SearchRequest {
 	orderDirection?: SearchOrderDirection;
 	from: number;
 	size: number;
+	index: EsIndex;
 }
 
 export interface SearchResponse {
