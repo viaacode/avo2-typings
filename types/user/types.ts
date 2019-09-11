@@ -1,14 +1,16 @@
 export interface UserResponse {
 	id: number;
-	created_at: string;
-	email: string;
+	uid: string,
+	mail: string;
 	first_name: string;
 	last_name: string;
 	role_id: number | null;
 	role: UserRole | null;
-	pofile: UserProfile | null;
-	uid: string;
+	profile: UserProfile | null;
+	organisation_id: string | null;
+	type: 'student' | 'docent',
 	updated_at: string;
+	created_at: string;
 }
 
 export interface UserRole {
