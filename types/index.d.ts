@@ -1,8 +1,15 @@
 // TypeScript Version: 2.1
 
-import { CoreContentType } from "./core/content";
+import { CoreContentType } from './core/content';
 import { ItemResponse } from './item/types';
-import { CollectionFragment, CollectionFragmentExternalId, CollectionResponse, CollectionEditorsLabel, CollectionFragmentMigration, CollectionPermission, CollectionPermissionType, CollectionType } from './collection/types';
+import {
+	CollectionFragment,
+	CollectionFragmentExternalId,
+	CollectionResponse,
+	CollectionEditorsLabel,
+	CollectionPermission,
+	CollectionPermissionType
+} from './collection/types';
 import {
 	SearchFilters,
 	SearchDateRange,
@@ -17,6 +24,7 @@ import {
 } from './search/types';
 import { StatusResponse } from './status/types';
 import { UserResponse, UserProfile, UserRole } from './user/types';
+import { VideoStillItem } from './video-stills/types';
 
 export namespace Avo {
 	namespace Core {
@@ -50,6 +58,9 @@ export namespace Avo {
 		type Request = SearchRequest;
 		type Response = SearchResponse;
 		type ResultItem = SearchResultItem;
+	}
+	namespace VideoStills {
+		type VideoStill = VideoStillItem;
 	}
 	namespace Status {
 		type Response = StatusResponse;

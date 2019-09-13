@@ -71,17 +71,6 @@ export interface CollectionFragment {
 	use_custom_fields: boolean;
 }
 
-export interface CollectionFragmentMigration {
-	id: number;
-	external_id: CollectionFragmentExternalId;
-	custom_title: string;
-	custom_description: string | null;
-	created_at: string;
-	updated_at: string;
-	start_oc: number | null;
-	end_oc: number | null;
-}
-
 export interface CollectionFragmentExternalId {
 	external_id: string,
 	mediamosa_id: string,
