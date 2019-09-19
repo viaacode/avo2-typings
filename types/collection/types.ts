@@ -27,12 +27,10 @@ export interface CollectionResponse {
 	thumbnail_path: string | null;
 	title: string;
 	type_id: number;
-	type: CollectionType;
-}
-
-export interface CollectionType {
-	id: number;
-	label: string;
+	type: {
+		id: number;
+		label: string;
+	};
 }
 
 export interface CollectionPermission {

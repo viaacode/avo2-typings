@@ -24,7 +24,7 @@ import {
 } from './search/types';
 import { StatusResponse } from './status/types';
 import { UserResponse, UserProfile, UserRole } from './user/types';
-import { VideoStillItem } from './video-stills/types';
+import { VideoStillInfo, VideoStillRequest } from './video-stills/types';
 
 export namespace Avo {
 	namespace Core {
@@ -59,8 +59,9 @@ export namespace Avo {
 		type Response = SearchResponse;
 		type ResultItem = SearchResultItem;
 	}
-	namespace VideoStills {
-		type VideoStill = VideoStillItem;
+	namespace Stills {
+		type StillRequest = VideoStillRequest;
+		type StillInfo = VideoStillInfo;
 	}
 	namespace Status {
 		type Response = StatusResponse;
