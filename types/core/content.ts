@@ -1,1 +1,1 @@
-export type CoreContentType = 'collection' | 'video' | 'audio' | 'bundle';
+export type CoreContentType = 'collectie' | 'video' | 'audio' | 'bundel';

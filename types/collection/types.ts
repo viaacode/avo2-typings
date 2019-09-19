@@ -27,12 +27,10 @@ export interface CollectionResponse {
 	thumbnail_path: string | null;
 	title: string;
 	type_id: number;
-	type: CollectionType;
-}
-
-export interface CollectionType {
-	id: number;
-	label: string;
+	type: {
+		id: number;
+		label: string;
+	};
 }
 
 export interface CollectionPermission {
@@ -69,17 +67,6 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
-}
-
-export interface CollectionFragmentMigration {
-	id: number;
-	external_id: CollectionFragmentExternalId;
-	custom_title: string;
-	custom_description: string | null;
-	created_at: string;
-	updated_at: string;
-	start_oc: number | null;
-	end_oc: number | null;
 }
 
 export interface CollectionFragmentExternalId {
