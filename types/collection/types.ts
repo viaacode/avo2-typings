@@ -1,5 +1,6 @@
 import { UserResponse } from '../user/types';
 import { CoreContentType } from '../core/content';
+import { ItemResponse } from '../item/types';
 
 export interface CollectionResponse {
 	id: number;
@@ -67,6 +68,7 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
+	item_meta?: ItemResponse;
 }
 
 export interface CollectionFragmentExternalId {
