@@ -25,6 +25,7 @@ export interface CollectionResponse {
 	organisation_id: string;
 	owner_id: string;
 	owner: UserResponse;
+	note: string | null;
 	thumbnail_path: string | null;
 	title: string;
 	type_id: number;
