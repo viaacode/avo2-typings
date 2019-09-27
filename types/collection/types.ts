@@ -14,6 +14,7 @@ export interface CollectionResponse {
 	external_id: string | null;
 	description: string | null;
 	collection_fragment_ids: number[] | null;
+	item_meta?: ItemResponse;
 	label_redactie_id: number | null;
 	label_redactie: CollectionEditorsLabel | null;
 	lom_classification: string[] | null;
