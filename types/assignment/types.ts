@@ -6,6 +6,7 @@ export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = ItemResponse | CollectionResponse;
 export type AssignmentView = 'assignments' | 'archived_assignments';
+export type AssignmentColumnKey = keyof AssignmentResponse | 'actions';
 
 export interface AssignmentResponse {
 	id: number;
@@ -53,7 +54,7 @@ export interface AssignmentTag {
 }
 
 export interface AssignmentColumn {
-	id: keyof AssignmentResponse | 'actions';
+	id: AssignmentColumnKey;
 	label: string;
 	sortable?: boolean;
 }

@@ -25,7 +25,7 @@ import {
 import { StatusResponse } from './status/types';
 import { UserResponse, UserProfile, UserRole } from './user/types';
 import { VideoStillInfo, VideoStillRequest } from './video-stills/types';
-import { AssignmentResponse, AssignmentLayout, AssignmentContentLabel, AssignmentContent, AssignmentColumn, AssignmentAnswer, AssignmentTag, AssignmentType, AssignmentView } from "./assignment/types"
+import { AssignmentResponse, AssignmentLayout, AssignmentColumnKey, AssignmentContentLabel, AssignmentContent, AssignmentColumn, AssignmentAnswer, AssignmentTag, AssignmentType, AssignmentView } from "./assignment/types"
 
 export namespace Avo {
 	namespace Assignment {
@@ -38,6 +38,7 @@ export namespace Avo {
 		type Layout = AssignmentLayout;
 		type Answer = AssignmentAnswer;
 		type Column = AssignmentColumn;
+		type ColumnKey = AssignmentColumnKey;
 	}
 
 	namespace Core {
