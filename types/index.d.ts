@@ -1,11 +1,11 @@
 // TypeScript Version: 2.1
 
-import { CoreContentType } from './core/content';
-import { ItemResponse } from './item/types';
+import { ContentTypeSchema } from './core/content';
+import { ItemSchema } from './item/types';
 import {
 	CollectionFragment,
 	CollectionFragmentExternalId,
-	CollectionResponse,
+	CollectionSchema,
 	CollectionEditorsLabel,
 	CollectionPermission,
 	CollectionPermissionType
@@ -15,38 +15,55 @@ import {
 	SearchDateRange,
 	SearchFilterOption,
 	SearchRequest,
-	SearchResponse,
+	SearchSchema,
 	SearchResultItem,
 	SearchOptionProp,
 	SearchFilterOptions,
 	SearchOrderProperty,
 	SearchOrderDirection,
 } from './search/types';
-import { StatusResponse } from './status/types';
-import { UserResponse, UserProfile, UserRole } from './user/types';
+import { StatusSchema } from './status/types';
+import { UserSchema, UserProfile, UserRole } from './user/types';
 import { VideoStillInfo, VideoStillRequest } from './video-stills/types';
+import { AssignmentSchema, AssignmentLayout, AssignmentContentLabel, AssignmentContent, AssignmentResponse, AssignmentTag, AssignmentType, AssignmentView } from "./assignment/types"
 
 export namespace Avo {
+	namespace Assignment {
+		type Assignment = AssignmentSchema;
+		type Type = AssignmentType;
+		type Content = AssignmentContent;
+		type ContentLabel = AssignmentContentLabel;
+		type View = AssignmentView;
+		type Tag = AssignmentTag;
+		type Layout = AssignmentLayout;
+		type Response = AssignmentResponse;
+	}
+
 	namespace Core {
-		type ContentType = CoreContentType;
+		type ContentType = ContentTypeSchema;
 	}
+
 	namespace Item {
-		type Response = ItemResponse;
+		type Item = ItemSchema;
 	}
+
 	namespace User {
-		type Response = UserResponse;
+		type User = UserSchema;
 		type Role = UserRole;
 		type Profile = UserProfile;
 	}
+
 	namespace Collection {
-		type Response = CollectionResponse;
+		type Collection = CollectionSchema;
 		type Fragment = CollectionFragment;
 		type ExternalId = CollectionFragmentExternalId;
 		type EditorsLabel = CollectionEditorsLabel;
 		type Permission = CollectionPermission;
 		type PermissionType = CollectionPermissionType;
 	}
+
 	namespace Search {
+		type Search = SearchSchema;
 		type DateRange = SearchDateRange;
 		type FilterOption = SearchFilterOption;
 		type FilterOptions = SearchFilterOptions;
@@ -56,14 +73,15 @@ export namespace Avo {
 		type OrderDirection = SearchOrderDirection;
 		type OrderProperty = SearchOrderProperty;
 		type Request = SearchRequest;
-		type Response = SearchResponse;
 		type ResultItem = SearchResultItem;
 	}
+
 	namespace Stills {
 		type StillRequest = VideoStillRequest;
 		type StillInfo = VideoStillInfo;
 	}
+
 	namespace Status {
-		type Response = StatusResponse;
+		type Status = StatusSchema;
 	}
 }

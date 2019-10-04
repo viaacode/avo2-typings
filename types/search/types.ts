@@ -1,4 +1,4 @@
-import { CoreContentType } from "../core/content";
+import { ContentTypeSchema } from "../core/content";
 
 export interface SearchDateRange {
 	gte: string | '' | null | undefined;
@@ -6,7 +6,7 @@ export interface SearchDateRange {
 }
 
 export interface SearchFilterOption {
-	type: CoreContentType;
+	type: ContentTypeSchema;
 	educationLevel: string;
 	domain: string;
 	language: string;
@@ -22,7 +22,7 @@ export interface SearchFilterOptions {
 
 export interface SearchFilters {
 	query: string;
-	type: CoreContentType[];
+	type: ContentTypeSchema[];
 	educationLevel: string[];
 	domain: string[];
 	broadcastDate: SearchDateRange;
@@ -59,7 +59,7 @@ export interface SearchRequest {
 	index: EsIndex;
 }
 
-export interface SearchResponse {
+export interface SearchSchema {
 	results: SearchResultItem[];
 	count: number;
 	aggregations: SearchFilterOptions;
@@ -87,5 +87,5 @@ export interface SearchResultItem {
 	briefing_id: string[];
 	duration_time: string;
 	duration_seconds: number;
-	administrative_type: CoreContentType;
+	administrative_type: ContentTypeSchema;
 }

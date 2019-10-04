@@ -1,10 +1,10 @@
-export interface PlayerTokenResponse {
+export interface PlayerTicket {
 	total: number;
 	name: string;
-	results: PlayerTokenResult[];
+	results: PlayerTicketResult[];
 }
 
-interface PlayerTokenResult {
+interface PlayerTicketResult {
 	jwt: string;
 	app: string;
 	verb: string;
