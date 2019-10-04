@@ -1,6 +1,6 @@
-import { CoreContentType } from '../core/content';
+import { ContentTypeSchema } from '../core/content';
 
-export interface ItemResponse {
+export interface ItemSchema {
 	bookmarks: null;
 	browse_path: string;
 	created_at: string;
@@ -29,7 +29,7 @@ export interface ItemResponse {
 	title: string;
 	type: {
 		id: number;
-		label: CoreContentType;
+		label: ContentTypeSchema;
 		__typename: string;
 	};
 	type_id: number;
