@@ -1,14 +1,13 @@
-import { ItemResponse } from '../item/types';
-import { CollectionResponse } from '../collection/types';
-import { UserResponse } from '../user/types';
+import { ItemSchema } from '../item/types';
+import { CollectionSchema } from '../collection/types';
+import { UserSchema } from '../user/types';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
-export type AssignmentContent = ItemResponse | CollectionResponse;
+export type AssignmentContent = ItemSchema | CollectionSchema;
 export type AssignmentView = 'assignments' | 'archived_assignments';
-export type AssignmentColumnKey = keyof AssignmentResponse | 'actions';
 
-export interface AssignmentResponse {
+export interface AssignmentSchema {
 	id: number;
 	title: string;
 	description: string;
@@ -29,17 +28,17 @@ export interface AssignmentResponse {
 	assignment_assignment_tags: {
 		assignment_tag: AssignmentTag[];
 	};
-	assignment_responses: AssignmentAnswer[];
+	assignment_responses: AssignmentResponse[];
 }
 
-export interface AssignmentAnswer {
+export interface AssignmentResponse {
 	id: number;
 	assignment_id: number;
 	collection_id?: string | null;
 	finished_at?: string | null; // ISO date string
 	owner_uids: number[];
 	started_at?: Date | null;
-	collection?: CollectionResponse | null;
+	collection?: CollectionSchema | null;
 }
 
 export interface AssignmentTag {
@@ -50,13 +49,7 @@ export interface AssignmentTag {
 		value: string; // BRIGHT_RED
 	};
 	color_override?: string | null; // #FF0000
-	user: UserResponse;
-}
-
-export interface AssignmentColumn {
-	id: AssignmentColumnKey;
-	label: string;
-	sortable?: boolean;
+	user: UserSchema;
 }
 
 export enum AssignmentLayout {

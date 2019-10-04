@@ -1,8 +1,8 @@
-import { UserResponse } from '../user/types';
-import { CoreContentType } from '../core/content';
-import { ItemResponse } from '../item/types';
+import { UserSchema } from '../user/types';
+import { ContentTypeSchema } from '../core/content';
+import { ItemSchema } from '../item/types';
 
-export interface CollectionResponse {
+export interface CollectionSchema {
 	id: number;
 	collection_fragments: CollectionFragment[];
 	collection_permissions: CollectionPermission[];
@@ -14,7 +14,7 @@ export interface CollectionResponse {
 	external_id: string | null;
 	description: string | null;
 	collection_fragment_ids: number[] | null;
-	item_meta?: ItemResponse;
+	item_meta?: ItemSchema;
 	label_redactie_id: number | null;
 	label_redactie: CollectionEditorsLabel | null;
 	lom_classification: string[] | null;
@@ -25,7 +25,7 @@ export interface CollectionResponse {
 	lom_languages: string[] | null;
 	organisation_id: string;
 	owner_id: string;
-	owner: UserResponse;
+	owner: UserSchema;
 	note: string | null;
 	thumbnail_path: string | null;
 	title: string;
@@ -70,11 +70,11 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
-	item_meta?: ItemResponse;
+	item_meta?: ItemSchema;
 }
 
 export interface CollectionFragmentExternalId {
-	external_id: string,
-	mediamosa_id: string,
-	type_label: CoreContentType
+	external_id: string;
+	mediamosa_id: string;
+	type_label: ContentTypeSchema;
 }

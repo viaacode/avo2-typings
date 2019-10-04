@@ -1,4 +1,4 @@
-export interface UserResponse {
+export interface UserSchema {
 	id: number;
 	first_name: string | null;
 	last_name: string | null;
