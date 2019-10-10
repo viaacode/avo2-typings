@@ -34,7 +34,7 @@ import {
 	AssignmentTag,
 	AssignmentType,
 	AssignmentView,
-	AssignmentError
+	AssignmentRetrieveError
 } from './assignment/types';
 
 export namespace Avo {
@@ -47,7 +47,7 @@ export namespace Avo {
 		type Tag = AssignmentTag;
 		type Layout = AssignmentLayout;
 		type Response = AssignmentResponse;
-		type RetrieveError = AssignmentError;
+		type RetrieveError = AssignmentRetrieveError;
 	}
 
 	namespace Core {
