@@ -1,13 +1,19 @@
 import { ItemSchema } from '../item/types';
 import { CollectionSchema } from '../collection/types';
-import { UserSchema } from '../user/types';
+import { UserProfile, UserSchema } from '../user/types';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = ItemSchema | CollectionSchema;
 export type AssignmentView = 'assignments' | 'archived_assignments';
 
-export interface AssignmentSchema {
+export enum AssignmentRetrieveError {
+	DELETED = 'DELETED',
+	NOT_YET_AVAILABLE = 'NOT_YET_AVAILABLE',
+	PAST_DEADLINE = 'PAST_DEADLINE',
+}
+
+export interface Assignment {
 	id: number;
 	title: string;
 	description: string;
@@ -18,7 +24,8 @@ export interface AssignmentSchema {
 	answer_url?: string | null;
 	available_at?: string | null; // ISO date string
 	deadline_at?: string | null; // ISO date string
-	owner_uid: string;
+	owner_profile_id: string;
+	profile?: UserProfile;
 	is_archived: boolean;
 	is_deleted: boolean;
 	class_room?: string | null;
@@ -35,8 +42,8 @@ export interface AssignmentResponse {
 	id: number;
 	assignment_id: number;
 	collection_id?: string | null;
-	finished_at?: string | null; // ISO date string
-	owner_uids: number[];
+	submitted_at?: string | null; // ISO date string
+	owner_profile_ids: string[];
 	started_at?: Date | null;
 	collection?: CollectionSchema | null;
 }
