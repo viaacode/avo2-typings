@@ -7,6 +7,12 @@ export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = ItemSchema | CollectionSchema;
 export type AssignmentView = 'assignments' | 'archived_assignments';
 
+export enum AssignmentRetrieveError {
+	DELETED = 'DELETED',
+	NOT_YET_AVAILABLE = 'NOT_YET_AVAILABLE',
+	PAST_DEADLINE = 'PAST_DEADLINE',
+}
+
 export interface AssignmentSchema {
 	id: number;
 	title: string;
