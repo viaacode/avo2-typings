@@ -1,4 +1,4 @@
-import { UserSchema } from '../user/types';
+import { UserProfile, UserSchema } from '../user/types';
 import { ContentTypeSchema } from '../core/content';
 import { ItemSchema } from '../item/types';
 
@@ -24,8 +24,8 @@ export interface CollectionSchema {
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
 	organisation_id: string;
-	owner_id: string;
-	owner: UserSchema;
+	owner_profile_id: string;
+	profile: UserProfile;
 	note: string | null;
 	thumbnail_path: string | null;
 	title: string;

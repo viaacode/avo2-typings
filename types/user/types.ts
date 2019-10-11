@@ -25,6 +25,7 @@ export interface UserProfile {
 	stamboek: string | null;
 	updated_at: string;
 	user_id: string | null;
+	user: UserSchema;
 	permissions: string[] | undefined;
 }
 
