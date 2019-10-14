@@ -13,7 +13,7 @@ export enum AssignmentRetrieveError {
 	PAST_DEADLINE = 'PAST_DEADLINE',
 }
 
-export interface Assignment {
+export interface AssignmentSchema {
 	id: number;
 	title: string;
 	description: string;
