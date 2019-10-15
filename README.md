@@ -1,4 +1,4 @@
-# Types for the AvO2 API#
+# Types for the AvO2 API #
 
 This repo contains the object types that are used to communicate between the NodeJS service and the React client apps.
 Every type in this package is namespaces under `Avo`.
