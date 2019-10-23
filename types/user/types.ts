@@ -16,7 +16,7 @@ export interface UserSchema {
 }
 
 export interface UserProfile {
-	id: number;
+	id: string;
 	alias: string | null;
 	alternative_email: string;
 	avatar: string | null;
