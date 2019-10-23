@@ -34,8 +34,13 @@ import {
 	AssignmentTag,
 	AssignmentType,
 	AssignmentView,
-	AssignmentRetrieveError
+	AssignmentRetrieveError,
 } from './assignment/types';
+import {
+	ClientEvent,
+	EventCategory,
+	EventName,
+} from './event-logging/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -90,6 +95,12 @@ export namespace Avo {
 	namespace Stills {
 		type StillRequest = VideoStillRequest;
 		type StillInfo = VideoStillInfo;
+	}
+
+	namespace EventLogging {
+		type Name = EventName;
+		type Category = EventCategory;
+		type Event = ClientEvent;
 	}
 
 	namespace Status {
