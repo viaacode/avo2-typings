@@ -41,6 +41,7 @@ import {
 	EventCategory,
 	EventName,
 } from './event-logging/types';
+import { LoginResponseSchema } from './auth/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -101,6 +102,10 @@ export namespace Avo {
 		type Name = EventName;
 		type Category = EventCategory;
 		type Event = ClientEvent;
+	}
+
+	namespace Auth {
+		type LoginResponse = LoginResponseSchema;
 	}
 
 	namespace Status {
