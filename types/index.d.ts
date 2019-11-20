@@ -41,6 +41,7 @@ import {
 	EventCategory,
 	EventName,
 } from './event-logging/types';
+import { ValidateStamboekResponse } from './stamboek/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -95,6 +96,10 @@ export namespace Avo {
 	namespace Stills {
 		type StillRequest = VideoStillRequest;
 		type StillInfo = VideoStillInfo;
+	}
+
+	namespace Stamboek {
+		type ValidateResponse = ValidateStamboekResponse;
 	}
 
 	namespace EventLogging {
