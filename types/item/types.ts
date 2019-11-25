@@ -23,7 +23,8 @@ export interface ItemSchema {
 	lom_typicalagerange: string[];
 	org_id: string;
 	org_name: string | null;
-	publish_at: null;
+	publish_at: string | null;
+	published_at: string | null;
 	series: string;
 	thumbnail_path: string;
 	title: string;
