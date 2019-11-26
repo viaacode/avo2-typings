@@ -12,5 +12,6 @@ export interface ContentSchema {
 	updated_at: string | null;
 	is_protected: boolean;
 	content_type: string;
-	user: UserProfile;
+	profile: UserProfile;
+	user_profile_id: string | null;
 }
