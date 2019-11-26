@@ -41,6 +41,10 @@ import {
 	EventCategory,
 	EventName,
 } from './event-logging/types';
+import { LoginResponseSchema } from './auth/types';
+import { ValidateStamboekResponse } from './stamboek/types';
+import { MenuSchema } from 'menu/types';
+import { ContentSchema } from 'content/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -97,13 +101,29 @@ export namespace Avo {
 		type StillInfo = VideoStillInfo;
 	}
 
+	namespace Stamboek {
+		type ValidateResponse = ValidateStamboekResponse;
+	}
+
 	namespace EventLogging {
 		type Name = EventName;
 		type Category = EventCategory;
 		type Event = ClientEvent;
 	}
 
+	namespace Auth {
+		type LoginResponse = LoginResponseSchema;
+	}
+
 	namespace Status {
 		type Status = StatusSchema;
+	}
+
+	namespace Menu {
+		type Menu = MenuSchema;
+	}
+
+	namespace Content {
+		type Content = ContentSchema;
 	}
 }
