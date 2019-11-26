@@ -45,6 +45,7 @@ export interface AssignmentResponse {
 	owner_profile_ids: string[];
 	started_at?: Date | null;
 	collection?: CollectionSchema | null;
+	assignment?: Partial<AssignmentSchema>;
 }
 
 export interface AssignmentTag {
