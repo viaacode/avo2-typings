@@ -1,4 +1,4 @@
-import { UserProfile } from "user/types";
+import { UserProfile } from "../user/types";
 
 export interface ContentSchema {
 	id: number;

@@ -43,8 +43,8 @@ import {
 } from './event-logging/types';
 import { LoginResponseSchema } from './auth/types';
 import { ValidateStamboekResponse } from './stamboek/types';
-import { MenuSchema } from 'menu/types';
-import { ContentSchema } from 'content/types';
+import { MenuSchema } from './menu/types';
+import { ContentSchema } from './content/types';
 
 export namespace Avo {
 	namespace Assignment {

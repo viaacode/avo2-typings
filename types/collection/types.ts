@@ -1,4 +1,4 @@
-import { UserProfile, UserSchema } from '../user/types';
+import { UserProfile } from '../user/types';
 import { ContentTypeSchema } from '../core/content';
 import { ItemSchema } from '../item/types';
 
