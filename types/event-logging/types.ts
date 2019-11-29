@@ -1,4 +1,4 @@
-export type SearchEventName = 'search_search';
+export type SearchEventName = 'search';
 
 export type ItemEventName =
 	| 'play_item'
