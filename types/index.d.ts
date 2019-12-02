@@ -38,8 +38,9 @@ import {
 } from './assignment/types';
 import {
 	ClientEvent,
-	EventCategory,
-	EventName, EventObjectType, EventSubjectType,
+	EventAction,
+	EventObjectType,
+	EventSubjectType,
 } from './event-logging/types';
 import { LoginResponseSchema } from './auth/types';
 import { ValidateStamboekResponse } from './stamboek/types';
@@ -106,8 +107,7 @@ export namespace Avo {
 	}
 
 	namespace EventLogging {
-		type Name = EventName;
-		type Category = EventCategory;
+		type Action = EventAction;
 		type Event = ClientEvent;
 		type ObjectType = EventObjectType;
 		type SubjectType = EventSubjectType;
