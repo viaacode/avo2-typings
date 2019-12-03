@@ -46,6 +46,7 @@ import { LoginResponseSchema } from './auth/types';
 import { ValidateStamboekResponse } from './stamboek/types';
 import { MenuSchema } from './menu/types';
 import { ContentSchema } from './content/types';
+import { ClientEducationOrganization } from './education-organizations/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -104,6 +105,10 @@ export namespace Avo {
 
 	namespace Stamboek {
 		type ValidateResponse = ValidateStamboekResponse;
+	}
+
+	namespace EducationOrganization {
+		type Organization = ClientEducationOrganization;
 	}
 
 	namespace EventLogging {
