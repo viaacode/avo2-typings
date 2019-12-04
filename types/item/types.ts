@@ -1,4 +1,5 @@
 import { ContentTypeSchema } from '../core/content';
+import { OrganizationSchema } from '../organization/types';
 
 export interface ItemSchema {
 	bookmarks: null;
@@ -22,7 +23,7 @@ export interface ItemSchema {
 	lom_languages: string[];
 	lom_typicalagerange: string[];
 	org_id: string;
-	org_name: string | null;
+	organization: OrganizationSchema;
 	publish_at: string | null;
 	published_at: string | null;
 	series: string;

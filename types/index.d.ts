@@ -47,6 +47,11 @@ import { ValidateStamboekResponse } from './stamboek/types';
 import { MenuSchema } from './menu/types';
 import { ContentSchema } from './content/types';
 import { ClientEducationOrganization } from './education-organizations/types';
+import {
+	OrganizationSchema,
+	OrganizationData,
+	OrganizationContactInfo
+} from './organization/types';
 
 export namespace Avo {
 	namespace Assignment {
@@ -82,6 +87,12 @@ export namespace Avo {
 		type EditorsLabel = CollectionEditorsLabel;
 		type Permission = CollectionPermission;
 		type PermissionType = CollectionPermissionType;
+	}
+
+	namespace Organization {
+		type Organization = OrganizationSchema;
+		type Data = OrganizationData;
+		type ContactInfo = OrganizationContactInfo;
 	}
 
 	namespace Search {
