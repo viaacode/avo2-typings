@@ -23,7 +23,7 @@ export interface ItemSchema {
 	lom_languages: string[];
 	lom_typicalagerange: string[];
 	org_id: string;
-	organization: OrganizationSchema;
+	organisation: OrganizationSchema;
 	publish_at: string | null;
 	published_at: string | null;
 	series: string;
