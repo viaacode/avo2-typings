@@ -1,5 +1,4 @@
-import { Avo } from 'avo2-types';
-import IdpType = Avo.Auth.IdpType;
+import { IdpTypeSchema } from '../auth/types';
 
 export interface UserSchema {
 	id: number;
@@ -16,7 +15,7 @@ export interface UserSchema {
 	updated_at: string;
 	mail: string;
 	organisation_id: string | null;
-	idpmaps: IdpType[];
+	idpmaps: IdpTypeSchema[];
 }
 
 export interface UserProfile {
@@ -31,7 +30,6 @@ export interface UserProfile {
 	user_id: string | null;
 	user: UserSchema;
 	permissions: string[] | undefined;
-	idpmaps: IdpType[];
 }
 
 export interface UserRole {
