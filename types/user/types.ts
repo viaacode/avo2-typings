@@ -26,10 +26,15 @@ export interface UserProfile {
 	created_at: string;
 	location: string;
 	stamboek: string | null;
+	bio: string | null;
+	function: string | null;
 	updated_at: string;
 	user_id: string | null;
 	user: UserSchema;
 	permissions: string[] | undefined;
+	educationLevels: string[];
+	subjects: string[];
+	organizations: Array<{ organizationName: string, unitAddress?: string }>;
 }
 
 export interface UserRole {
