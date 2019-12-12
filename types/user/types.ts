@@ -1,3 +1,5 @@
+import { IdpTypeSchema } from '../auth/types';
+
 export interface UserSchema {
 	id: number;
 	first_name: string | null;
@@ -13,6 +15,7 @@ export interface UserSchema {
 	updated_at: string;
 	mail: string;
 	organisation_id: string | null;
+	idpmaps: IdpTypeSchema[];
 }
 
 export interface UserProfile {

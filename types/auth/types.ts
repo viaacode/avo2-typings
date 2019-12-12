@@ -1,6 +1,13 @@
 import { UserSchema } from '../user/types';
 
 export interface LoginResponseSchema {
-	message: 'LOGGED_IN' | 'LOGGED_OUT';
+	message: LoginMessageSchema;
 	userInfo?: UserSchema;
+}
+
+export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
+
+export enum LoginMessageSchema {
+	LOGGED_IN = 'LOGGED_IN',
+	LOGGED_OUT = 'LOGGED_OUT',
 }
