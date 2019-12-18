@@ -42,7 +42,7 @@ import {
 	EventObjectType,
 	EventSubjectType,
 } from './event-logging/types';
-import { LoginResponseSchema } from './auth/types';
+import { IdpTypeSchema, LoginMessageSchema, LoginResponseSchema } from './auth/types';
 import { ValidateStamboekResponse } from './stamboek/types';
 import { MenuSchema } from './menu/types';
 import { ContentSchema } from './content/types';
@@ -131,6 +131,8 @@ export namespace Avo {
 
 	namespace Auth {
 		type LoginResponse = LoginResponseSchema;
+		type IdpType = IdpTypeSchema;
+		type LoginMessage = LoginMessageSchema;
 	}
 
 	namespace Status {
