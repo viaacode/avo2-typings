@@ -1,6 +1,6 @@
-import { UserProfile } from '../user/types';
+import { UserProfile } from '../user';
 import { ContentTypeSchema } from '../core/content';
-import { ItemSchema } from '../item/types';
+import { ItemSchema } from '../item';
 
 export interface CollectionSchema {
 	id: number;

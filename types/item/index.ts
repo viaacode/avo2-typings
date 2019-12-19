@@ -1,5 +1,5 @@
 import { ContentTypeSchema } from '../core/content';
-import { OrganizationSchema } from '../organization/types';
+import { OrganizationSchema } from '../organization';
 
 export interface ItemSchema {
 	bookmarks: null;

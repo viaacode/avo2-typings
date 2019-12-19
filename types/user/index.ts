@@ -1,4 +1,4 @@
-import { IdpTypeSchema } from '../auth/types';
+import { IdpTypeSchema } from '../auth';
 
 export interface UserSchema {
 	id: number;

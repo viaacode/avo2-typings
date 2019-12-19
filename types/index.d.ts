@@ -1,121 +1,93 @@
 // TypeScript Version: 2.1
 
-import { ContentTypeSchema } from './core/content';
-import { ItemSchema } from './item/types';
 import {
-	CollectionFragment,
-	CollectionFragmentExternalId,
-	CollectionSchema,
-	CollectionEditorsLabel,
-	CollectionPermission,
-	CollectionPermissionType
-} from './collection/types';
-import {
-	SearchFilters,
-	SearchDateRange,
-	SearchFilterOption,
-	SearchRequest,
-	SearchSchema,
-	SearchResultItem,
-	SearchOptionProp,
-	SearchFilterOptions,
-	SearchOrderProperty,
-	SearchOrderDirection,
-} from './search/types';
-import { StatusSchema } from './status/types';
-import { UserSchema, UserProfile, UserRole } from './user/types';
-import { VideoStillInfo, VideoStillRequest } from './video-stills/types';
-import {
-	AssignmentSchema,
-	AssignmentLayout,
-	AssignmentContentLabel,
 	AssignmentContent,
+	AssignmentContentLabel,
+	AssignmentLayout,
 	AssignmentResponse,
+	AssignmentRetrieveError,
+	AssignmentSchema,
 	AssignmentTag,
 	AssignmentType,
 	AssignmentView,
-	AssignmentRetrieveError,
-} from './assignment/types';
+} from './assignment';
+import { LoginMessageSchema, IdpTypeSchema,LoginResponseSchema } from './auth';
+import {
+	CollectionEditorsLabel,
+	CollectionFragment,
+	CollectionFragmentExternalId,
+	CollectionPermission,
+	CollectionPermissionType,
+	CollectionSchema,
+} from './collection';
+import { ContentSchema } from './content';
+import { ContentBlockSchema } from 'content-blocks';
+import { ContentTypeSchema } from './core/content';
+import { ClientEducationOrganization } from './education-organizations';
 import {
 	ClientEvent,
 	EventAction,
 	EventObjectType,
 	EventSubjectType,
-} from './event-logging/types';
-import { IdpTypeSchema, LoginMessageSchema, LoginResponseSchema } from './auth/types';
-import { ValidateStamboekResponse } from './stamboek/types';
-import { MenuSchema } from './menu/types';
-import { ContentSchema } from './content/types';
-import { ClientEducationOrganization } from './education-organizations/types';
+} from './event-logging';
+import { ItemSchema } from './item';
+import { MenuSchema } from './menu';
 import {
-	OrganizationSchema,
+	OrganizationContactInfo,
 	OrganizationData,
-	OrganizationContactInfo
-} from './organization/types';
+	OrganizationSchema,
+} from './organization';
+import {
+	SearchDateRange,
+	SearchFilterOption,
+	SearchFilterOptions,
+	SearchFilters,
+	SearchOptionProp,
+	SearchOrderDirection,
+	SearchOrderProperty,
+	SearchRequest,
+	SearchResultItem,
+	SearchSchema,
+} from './search';
+import { ValidateStamboekResponse } from './stamboek';
+import { StatusSchema } from './status';
+import { UserProfile, UserRole, UserSchema } from './user';
+import { VideoStillInfo, VideoStillRequest } from './video-stills';
 
 export namespace Avo {
 	namespace Assignment {
 		type Assignment = AssignmentSchema;
-		type Type = AssignmentType;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
-		type View = AssignmentView;
-		type Tag = AssignmentTag;
 		type Layout = AssignmentLayout;
 		type Response = AssignmentResponse;
 		type RetrieveError = AssignmentRetrieveError;
+		type Tag = AssignmentTag;
+		type Type = AssignmentType;
+		type View = AssignmentView;
 	}
 
-	namespace Core {
-		type ContentType = ContentTypeSchema;
-	}
-
-	namespace Item {
-		type Item = ItemSchema;
-	}
-
-	namespace User {
-		type User = UserSchema;
-		type Role = UserRole;
-		type Profile = UserProfile;
+	namespace Auth {
+		type IdpType = IdpTypeSchema;
+		type LoginMessage = LoginMessageSchema;
+		type LoginResponse = LoginResponseSchema;
 	}
 
 	namespace Collection {
 		type Collection = CollectionSchema;
-		type Fragment = CollectionFragment;
-		type ExternalId = CollectionFragmentExternalId;
 		type EditorsLabel = CollectionEditorsLabel;
+		type ExternalId = CollectionFragmentExternalId;
+		type Fragment = CollectionFragment;
 		type Permission = CollectionPermission;
 		type PermissionType = CollectionPermissionType;
 	}
 
-	namespace Organization {
-		type Organization = OrganizationSchema;
-		type Data = OrganizationData;
-		type ContactInfo = OrganizationContactInfo;
+	namespace Content {
+		type Content = ContentSchema;
 	}
 
-	namespace Search {
-		type Search = SearchSchema;
-		type DateRange = SearchDateRange;
-		type FilterOption = SearchFilterOption;
-		type FilterOptions = SearchFilterOptions;
-		type Filters = SearchFilters;
-		type FilterProp = keyof Filters;
-		type OptionProp = SearchOptionProp;
-		type OrderDirection = SearchOrderDirection;
-		type OrderProperty = SearchOrderProperty;
-		type Request = SearchRequest;
-		type ResultItem = SearchResultItem;
-	}
-
-	namespace Stills {
-		type StillRequest = VideoStillRequest;
-		type StillInfo = VideoStillInfo;
-	}
-
-	namespace Stamboek {
-		type ValidateResponse = ValidateStamboekResponse;
+	namespace Core {
+		type ContentType = ContentTypeSchema;
 	}
 
 	namespace EducationOrganization {
@@ -129,21 +101,50 @@ export namespace Avo {
 		type SubjectType = EventSubjectType;
 	}
 
-	namespace Auth {
-		type LoginResponse = LoginResponseSchema;
-		type IdpType = IdpTypeSchema;
-		type LoginMessage = LoginMessageSchema;
-	}
-
-	namespace Status {
-		type Status = StatusSchema;
+	namespace Item {
+		type Item = ItemSchema;
 	}
 
 	namespace Menu {
 		type Menu = MenuSchema;
 	}
 
-	namespace Content {
-		type Content = ContentSchema;
+	namespace Organization {
+		type ContactInfo = OrganizationContactInfo;
+		type Data = OrganizationData;
+		type Organization = OrganizationSchema;
+	}
+
+	namespace Search {
+		type DateRange = SearchDateRange;
+		type FilterOption = SearchFilterOption;
+		type FilterOptions = SearchFilterOptions;
+		type FilterProp = keyof Filters;
+		type Filters = SearchFilters;
+		type OptionProp = SearchOptionProp;
+		type OrderDirection = SearchOrderDirection;
+		type OrderProperty = SearchOrderProperty;
+		type Request = SearchRequest;
+		type ResultItem = SearchResultItem;
+		type Search = SearchSchema;
+	}
+
+	namespace Stamboek {
+		type ValidateResponse = ValidateStamboekResponse;
+	}
+
+	namespace Status {
+		type Status = StatusSchema;
+	}
+
+	namespace Stills {
+		type StillInfo = VideoStillInfo;
+		type StillRequest = VideoStillRequest;
+	}
+
+	namespace User {
+		type Profile = UserProfile;
+		type Role = UserRole;
+		type User = UserSchema;
 	}
 }
