@@ -1,4 +1,4 @@
-// TypeScript Version: 2.1
+// TypeScript Version: 2.4
 
 import {
 	AssignmentContent,
@@ -11,7 +11,7 @@ import {
 	AssignmentType,
 	AssignmentView,
 } from './assignment';
-import { LoginMessageSchema, IdpTypeSchema,LoginResponseSchema } from './auth';
+import { LoginMessageSchema, IdpTypeSchema, LoginResponseSchema } from './auth';
 import {
 	CollectionEditorsLabel,
 	CollectionFragment,
