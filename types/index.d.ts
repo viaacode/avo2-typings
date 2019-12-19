@@ -86,6 +86,10 @@ export namespace Avo {
 		type Content = ContentSchema;
 	}
 
+	namespace ContentBlocks {
+		type ContentBlocks = ContentBlockSchema;
+	}
+
 	namespace Core {
 		type ContentType = ContentTypeSchema;
 	}
