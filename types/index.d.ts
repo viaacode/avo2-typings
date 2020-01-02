@@ -56,10 +56,10 @@ import { VideoStillInfo, VideoStillRequest } from './video-stills';
 
 export namespace Avo {
 	namespace Assignment {
+		export import Layout = AssignmentLayout;
 		type Assignment = AssignmentSchema;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
-		type Layout = AssignmentLayout;
 		type Response = AssignmentResponse;
 		type RetrieveError = AssignmentRetrieveError;
 		type Tag = AssignmentTag;
@@ -68,8 +68,8 @@ export namespace Avo {
 	}
 
 	namespace Auth {
+		export import LoginMessage = LoginMessageSchema;
 		type IdpType = IdpTypeSchema;
-		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
 	}
 
