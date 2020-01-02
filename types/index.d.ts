@@ -1,4 +1,4 @@
-// TypeScript Version: 2.1
+// TypeScript Version: 2.4
 
 import { ContentTypeSchema } from './core/content';
 import { ItemSchema } from './item/types';
@@ -55,13 +55,13 @@ import {
 
 export namespace Avo {
 	namespace Assignment {
+		export import Layout = AssignmentLayout;
 		type Assignment = AssignmentSchema;
 		type Type = AssignmentType;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
 		type View = AssignmentView;
 		type Tag = AssignmentTag;
-		type Layout = AssignmentLayout;
 		type Response = AssignmentResponse;
 		type RetrieveError = AssignmentRetrieveError;
 	}
@@ -130,9 +130,9 @@ export namespace Avo {
 	}
 
 	namespace Auth {
+		export import LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
 		type IdpType = IdpTypeSchema;
-		type LoginMessage = LoginMessageSchema;
 	}
 
 	namespace Status {
