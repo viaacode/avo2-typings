@@ -1,4 +1,4 @@
-// TypeScript Version: 2.1
+// TypeScript Version: 2.4
 
 import { ContentTypeSchema } from './core/content';
 import { ItemSchema } from './item/types';
