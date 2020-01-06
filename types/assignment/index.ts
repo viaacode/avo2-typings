@@ -1,6 +1,6 @@
-import { ItemSchema } from '../item/types';
-import { CollectionSchema } from '../collection/types';
-import { UserProfile, UserSchema } from '../user/types';
+import { ItemSchema } from '../item';
+import { CollectionSchema } from '../collection';
+import { UserProfile, UserSchema } from '../user';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';

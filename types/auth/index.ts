@@ -1,4 +1,4 @@
-import { UserSchema } from '../user/types';
+import { UserSchema } from '../user';
 
 export interface LoginResponseSchema {
 	message: LoginMessageSchema;
