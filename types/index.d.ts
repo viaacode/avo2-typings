@@ -43,7 +43,7 @@ import {
 	EventSubjectType,
 } from './event-logging/types';
 import { IdpTypeSchema, LoginMessageSchema, LoginResponseSchema } from './auth/types';
-import { ValidateStamboekResponse } from './stamboek/types';
+import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek/types';
 import { MenuSchema } from './menu/types';
 import { ContentSchema } from './content/types';
 import { ClientEducationOrganization } from './education-organizations/types';
@@ -55,7 +55,7 @@ import {
 
 export namespace Avo {
 	namespace Assignment {
-		export import Layout = AssignmentLayout;
+		type Layout = AssignmentLayout;
 		type Assignment = AssignmentSchema;
 		type Type = AssignmentType;
 		type Content = AssignmentContent;
@@ -116,6 +116,7 @@ export namespace Avo {
 
 	namespace Stamboek {
 		type ValidateResponse = ValidateStamboekResponse;
+		type ValidationStatuses = StamboekValidationStatuses;
 	}
 
 	namespace EducationOrganization {
@@ -130,7 +131,7 @@ export namespace Avo {
 	}
 
 	namespace Auth {
-		export import LoginMessage = LoginMessageSchema;
+		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
 		type IdpType = IdpTypeSchema;
 	}
