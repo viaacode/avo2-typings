@@ -7,7 +7,4 @@ export interface LoginResponseSchema {
 
 export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
 
-export enum LoginMessageSchema {
-	LOGGED_IN = 'LOGGED_IN',
-	LOGGED_OUT = 'LOGGED_OUT',
-}
+export type LoginMessageSchema  = 'LOGGED_IN' | 'LOGGED_OUT';

@@ -49,14 +49,14 @@ import {
 	SearchResultItem,
 	SearchSchema,
 } from './search';
-import { ValidateStamboekResponse } from './stamboek';
+import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek';
 import { StatusSchema } from './status';
 import { UserProfile, UserRole, UserSchema } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
 
 export namespace Avo {
 	namespace Assignment {
-		export import Layout = AssignmentLayout;
+		type Layout = AssignmentLayout;
 		type Assignment = AssignmentSchema;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
@@ -68,8 +68,8 @@ export namespace Avo {
 	}
 
 	namespace Auth {
-		export import LoginMessage = LoginMessageSchema;
 		type IdpType = IdpTypeSchema;
+		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
 	}
 
@@ -135,6 +135,7 @@ export namespace Avo {
 
 	namespace Stamboek {
 		type ValidateResponse = ValidateStamboekResponse;
+		type ValidationStatuses = StamboekValidationStatuses;
 	}
 
 	namespace Status {
