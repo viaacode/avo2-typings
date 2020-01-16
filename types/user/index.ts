@@ -31,6 +31,7 @@ export interface UserProfile {
 	updated_at: string;
 	user_id: string | null;
 	user: UserSchema;
+	userGroupIds: number[];
 	permissions: string[] | undefined;
 	educationLevels: string[];
 	subjects: string[];

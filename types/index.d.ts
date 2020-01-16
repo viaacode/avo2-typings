@@ -21,7 +21,7 @@ import {
 	CollectionSchema,
 } from './collection';
 import { ContentSchema } from './content';
-import { ContentBlockSchema } from 'content-blocks';
+import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
 import {
