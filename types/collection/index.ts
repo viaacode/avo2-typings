@@ -70,7 +70,7 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
-	item_meta?: ItemSchema;
+	item_meta?: ItemSchema | CollectionSchema;
 }
 
 export interface CollectionFragmentExternalId {
