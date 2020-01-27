@@ -24,6 +24,14 @@ export interface CollectionSchema {
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
 	organisation_id: string;
+	organisation: {
+		data: any;
+		description: string | null;
+		logo_url: string | null;
+		name: string | null;
+		or_id: string | null;
+		website: string | null;
+	} | null;
 	owner_profile_id: string;
 	profile: UserProfile;
 	note: string | null;

@@ -34,7 +34,7 @@ export interface ClientEvent {
 export type EventSubjectType = 'user_uuid' | 'anonymous_user' | 'system';
 
 export type EventObjectType =
-	| 'bundels'
+	| 'bundles'
 	| 'collections'
 	| 'avo_item_pid'
 	| 'archief_item_pid'
