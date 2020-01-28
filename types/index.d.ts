@@ -20,7 +20,7 @@ import {
 	CollectionPermissionType,
 	CollectionSchema,
 } from './collection';
-import { ContentSchema } from './content';
+import { ContentSchema, ContentWidthSchema } from './content';
 import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
@@ -83,6 +83,7 @@ export namespace Avo {
 	}
 
 	namespace Content {
+		type ContentWidth = ContentWidthSchema;
 		type Content = ContentSchema;
 	}
 
