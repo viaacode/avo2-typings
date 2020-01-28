@@ -1,11 +1,13 @@
+type ContentType = 'CONTENT_PAGE' | 'COLLECTION' | 'ITEM' | 'DROPDOWN' | 'INTERNAL_LINK' | 'EXTERNAL_LINK';
+
 export interface MenuSchema {
 	id: number;
 	label: string;
 	icon_name: string;
 	description: string | null;
-	content_id: number | null;
 	group_access: Array<number | string> | { [key: string]: string } | null;
-	external_link: string | null;
+	content_type: ContentType | null;
+	content_path: string | null;
 	link_target: '_blank' | '_self' | null;
 	position: number;
 	placement: string;
