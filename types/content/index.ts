@@ -1,7 +1,7 @@
 import { UserProfile } from '../user';
 import { ContentBlockSchema } from '../content-blocks';
 
-export type ContentWidthSchema = 'regular' | 'large' | 'medium';
+export type ContentWidthSchema = 'REGULAR' | 'LARGE' | 'MEDIUM';
 
 export interface ContentSchema {
 	id: number;
