@@ -74,13 +74,13 @@ export interface SearchResultItem {
 	dc_title: string;
 	dc_titles_serie: string;
 	thumbnail_path: string;
-	original_cp: string;
-	original_cp_id: string;
+	original_cp: string | null;
+	original_cp_id: string | null;
 	lom_context: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
 	dcterms_issued: string;
-	dcterms_abstract: string;
+	dcterms_abstract: string | null;
 	lom_classification: string[];
 	lom_typical_age_range: string[];
 	lom_intended_enduser_role: string[];
