@@ -16,13 +16,11 @@ import {
 	CollectionEditorsLabel,
 	CollectionFragment,
 	CollectionFragmentExternalId,
-	CollectionPermission,
-	CollectionPermissionType,
 	CollectionSchema,
 } from './collection';
-import { ContentSchema } from './content';
+import { ContentSchema, ContentWidthSchema } from './content';
 import { ContentBlockSchema } from './content-blocks';
-import { ContentTypeSchema } from './core/content';
+import { ContentTypeSchema, ContentPickerTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
 import {
 	ClientEvent,
@@ -78,11 +76,10 @@ export namespace Avo {
 		type EditorsLabel = CollectionEditorsLabel;
 		type ExternalId = CollectionFragmentExternalId;
 		type Fragment = CollectionFragment;
-		type Permission = CollectionPermission;
-		type PermissionType = CollectionPermissionType;
 	}
 
 	namespace Content {
+		type ContentWidth = ContentWidthSchema;
 		type Content = ContentSchema;
 	}
 
@@ -92,6 +89,7 @@ export namespace Avo {
 
 	namespace Core {
 		type ContentType = ContentTypeSchema;
+		type ContentPickerType = ContentPickerTypeSchema;
 	}
 
 	namespace EducationOrganization {
