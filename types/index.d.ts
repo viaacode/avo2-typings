@@ -22,7 +22,7 @@ import {
 } from './collection';
 import { ContentSchema } from './content';
 import { ContentBlockSchema } from './content-blocks';
-import { ContentTypeSchema } from './core/content';
+import { ContentTypeSchema, ContentPickerTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
 import {
 	ClientEvent,
@@ -92,6 +92,7 @@ export namespace Avo {
 
 	namespace Core {
 		type ContentType = ContentTypeSchema;
+		type ContentPickerType = ContentPickerTypeSchema;
 	}
 
 	namespace EducationOrganization {

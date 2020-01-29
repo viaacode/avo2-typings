@@ -7,7 +7,7 @@ export interface MenuSchema {
 	description: string | null;
 	user_group_ids: Array<number | string> | { [key: string]: string } | null;
 	content_type: ContentType | null;
-	content_path: string | null;
+	content_path: string | number | null;
 	link_target: '_blank' | '_self' | null;
 	position: number;
 	placement: string;
