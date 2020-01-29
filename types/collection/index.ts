@@ -1,6 +1,7 @@
 import { UserProfile } from '../user';
 import { ContentTypeSchema } from '../core/content';
 import { ItemSchema } from '../item';
+import { OrganizationSchema } from '../organization';
 
 export interface CollectionSchema {
 	id: string;
@@ -24,6 +25,7 @@ export interface CollectionSchema {
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
 	organisation_id: string;
+	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
 	profile: UserProfile | null;
 	note: string | null;
@@ -59,9 +61,13 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
-	item_meta?: ItemSchema;
+
+	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems
+	item_meta?: ItemSchema | CollectionSchema;
 	is_media_fragment: boolean; // Deprecated, use type instead
-	type: 'ITEM' | 'TEXT' | 'COLLECTION'; // A collection can contain ITEM or TEXT fragments, a bundle can contain COLLECTION fragments
+
+	// A collection can contain ITEM or TEXT fragments, a bundle can contain COLLECTION fragments
+	type: 'ITEM' | 'TEXT' | 'COLLECTION';
 }
 
 export interface CollectionFragmentExternalId {
