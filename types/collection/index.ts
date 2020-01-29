@@ -1,6 +1,7 @@
 import { UserProfile } from '../user';
 import { ContentTypeSchema } from '../core/content';
 import { ItemSchema } from '../item';
+import { OrganizationSchema } from '../organization';
 
 export interface CollectionSchema {
 	id: number;
@@ -24,6 +25,7 @@ export interface CollectionSchema {
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
 	organisation_id: string;
+	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
 	profile: UserProfile;
 	note: string | null;
