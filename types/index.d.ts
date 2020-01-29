@@ -16,8 +16,6 @@ import {
 	CollectionEditorsLabel,
 	CollectionFragment,
 	CollectionFragmentExternalId,
-	CollectionPermission,
-	CollectionPermissionType,
 	CollectionSchema,
 } from './collection';
 import { ContentSchema, ContentWidthSchema } from './content';
@@ -78,8 +76,6 @@ export namespace Avo {
 		type EditorsLabel = CollectionEditorsLabel;
 		type ExternalId = CollectionFragmentExternalId;
 		type Fragment = CollectionFragment;
-		type Permission = CollectionPermission;
-		type PermissionType = CollectionPermissionType;
 	}
 
 	namespace Content {
