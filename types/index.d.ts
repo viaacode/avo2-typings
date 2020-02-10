@@ -109,7 +109,6 @@ export namespace Avo {
 
 	namespace Menu {
 		type Menu = MenuSchema;
-		type ContentType = ContentTypeSchema;
 	}
 
 	namespace Organization {

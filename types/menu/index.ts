@@ -1,4 +1,4 @@
-export type ContentTypeSchema = 'CONTENT_PAGE' | 'COLLECTION' | 'ITEM' | 'DROPDOWN' | 'INTERNAL_LINK' | 'EXTERNAL_LINK';
+import { ContentTypeSchema } from '../core/content';
 
 export interface MenuSchema {
 	id: number;
