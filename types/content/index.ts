@@ -19,5 +19,6 @@ export interface ContentSchema {
 	content_width: ContentWidthSchema;
 	profile: UserProfile;
 	user_profile_id: string | null;
+	user_group_ids: number[] | null;
 	contentBlockssBycontentId: ContentBlockSchema[]
 }

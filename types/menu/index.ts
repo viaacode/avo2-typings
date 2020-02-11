@@ -5,7 +5,7 @@ export interface MenuSchema {
 	label: string;
 	icon_name: string;
 	description: string | null;
-	user_group_ids: Array<number | string> | { [key: string]: string } | null;
+	user_group_ids: number[] | null;
 	content_type: ContentPickerTypeSchema | null;
 	content_path: string | number | null;
 	link_target: '_blank' | '_self' | null;
