@@ -61,6 +61,7 @@ export interface CollectionFragment {
 	start_oc: number | null;
 	updated_at: string;
 	use_custom_fields: boolean;
+	thumbnail_path: string | null;
 
 	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems
 	item_meta?: ItemSchema | CollectionSchema;
