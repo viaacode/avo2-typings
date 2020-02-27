@@ -88,4 +88,7 @@ export interface SearchResultItem {
 	duration_time: string;
 	duration_seconds: number;
 	administrative_type: ContentTypeSchema;
+	views_count: number;
+	plays_count: number;
+	bookmarks_count: number;
 }
