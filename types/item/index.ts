@@ -11,6 +11,7 @@ export interface ItemSchema {
 	expiry_date: null;
 	external_id: string;
 	id: number;
+	uid: string;
 	is_deleted: boolean;
 	is_orphaned: boolean;
 	is_published: boolean;

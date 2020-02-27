@@ -2,11 +2,13 @@ import { UserProfile } from '../user';
 import { ContentTypeSchema } from '../core/content';
 import { ItemSchema } from '../item';
 import { OrganizationSchema } from '../organization';
+import { Aggregate } from '../shared';
 
 export interface CollectionSchema {
 	id: string;
 	avo1_id: string | null;
 	collection_fragments: CollectionFragment[];
+	collection_fragments_aggregate: Aggregate;
 	created_at: string;
 	updated_at: string;
 	is_public: boolean;
