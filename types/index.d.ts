@@ -11,7 +11,7 @@ import {
 	AssignmentType,
 	AssignmentView,
 } from './assignment';
-import { LoginMessageSchema, IdpTypeSchema, LoginResponseSchema } from './auth';
+import { LoginMessageSchema, IdpTypeSchema, LoginResponseSchema, ErrorActionButtonSchema } from './auth';
 import {
 	CollectionEditorsLabel,
 	CollectionFragment,
@@ -70,6 +70,7 @@ export namespace Avo {
 		type IdpType = IdpTypeSchema;
 		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
+		type ErrorActionButton = ErrorActionButtonSchema;
 	}
 
 	namespace Collection {

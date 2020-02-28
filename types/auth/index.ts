@@ -9,4 +9,4 @@ export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT'
 
 export type LoginMessageSchema  = 'LOGGED_IN' | 'LOGGED_OUT';
 
-export type ErrorActionButton = 'home' | 'helpdesk';
+export type ErrorActionButtonSchema = 'home' | 'helpdesk';
