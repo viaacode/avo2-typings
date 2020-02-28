@@ -51,6 +51,7 @@ import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek
 import { StatusSchema } from './status';
 import { UserProfile, UserRole, UserSchema } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
+import { AssetInfoSchema, AssetTypeSchema, UploadAssetInfoSchema } from './file-upload';
 
 export namespace Avo {
 	namespace Assignment {
@@ -105,6 +106,12 @@ export namespace Avo {
 
 	namespace Item {
 		type Item = ItemSchema;
+	}
+
+	namespace FileUpload {
+		type AssetType = AssetTypeSchema;
+		type AssetInfo = AssetInfoSchema;
+		type UploadAssetInfo = UploadAssetInfoSchema;
 	}
 
 	namespace Menu {

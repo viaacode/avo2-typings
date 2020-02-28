@@ -52,8 +52,8 @@ export interface CollectionEditorsLabel {
 
 export interface CollectionFragment {
 	id: number;
-	collection_id: number; // Deprecated, use collection_uuid instead
-	collection_uuid: number;
+	collection_id: string | null; // Deprecated, use collection_uuid instead
+	collection_uuid: string;
 	created_at: string;
 	custom_description: string | null;
 	custom_title: string | null;
