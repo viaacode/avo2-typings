@@ -18,7 +18,7 @@ import {
 	CollectionFragmentExternalId,
 	CollectionSchema,
 } from './collection';
-import { ContentSchema, ContentWidthSchema } from './content';
+import { ContentLabelLinkSchema, ContentLabelSchema, ContentSchema, ContentWidthSchema } from './content';
 import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema, ContentPickerTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
@@ -83,6 +83,8 @@ export namespace Avo {
 	namespace Content {
 		type ContentWidth = ContentWidthSchema;
 		type Content = ContentSchema;
+		type ContentLabelLink = ContentLabelLinkSchema;
+		type ContentLabel = ContentLabelSchema;
 	}
 
 	namespace ContentBlocks {
