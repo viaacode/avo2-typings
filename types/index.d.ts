@@ -13,14 +13,13 @@ import {
 } from './assignment';
 import { LoginMessageSchema, IdpTypeSchema, LoginResponseSchema, ErrorActionButtonSchema } from './auth';
 import {
-	CollectionEditorsLabel,
 	CollectionFragment,
 	CollectionFragmentExternalId,
 	CollectionSchema,
 } from './collection';
 import { ContentLabelLinkSchema, ContentLabelSchema, ContentSchema, ContentWidthSchema } from './content';
 import { ContentBlockSchema } from './content-blocks';
-import { ContentTypeSchema, ContentPickerTypeSchema } from './core/content';
+import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
 import {
 	ClientEvent,
@@ -75,7 +74,6 @@ export namespace Avo {
 
 	namespace Collection {
 		type Collection = CollectionSchema;
-		type EditorsLabel = CollectionEditorsLabel;
 		type ExternalId = CollectionFragmentExternalId;
 		type Fragment = CollectionFragment;
 	}
@@ -94,6 +92,7 @@ export namespace Avo {
 	namespace Core {
 		type ContentType = ContentTypeSchema;
 		type ContentPickerType = ContentPickerTypeSchema;
+		type MediaType = MediaTypeSchema;
 	}
 
 	namespace EducationOrganization {
