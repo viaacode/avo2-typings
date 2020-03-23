@@ -3,6 +3,7 @@ import { UserSchema } from '../user';
 export interface LoginResponseSchema {
 	message: LoginMessageSchema;
 	userInfo?: UserSchema;
+	acceptedConditions?: boolean;
 }
 
 export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
