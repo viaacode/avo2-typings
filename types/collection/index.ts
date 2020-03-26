@@ -1,5 +1,5 @@
 import { UserProfile } from '../user';
-import { ContentTypeSchema } from '../core/content';
+import { ContentTypeSchema, MediaTypeSchema } from '../core/content';
 import { ItemSchema } from '../item';
 import { OrganizationSchema } from '../organization';
 import { Aggregate } from '../shared';
@@ -18,8 +18,6 @@ export interface CollectionSchema {
 	depublish_at: string | null;
 	external_id: string | null;
 	description: string | null;
-	label_redactie_id: number | null;
-	label_redactie: CollectionEditorsLabel | null;
 	lom_classification: string[] | null;
 	lom_context: string[] | null;
 	lom_typicalagerange: string[] | null;
@@ -36,17 +34,15 @@ export interface CollectionSchema {
 	thumbnail_path: string | null;
 	title: string;
 	type_id: number;
-	type: {
-		id: number;
-		label: string;
-	} | null;
+	type: MediaTypeSchema | null;
+	collection_labels: CollectionLabelSchema[] | null;
 }
 
-export interface CollectionEditorsLabel {
+export interface CollectionLabelSchema {
 	id: number;
-	alt_label: string;
-	created_at: string;
 	label: string;
+	collection_uuid: string;
+	created_at: string;
 	updated_at: string;
 }
 
