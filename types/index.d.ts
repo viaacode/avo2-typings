@@ -36,6 +36,8 @@ import {
 	OrganizationSchema,
 } from './organization';
 import {
+	EsIndexSchema,
+	EsIndexTypeSchema,
 	SearchDateRange,
 	SearchFilterOption,
 	SearchFilterOptions,
@@ -139,6 +141,9 @@ export namespace Avo {
 		type Request = SearchRequest;
 		type ResultItem = SearchResultItem;
 		type Search = SearchSchema;
+		type EsIndex = EsIndexSchema;
+		type EsIndexType = EsIndexTypeSchema;
+
 	}
 
 	namespace Stamboek {
