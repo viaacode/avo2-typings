@@ -52,6 +52,7 @@ import { StatusSchema } from './status';
 import { UserProfile, UserRole, UserSchema } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
 import { AssetInfoSchema, AssetTypeSchema, UploadAssetInfoSchema } from './file-upload';
+import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 
 export namespace Avo {
 	namespace Assignment {
@@ -109,6 +110,11 @@ export namespace Avo {
 
 	namespace Item {
 		type Item = ItemSchema;
+	}
+
+	namespace InteractiveTour {
+		type InteractiveTour = InteractiveTourSchema;
+		type Step = StepSchema;
 	}
 
 	namespace FileUpload {
