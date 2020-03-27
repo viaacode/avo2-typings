@@ -14,7 +14,9 @@
   "contributors": [
     "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "react-joyride": "2.2.1"
+  },
   "devDependencies": {
     "dtslint": "0.3.0",
     "tslint": "5.16.0",
