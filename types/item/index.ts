@@ -1,4 +1,4 @@
-import { ContentTypeSchema } from '../core/content';
+import { ContentTypeSchema, MediaTypeSchema } from '../core/content';
 import { OrganizationSchema } from '../organization';
 
 export interface ItemSchema {
@@ -30,11 +30,7 @@ export interface ItemSchema {
 	series: string;
 	thumbnail_path: string;
 	title: string;
-	type: {
-		id: number;
-		label: ContentTypeSchema;
-		__typename: string;
-	};
+	type: MediaTypeSchema;
 	type_id: number;
 	updated_at: string;
 	views: null;

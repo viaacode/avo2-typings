@@ -1,8 +1,8 @@
 import { ContentTypeSchema } from '../core/content';
 
 export interface SearchDateRange {
-	gte: string | '' | null | undefined;
-	lte: string | '' | null | undefined;
+	gte: string | '' | undefined;
+	lte: string | '' | undefined;
 }
 
 export interface SearchFilterOption {
@@ -31,6 +31,7 @@ export interface SearchFilters {
 	subject: string[];
 	serie: string[];
 	provider: string[];
+	collectionLabel: string[];
 }
 
 export interface SearchOptionProp {
@@ -47,7 +48,8 @@ export type SearchOrderProperty =
 	| 'addedDate'
 	| 'editDate';
 
-export type EsIndex = 'both' | 'items' | 'collections';
+export type EsIndexTypeSchema = 'items' | 'collections' | 'bundles';
+export type EsIndexSchema = 'all' | EsIndexTypeSchema;
 
 export interface SearchRequest {
 	filters?: Partial<SearchFilters>;
@@ -56,7 +58,7 @@ export interface SearchRequest {
 	orderDirection?: SearchOrderDirection;
 	from: number;
 	size: number;
-	index: EsIndex;
+	index: EsIndexSchema;
 }
 
 export interface SearchSchema {
@@ -67,6 +69,7 @@ export interface SearchSchema {
 
 export interface SearchResultItem {
 	id: string;
+	uid: string;
 	external_id: string;
 	administrative_external_id?: string;
 	pid?: string;
@@ -91,4 +94,5 @@ export interface SearchResultItem {
 	views_count: number;
 	plays_count: number;
 	bookmarks_count: number;
+	collection_labels?: string[];
 }
