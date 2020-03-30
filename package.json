@@ -1,6 +1,6 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "2.14.0",
+  "version": "2.15.0",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "types": "./types/index.d.ts",
   "scripts": {
