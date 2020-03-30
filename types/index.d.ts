@@ -16,7 +16,12 @@ import {
 	LoginResponseSchema,
 	ErrorActionButtonSchema,
 } from './auth';
-import { CollectionFragment, CollectionFragmentExternalId, CollectionSchema } from './collection';
+import {
+	CollectionFragment,
+	CollectionFragmentExternalId,
+	CollectionLabelSchema,
+	CollectionSchema,
+} from './collection';
 import {
 	ContentLabelLinkSchema,
 	ContentLabelSchema,
@@ -80,6 +85,7 @@ export namespace Avo {
 		type Collection = CollectionSchema;
 		type ExternalId = CollectionFragmentExternalId;
 		type Fragment = CollectionFragment;
+		type Label = CollectionLabelSchema;
 	}
 
 	namespace Content {

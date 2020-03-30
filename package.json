@@ -1,6 +1,6 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "2.14.2",
+  "version": "2.14.3",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "types": "./types/index.d.ts",
   "scripts": {
@@ -14,9 +14,7 @@
   "contributors": [
     "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
   ],
-  "dependencies": {
-    "react-joyride": "2.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "dtslint": "0.3.0",
     "tslint": "5.16.0",
