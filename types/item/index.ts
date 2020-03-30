@@ -1,4 +1,4 @@
-import { ContentTypeSchema, MediaTypeSchema } from '../core/content';
+import { MediaTypeSchema } from '../core/content';
 import { OrganizationSchema } from '../organization';
 
 export interface ItemSchema {
