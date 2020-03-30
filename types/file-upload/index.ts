@@ -20,3 +20,9 @@ export interface AssetInfoSchema {
 	type: AssetTypeSchema; // enum in the database
 	objectId: string | number;
 }
+
+export interface ZendeskFileInfoSchema {
+	base64: string;
+	filename: string;
+	mimeType: string;
+}

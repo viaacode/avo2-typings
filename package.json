@@ -1,10 +1,11 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "types": "./types/index.d.ts",
   "scripts": {
-    "test": "dtslint types"
+    "test": "dtslint types",
+    "lint": "tslint -p ./types"
   },
   "publishConfig": {
     "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
@@ -13,7 +14,9 @@
   "contributors": [
     "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "react-joyride": "2.2.1"
+  },
   "devDependencies": {
     "dtslint": "0.3.0",
     "tslint": "5.16.0",
