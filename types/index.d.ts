@@ -1,5 +1,4 @@
 // TypeScript Version: 2.4
-
 import {
 	AssignmentContent,
 	AssignmentContentLabel,
@@ -11,29 +10,26 @@ import {
 	AssignmentType,
 	AssignmentView,
 } from './assignment';
-import { LoginMessageSchema, IdpTypeSchema, LoginResponseSchema, ErrorActionButtonSchema } from './auth';
 import {
-	CollectionFragment,
-	CollectionFragmentExternalId,
-	CollectionSchema,
-} from './collection';
-import { ContentLabelLinkSchema, ContentLabelSchema, ContentSchema, ContentWidthSchema } from './content';
+	LoginMessageSchema,
+	IdpTypeSchema,
+	LoginResponseSchema,
+	ErrorActionButtonSchema,
+} from './auth';
+import { CollectionFragment, CollectionFragmentExternalId, CollectionSchema } from './collection';
+import {
+	ContentLabelLinkSchema,
+	ContentLabelSchema,
+	ContentSchema,
+	ContentWidthSchema,
+} from './content';
 import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
-import {
-	ClientEvent,
-	EventAction,
-	EventObjectType,
-	EventSubjectType,
-} from './event-logging';
+import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
 import { ItemSchema } from './item';
 import { MenuSchema } from './menu';
-import {
-	OrganizationContactInfo,
-	OrganizationData,
-	OrganizationSchema,
-} from './organization';
+import { OrganizationContactInfo, OrganizationData, OrganizationSchema } from './organization';
 import {
 	EsIndexSchema,
 	EsIndexTypeSchema,
@@ -52,7 +48,12 @@ import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek
 import { StatusSchema } from './status';
 import { UserProfile, UserRole, UserSchema } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
-import { AssetInfoSchema, AssetTypeSchema, UploadAssetInfoSchema } from './file-upload';
+import {
+	AssetInfoSchema,
+	AssetTypeSchema,
+	UploadAssetInfoSchema,
+	ZendeskFileInfoSchema,
+} from './file-upload';
 import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 
 export namespace Avo {
@@ -122,6 +123,7 @@ export namespace Avo {
 		type AssetType = AssetTypeSchema;
 		type AssetInfo = AssetInfoSchema;
 		type UploadAssetInfo = UploadAssetInfoSchema;
+		type ZendeskFileInfo = ZendeskFileInfoSchema;
 	}
 
 	namespace Menu {
@@ -148,7 +150,6 @@ export namespace Avo {
 		type Search = SearchSchema;
 		type EsIndex = EsIndexSchema;
 		type EsIndexType = EsIndexTypeSchema;
-
 	}
 
 	namespace Stamboek {
