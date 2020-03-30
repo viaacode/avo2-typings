@@ -54,6 +54,7 @@ import {
 	UploadAssetInfoSchema,
 	ZendeskFileInfoSchema,
 } from './file-upload';
+import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 
 export namespace Avo {
 	namespace Assignment {
@@ -111,6 +112,11 @@ export namespace Avo {
 
 	namespace Item {
 		type Item = ItemSchema;
+	}
+
+	namespace InteractiveTour {
+		type InteractiveTour = InteractiveTourSchema;
+		type Step = StepSchema;
 	}
 
 	namespace FileUpload {
