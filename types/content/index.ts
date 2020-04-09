@@ -24,6 +24,7 @@ export interface ContentLabelLinkSchema {
 
 export interface ContentSchema {
 	id: number;
+	thumbnail_path: string | null;
 	title: string;
 	description: string | null;
 	path: string | null;
