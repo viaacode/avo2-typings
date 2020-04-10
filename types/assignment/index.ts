@@ -1,6 +1,6 @@
 import { ItemSchema } from '../item';
 import { CollectionSchema } from '../collection';
-import { UserProfile, UserSchema } from '../user';
+import { UserProfile } from '../user';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -31,9 +31,9 @@ export interface AssignmentSchema {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	assignment_assignment_tags: {
-		assignment_tag: AssignmentTag[];
-	};
+	assignment_assignment_tags: Array<{
+		assignment_tag: AssignmentLabel;
+	}>;
 	assignment_responses: AssignmentResponse[];
 }
 
@@ -48,15 +48,16 @@ export interface AssignmentResponse {
 	assignment?: Partial<AssignmentSchema>;
 }
 
-export interface AssignmentTag {
+export interface AssignmentLabel {
 	id: number;
-	label: string;
-	enum_color: {
+	label: string | null; // Wiskunde
+	color_enum_value: string; // BRIGHT_RED
+	color_override: string | null; // #FFFF00
+	owner_profile_id: string;
+	enum_color?: {
 		label: string; // #FF0000
 		value: string; // BRIGHT_RED
 	};
-	color_override?: string | null; // #FF0000
-	user: UserSchema;
 }
 
 export enum AssignmentLayout {
