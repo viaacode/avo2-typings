@@ -1,7 +1,6 @@
 import { IdpTypeSchema } from '../auth';
 
 export interface UserSchema {
-	id: number;
 	first_name: string | null;
 	last_name: string | null;
 	profile: UserProfile | null;
