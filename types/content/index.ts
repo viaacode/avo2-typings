@@ -28,7 +28,6 @@ export interface ContentSchema {
 	title: string;
 	description: string | null;
 	path: string | null;
-	is_published: boolean;
 	is_public: boolean;
 	publish_at: string | null;
 	depublish_at: string | null;
