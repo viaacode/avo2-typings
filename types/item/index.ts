@@ -33,5 +33,6 @@ export interface ItemSchema {
 	type: MediaTypeSchema;
 	type_id: number;
 	updated_at: string;
+	note: string | null;
 	views: null;
 }
