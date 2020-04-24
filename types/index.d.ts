@@ -2,11 +2,11 @@
 import {
 	AssignmentContent,
 	AssignmentContentLabel,
+	AssignmentLabel,
 	AssignmentLayout,
 	AssignmentResponse,
 	AssignmentRetrieveError,
 	AssignmentSchema,
-	AssignmentTag,
 	AssignmentType,
 	AssignmentView,
 } from './assignment';
@@ -69,7 +69,7 @@ export namespace Avo {
 		type ContentLabel = AssignmentContentLabel;
 		type Response = AssignmentResponse;
 		type RetrieveError = AssignmentRetrieveError;
-		type Tag = AssignmentTag;
+		type Label = AssignmentLabel;
 		type Type = AssignmentType;
 		type View = AssignmentView;
 	}

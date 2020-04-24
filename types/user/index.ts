@@ -1,7 +1,6 @@
 import { IdpTypeSchema } from '../auth';
 
 export interface UserSchema {
-	id: number;
 	first_name: string | null;
 	last_name: string | null;
 	profile: UserProfile | null;
@@ -10,11 +9,9 @@ export interface UserSchema {
 	external_uid: number | null;
 	role: UserRole | null;
 	role_id: number | null;
-	type: string | null;
 	uid: string;
 	updated_at: string;
 	mail: string;
-	organisation_id: string | null;
 	idpmaps: IdpTypeSchema[];
 }
 
@@ -24,10 +21,9 @@ export interface UserProfile {
 	alternative_email: string;
 	avatar: string | null;
 	created_at: string;
-	location: string;
 	stamboek: string | null;
 	bio: string | null;
-	function: string | null;
+	title: string | null;
 	updated_at: string;
 	user_id: string | null;
 	user: UserSchema;
