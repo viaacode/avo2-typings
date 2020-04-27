@@ -28,6 +28,8 @@ export interface CollectionSchema {
 	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
 	profile: UserProfile | null;
+	updated_by_profile_id: string;
+	updated_by: UserProfile | null;
 	note: string | null;
 	redaction: boolean | null;
 	redaction_at: string | null;
