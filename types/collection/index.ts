@@ -18,6 +18,7 @@ export interface CollectionSchema {
 	depublish_at: string | null;
 	external_id: string | null;
 	description: string | null;
+	description_long: string | null;
 	lom_classification: string[] | null;
 	lom_context: string[] | null;
 	lom_typicalagerange: string[] | null;
