@@ -53,6 +53,7 @@ import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek
 import { StatusSchema } from './status';
 import { UserProfile, UserRole, UserSchema } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
+import { SiteVariableSchema } from './site-variable';
 import {
 	AssetInfoSchema,
 	AssetTypeSchema,
@@ -156,6 +157,10 @@ export namespace Avo {
 		type Search = SearchSchema;
 		type EsIndex = EsIndexSchema;
 		type EsIndexType = EsIndexTypeSchema;
+	}
+
+	namespace SiteVariable {
+		type SiteVariable = SiteVariableSchema;
 	}
 
 	namespace Stamboek {
