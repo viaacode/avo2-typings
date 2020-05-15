@@ -39,6 +39,9 @@ export interface CollectionSchema {
 	type_id: number;
 	type: MediaTypeSchema | null;
 	collection_labels: CollectionLabelSchema[] | null;
+	relations?: Array<{
+		object_meta: Partial<CollectionSchema>;
+	}>
 }
 
 export interface CollectionLabelSchema {
