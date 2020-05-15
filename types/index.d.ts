@@ -34,7 +34,7 @@ import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
 import { ItemSchema } from './item';
 import { MenuSchema } from './menu';
-import { NewsletterPreferences, NewsletterPreferencesKey } from './newsletter';
+import { NewsletterPreferences, NewsletterPreferenceKey } from './newsletter';
 import { OrganizationContactInfo, OrganizationData, OrganizationSchema } from './organization';
 import {
 	EsIndexSchema,
@@ -139,7 +139,7 @@ export namespace Avo {
 
 	namespace Newsletter {
 		type Preferences = NewsletterPreferences;
-		type PreferencesKey = NewsletterPreferencesKey;
+		type PreferencesKey = NewsletterPreferenceKey;
 	}
 
 	namespace Organization {
