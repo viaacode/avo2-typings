@@ -4,6 +4,7 @@ export interface LoginResponseSchema {
 	message: LoginMessageSchema;
 	userInfo?: UserSchema;
 	acceptedConditions?: boolean;
+	sessionExpiresAt: string;
 }
 
 export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
