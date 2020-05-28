@@ -18,7 +18,7 @@ export interface ContentLabelLinkSchema {
 	label_id: number;
 	created_at: string;
 	updated_at: string;
-	content_label: ContentLabelSchema[];
+	content_label: ContentLabelSchema;
 	content: ContentSchema[];
 }
 
