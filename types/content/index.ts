@@ -27,6 +27,7 @@ export interface ContentSchema {
 	thumbnail_path: string | null;
 	title: string;
 	description: string | null;
+	seo_description: string | null;
 	path: string | null;
 	is_public: boolean;
 	published_at: string;
