@@ -3,26 +3,26 @@ import { ContentBlockSchema } from '../content-blocks';
 
 export type ContentWidthSchema = 'REGULAR' | 'LARGE' | 'MEDIUM';
 
-export interface ContentLabelSchema {
+export interface ContentPageLabelSchema {
 	id: number;
 	label: string;
-	content_type: string;
+	content_type: ContentPageTypeSchema;
 	created_at: string;
 	updated_at: string;
-	content_content_labels: ContentLabelLinkSchema[];
+	content_content_labels: ContentPageLabelLinkSchema[];
 }
 
-export interface ContentLabelLinkSchema {
+export interface ContentPageLabelLinkSchema {
 	id: number;
 	content_id: number;
 	label_id: number;
 	created_at: string;
 	updated_at: string;
-	content_label: ContentLabelSchema;
-	content: ContentSchema[];
+	content_label: ContentPageLabelSchema;
+	content: ContentPageSchema[];
 }
 
-export interface ContentSchema {
+export interface ContentPageSchema {
 	id: number;
 	thumbnail_path: string | null;
 	title: string;
@@ -42,5 +42,14 @@ export interface ContentSchema {
 	user_profile_id: string | null;
 	user_group_ids: number[] | null;
 	contentBlockssBycontentId: ContentBlockSchema[];
-	labels: ContentLabelSchema[]
+	content_content_labels: ContentPageLabelLinkSchema[];
+}
+
+export enum ContentPageTypeSchema {
+	NewsItem = 'NIEUWS_ITEM',
+	FaqItem = 'FAQ_ITEM',
+	Screencast = 'SCREENCAST',
+	Page = 'PAGINA',
+	Project = 'PROJECT',
+	overview = 'OVERZICHT',
 }
