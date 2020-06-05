@@ -1,4 +1,4 @@
-// TypeScript Version: 2.4
+// Minimum TypeScript Version: 3.4
 import {
 	AssignmentContent,
 	AssignmentContentLabel,
@@ -29,7 +29,7 @@ import {
 	ContentWidthSchema,
 } from './content-page';
 import { ContentBlockSchema } from './content-blocks';
-import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core/content';
+import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core';
 import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
 import { ItemSchema } from './item';

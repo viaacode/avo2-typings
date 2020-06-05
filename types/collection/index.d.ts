@@ -1,8 +1,13 @@
 import { UserProfile } from '../user';
-import { ContentTypeSchema, MediaTypeSchema } from '../core/content';
+import { ContentTypeSchema, MediaTypeSchema } from '../core';
 import { ItemSchema } from '../item';
 import { OrganizationSchema } from '../organization';
-import { Aggregate } from '../shared';
+
+interface Aggregate {
+	aggregate: {
+		count: number;
+	};
+}
 
 export interface CollectionSchema {
 	id: string;
