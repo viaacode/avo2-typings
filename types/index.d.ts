@@ -23,11 +23,11 @@ import {
 	CollectionSchema,
 } from './collection';
 import {
-	ContentLabelLinkSchema,
-	ContentLabelSchema,
-	ContentSchema,
+	ContentPageLabelLinkSchema,
+	ContentPageLabelSchema, ContentPageTypeSchema,
+	ContentPageSchema,
 	ContentWidthSchema,
-} from './content';
+} from './content-page';
 import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core/content';
 import { ClientEducationOrganization } from './education-organizations';
@@ -90,15 +90,13 @@ export namespace Avo {
 		type Label = CollectionLabelSchema;
 	}
 
-	namespace Content {
-		type ContentWidth = ContentWidthSchema;
-		type Content = ContentSchema;
-		type ContentLabelLink = ContentLabelLinkSchema;
-		type ContentLabel = ContentLabelSchema;
-	}
-
-	namespace ContentBlocks {
-		type ContentBlocks = ContentBlockSchema;
+	namespace ContentPage {
+		type Width = ContentWidthSchema;
+		type Page = ContentPageSchema;
+		type LabelLink = ContentPageLabelLinkSchema;
+		type Label = ContentPageLabelSchema;
+		type Type = ContentPageTypeSchema;
+		type Block = ContentBlockSchema;
 	}
 
 	namespace Core {
