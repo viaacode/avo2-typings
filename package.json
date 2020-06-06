@@ -1,6 +1,6 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "2.18.0",
+  "version": "2.19.0",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "types": "./types/index.d.ts",
   "scripts": {
@@ -16,7 +16,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "dtslint": "0.3.0",
+    "dtslint": "^3.6.10",
     "tslint": "5.16.0",
     "tslint-config-airbnb": "5.11.1",
     "typescript": "3.4.5"

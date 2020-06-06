@@ -45,11 +45,10 @@ export interface ContentPageSchema {
 	content_content_labels: ContentPageLabelLinkSchema[];
 }
 
-export enum ContentPageTypeSchema {
-	NewsItem = 'NIEUWS_ITEM',
-	FaqItem = 'FAQ_ITEM',
-	Screencast = 'SCREENCAST',
-	Page = 'PAGINA',
-	Project = 'PROJECT',
-	overview = 'OVERZICHT',
-}
+export type ContentPageTypeSchema =
+	| 'NIEUWS_ITEM'
+	| 'FAQ_ITEM'
+	| 'SCREENCAST'
+	| 'PAGINA'
+	| 'PROJECT'
+	| 'OVERZICHT';

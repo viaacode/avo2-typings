@@ -1,4 +1,4 @@
-import { ContentPickerTypeSchema } from '../core/content';
+import { ContentPickerTypeSchema } from '../core';
 
 export interface MenuSchema {
 	id: number;
