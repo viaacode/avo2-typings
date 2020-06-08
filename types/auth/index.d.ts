@@ -1,10 +1,12 @@
 import { UserSchema } from '../user';
 
-export interface LoginResponseSchema {
-	message: LoginMessageSchema;
-	userInfo?: UserSchema;
-	acceptedConditions?: boolean;
+export type LoginResponseSchema = {
+	message: 'LOGGED_IN';
+	userInfo: UserSchema;
+	acceptedConditions: boolean;
 	sessionExpiresAt: string;
+} | {
+	message: 'LOGGED_OUT';
 }
 
 export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
