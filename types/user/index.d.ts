@@ -1,4 +1,5 @@
 import { IdpTypeSchema } from '../auth';
+import { OrganizationSchema } from '../organization';
 
 export interface UserSchema {
 	first_name: string | null;
@@ -12,6 +13,7 @@ export interface UserSchema {
 	uid: string;
 	updated_at: string;
 	mail: string;
+	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
 }
 
@@ -32,6 +34,8 @@ export interface UserProfile {
 	educationLevels: string[];
 	subjects: string[];
 	organizations: Array<{ organizationName: string, unitAddress?: string }>;
+	company_id: string | null;
+	company: OrganizationSchema | null;
 }
 
 export interface UserRole {
