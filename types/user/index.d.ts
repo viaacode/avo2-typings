@@ -13,6 +13,7 @@ export interface UserSchema {
 	uid: string;
 	updated_at: string;
 	mail: string;
+	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
 }
 
