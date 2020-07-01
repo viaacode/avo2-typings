@@ -35,7 +35,7 @@ export interface UserProfile {
 	subjects: string[];
 	organizations: Array<{ organizationName: string, unitAddress?: string }>;
 	company_id: string | null;
-	company: OrganizationSchema | null;
+	organisation: OrganizationSchema | null;
 }
 
 export interface UserRole {
