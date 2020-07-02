@@ -25,7 +25,6 @@ export interface UserProfile {
 	created_at: string;
 	stamboek: string | null;
 	bio: string | null;
-	title: string | null;
 	updated_at: string;
 	user_id: string | null;
 	user: UserSchema;
@@ -36,6 +35,8 @@ export interface UserProfile {
 	organizations: Array<{ organizationName: string, unitAddress?: string }>;
 	company_id: string | null;
 	organisation: OrganizationSchema | null;
+	is_exception: boolean;
+	title: string | null; // oormerk
 }
 
 export interface UserRole {
