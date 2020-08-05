@@ -39,6 +39,12 @@ export interface SearchOptionProp {
 	option_count: number;
 }
 
+export interface SearchOptionRequest {
+	index: EsIndexSchema;
+	aggregation: keyof SearchFilters;
+	size: number;
+}
+
 export type SearchOrderDirection = 'asc' | 'desc';
 
 export type SearchOrderProperty =
