@@ -65,11 +65,14 @@ export interface SearchRequest {
 	from: number;
 	size: number;
 	index: EsIndexSchema;
+	requestedAggs?: (keyof SearchFilters)[];
+	onlyAggs: boolean;
+	aggsSize?: number;
 }
 
 export interface SearchSchema {
-	results: SearchResultItem[];
-	count: number;
+	results?: SearchResultItem[];
+	count?: number;
 	aggregations: SearchFilterOptions;
 }
 
