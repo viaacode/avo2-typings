@@ -34,7 +34,7 @@ export interface CollectionSchema {
 	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
 	profile: UserProfile | null;
-	updated_by_profile_id: string;
+	updated_by_profile_id: string | null;
 	updated_by: UserProfile | null;
 	note: string | null;
 	redaction: boolean | null;
@@ -43,6 +43,7 @@ export interface CollectionSchema {
 	title: string;
 	type_id: number;
 	type: MediaTypeSchema | null;
+	briefing_id: string | null;
 	collection_labels: CollectionLabelSchema[] | null;
 	relations?: Array<{
 		object_meta: Partial<CollectionSchema>;
