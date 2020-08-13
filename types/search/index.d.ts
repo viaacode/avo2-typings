@@ -95,4 +95,6 @@ export interface SearchResultItem {
 	plays_count: number;
 	bookmarks_count: number;
 	collection_labels?: string[];
+	created_at: string;
+	updated_at: string;
 }
