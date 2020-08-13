@@ -57,10 +57,9 @@ export interface SearchRequest {
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
-	size: number;
+	size: number; // If you only want to receive aggs, you can set the size to 0
 	index: EsIndexSchema;
-	requestedAggs?: (keyof SearchFilters)[];
-	onlyAggs: boolean;
+	requestedAggs?: Array<keyof SearchFilters>;
 	aggsSize?: number;
 }
 
