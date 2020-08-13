@@ -57,13 +57,15 @@ export interface SearchRequest {
 	orderProperty?: SearchOrderProperty;
 	orderDirection?: SearchOrderDirection;
 	from: number;
-	size: number;
+	size: number; // If you only want to receive aggs, you can set the size to 0
 	index: EsIndexSchema;
+	requestedAggs?: Array<keyof SearchFilters>;
+	aggsSize?: number;
 }
 
 export interface SearchSchema {
-	results: SearchResultItem[];
-	count: number;
+	results?: SearchResultItem[];
+	count?: number;
 	aggregations: SearchFilterOptions;
 }
 
@@ -95,4 +97,6 @@ export interface SearchResultItem {
 	plays_count: number;
 	bookmarks_count: number;
 	collection_labels?: string[];
+	created_at: string;
+	updated_at: string;
 }
