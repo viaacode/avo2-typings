@@ -1,24 +1,24 @@
 export type EventAction =
+	| 'register'
+	| 'activate'
 	| 'create'
-	| 'view'
 	| 'edit'
 	| 'delete'
-	| 'copy'
+	| 'request'
+	| 'reset'
+	| 'authenticate'
+	| 'logout'
+	| 'send'
+	| 'view'
 	| 'play'
 	| 'bookmark'
+	| 'share'
 	| 'report'
-	| 'information_request'
-	| 'add_to_collection'
 	| 'publish'
 	| 'unpublish'
-	| 'share'
-	| 'login'
-	| 'password_reset'
-	| 'account'
-	| 'block'
-	| 'unblock'
-	| 'register'
-	| 'search';
+	| 'copy'
+	| 'add_to'
+	| 'remove_from';
 
 export interface ClientEvent {
 	action: EventAction;
@@ -31,13 +31,17 @@ export interface ClientEvent {
 	source_url: string; // eg: url when the event was triggered
 }
 
-export type EventSubjectType = 'user_uuid' | 'anonymous_user' | 'system';
+export type EventSubjectType = 'user' | 'system';
 
 export type EventObjectType =
-	| 'bundels'
-	| 'collections'
-	| 'avo_item_pid'
-	| 'archief_item_pid'
-	| 'user_uuid'
-	| 'anonymous_user'
-	| 'system';
+	| 'account'
+	| 'profile'
+	| 'password'
+	| 'user'
+	| 'mail'
+	| 'information'
+	| 'item'
+	| 'collection'
+	| 'bundle'
+	| 'assignment'
+	| 'search';
