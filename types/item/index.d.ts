@@ -27,6 +27,7 @@ export interface ItemSchema {
 	organisation: OrganizationSchema;
 	publish_at: string | null;
 	published_at: string | null;
+	depublish_reason: string | null;
 	series: string;
 	thumbnail_path: string;
 	title: string;

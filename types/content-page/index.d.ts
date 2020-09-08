@@ -28,6 +28,7 @@ export interface ContentPageSchema {
 	title: string;
 	description: string | null;
 	seo_description: string | null;
+	meta_description: string | null;
 	path: string | null;
 	is_public: boolean;
 	published_at: string;
