@@ -1,5 +1,6 @@
 import { MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
+import { RelationEntry } from '../collection';
 
 export interface ItemSchema {
 	bookmarks: null;
@@ -36,4 +37,5 @@ export interface ItemSchema {
 	updated_at: string;
 	note: string | null;
 	views: null;
+	relations: Array<RelationEntry<ItemSchema>> | null;
 }
