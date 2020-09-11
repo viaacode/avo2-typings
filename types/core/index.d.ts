@@ -17,3 +17,12 @@ export type MediaTypeSchema = {
 	id: number;
 	label: ContentTypeSchema;
 };
+
+export type LinkTargetSchema = '_self' | '_blank';
+
+export interface PickerItemSchema {
+	label?: string;
+	type: ContentPickerTypeSchema;
+	value: string;
+	target?: LinkTargetSchema;
+}

@@ -29,7 +29,13 @@ import {
 	ContentWidthSchema,
 } from './content-page';
 import { ContentBlockSchema } from './content-blocks';
-import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core';
+import {
+	ContentTypeSchema,
+	ContentPickerTypeSchema,
+	MediaTypeSchema,
+	LinkTargetSchema,
+	PickerItemSchema,
+} from './core';
 import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
 import { ItemSchema } from './item';
@@ -103,6 +109,8 @@ export namespace Avo {
 		type ContentType = ContentTypeSchema;
 		type ContentPickerType = ContentPickerTypeSchema;
 		type MediaType = MediaTypeSchema;
+		type PickerItem = PickerItemSchema;
+		type LinkTarget = LinkTargetSchema;
 	}
 
 	namespace EducationOrganization {

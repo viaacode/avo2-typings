@@ -1,5 +1,6 @@
 import { UserProfile } from '../user';
 import { ContentBlockSchema } from '../content-blocks';
+import { PickerItemSchema } from '../core';
 
 export type ContentWidthSchema = 'REGULAR' | 'LARGE' | 'MEDIUM';
 
@@ -7,6 +8,7 @@ export interface ContentPageLabelSchema {
 	id: number;
 	label: string;
 	content_type: ContentPageTypeSchema;
+	link_to: PickerItemSchema | null;
 	created_at: string;
 	updated_at: string;
 	content_content_labels: ContentPageLabelLinkSchema[];

@@ -90,6 +90,8 @@ export interface RelationEntry<T> {
 	id: number;
 	object: string;
 	subject: string;
+	created_at: string;
+	updated_at: string;
 	predicate: RelationType;
 	object_meta?: T;
 }
