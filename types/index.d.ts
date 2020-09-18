@@ -32,7 +32,7 @@ import { ContentBlockSchema } from './content-blocks';
 import { ContentTypeSchema, ContentPickerTypeSchema, MediaTypeSchema } from './core';
 import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
-import { ItemSchema } from './item';
+import { ItemSchema, SubtitleSchema } from './item';
 import { MenuSchema } from './menu';
 import { NewsletterPreferences, NewsletterPreferenceKey } from './newsletter';
 import { OrganizationContactInfo, OrganizationData, OrganizationSchema } from './organization';
@@ -118,6 +118,7 @@ export namespace Avo {
 
 	namespace Item {
 		type Item = ItemSchema;
+		type Subtitle = SubtitleSchema;
 	}
 
 	namespace InteractiveTour {

@@ -2,6 +2,16 @@ import { MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
 import { RelationEntry } from '../collection';
 
+export interface SubtitleSchema {
+	item_external_id: string;
+	external_id: string;
+	format: string;
+	path: string;
+	description: string;
+	created_at: string;
+	updated_at: string;
+}
+
 export interface ItemSchema {
 	bookmarks: null;
 	browse_path: string;
@@ -38,4 +48,5 @@ export interface ItemSchema {
 	note: string | null;
 	views: null;
 	relations: Array<RelationEntry<ItemSchema>> | null;
+	item_collaterals: SubtitleSchema[] | null;
 }
