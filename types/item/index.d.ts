@@ -2,6 +2,14 @@ import { MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
 import { RelationEntry } from '../collection';
 
+export interface ItemCountSchema {
+	bookmarks: number;
+	in_assignment: number;
+	in_collection: number;
+	plays: number;
+	views: number;
+}
+
 export interface SubtitleSchema {
 	item_external_id: string;
 	external_id: string;
@@ -48,5 +56,6 @@ export interface ItemSchema {
 	note: string | null;
 	views: null;
 	relations: Array<RelationEntry<ItemSchema>> | null;
+	item_counts: ItemCountSchema | null;
 	item_collaterals: SubtitleSchema[] | null;
 }
