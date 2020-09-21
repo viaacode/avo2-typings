@@ -45,9 +45,7 @@ export interface CollectionSchema {
 	type: MediaTypeSchema | null;
 	briefing_id: string | null;
 	collection_labels: CollectionLabelSchema[] | null;
-	relations?: Array<{
-		object_meta: Partial<CollectionSchema>;
-	}>
+	relations: Array<RelationEntry<CollectionSchema>> | null;
 }
 
 export interface CollectionLabelSchema {
@@ -84,4 +82,16 @@ export interface CollectionFragmentExternalId {
 	external_id: string;
 	mediamosa_id: string;
 	type_label: ContentTypeSchema;
+}
+
+export type RelationType = 'IS_COPY_OF' | 'IS_REPLACED_BY' | 'REPLACES' | 'HAS_COPY';
+
+export interface RelationEntry<T> {
+	id: number;
+	object: string;
+	subject: string;
+	created_at: string;
+	updated_at: string;
+	predicate: RelationType;
+	object_meta?: T;
 }
