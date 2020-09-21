@@ -9,7 +9,7 @@ export type LoginResponseSchema = {
 	message: 'LOGGED_OUT';
 }
 
-export type IdpTypeSchema = 'HETARCHIEF' | 'VIAA' | 'SMARTSCHOOL' | 'KLASCEMENT';
+export type IdpTypeSchema = 'HETARCHIEF' | 'SMARTSCHOOL' | 'KLASCEMENT';
 
 export type LoginMessageSchema  = 'LOGGED_IN' | 'LOGGED_OUT';
 
