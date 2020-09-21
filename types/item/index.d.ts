@@ -10,6 +10,16 @@ export interface ItemCountSchema {
 	views: number;
 }
 
+export interface SubtitleSchema {
+	item_external_id: string;
+	external_id: string;
+	format: string;
+	path: string;
+	description: string;
+	created_at: string;
+	updated_at: string;
+}
+
 export interface ItemSchema {
 	bookmarks: null;
 	browse_path: string;
@@ -47,4 +57,5 @@ export interface ItemSchema {
 	views: null;
 	relations: Array<RelationEntry<ItemSchema>> | null;
 	item_counts: ItemCountSchema | null;
+	item_collaterals: SubtitleSchema[] | null;
 }
