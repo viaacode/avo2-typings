@@ -4,6 +4,7 @@ import { OrganizationSchema } from '../organization';
 export interface UserSchema {
 	first_name: string | null;
 	last_name: string | null;
+	full_name: string | null;
 	profile: UserProfile | null;
 	created_at: string;
 	expires_at: string | null;
