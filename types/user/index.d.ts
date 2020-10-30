@@ -16,6 +16,10 @@ export interface UserSchema {
 	mail: string;
 	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
+	idpmapObjects: Array<{
+		idp: IdpTypeSchema,
+		idp_user_id: string
+	}>;
 }
 
 export interface UserProfile {
@@ -37,7 +41,8 @@ export interface UserProfile {
 	company_id: string | null;
 	organisation: OrganizationSchema | null;
 	is_exception: boolean;
-	title: string | null; // oormerk
+	title: string | null;
+	business_category: string | null;
 }
 
 export interface UserRole {
