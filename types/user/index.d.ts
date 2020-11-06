@@ -6,13 +6,14 @@ export interface UserSchema {
 	last_name: string | null;
 	full_name: string | null;
 	profile: UserProfile | null;
-	created_at: string;
-	expires_at: string | null;
 	external_uid: number | null;
 	role: UserRole | null;
 	role_id: number | null;
 	uid: string;
+	created_at: string;
 	updated_at: string;
+	last_access_at: string;
+	expires_at: string | null;
 	mail: string;
 	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
