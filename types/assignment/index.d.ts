@@ -13,8 +13,8 @@ export type AssignmentRetrieveError =
 	| 'PAST_DEADLINE';
 
 export interface AssignmentSchema {
-	id: string;
-	_id: number; // Deprecated, use id instead
+	uuid: string;
+	id: number; // Deprecated, use id instead
 	title: string;
 	description: string;
 	assignment_type: AssignmentType;
@@ -32,10 +32,10 @@ export interface AssignmentSchema {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	assignment_assignment_tags: Array<{
+	tags: Array<{
 		assignment_tag: AssignmentLabel;
 	}>;
-	assignment_responses: AssignmentResponse[];
+	responses: AssignmentResponse[];
 }
 
 export interface AssignmentResponse {
@@ -59,6 +59,7 @@ export interface AssignmentLabel {
 		label: string; // #FF0000
 		value: string; // BRIGHT_RED
 	};
+	profile?: UserProfile;
 }
 
 export enum AssignmentLayout {
