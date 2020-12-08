@@ -12,7 +12,7 @@ export interface UserSchema {
 	uid: string;
 	created_at: string;
 	updated_at: string;
-	last_access_at: string;
+	last_access_at: string | null; // Migrated users from avo1 do not have a last login date yet
 	expires_at: string | null;
 	mail: string;
 	is_blocked: boolean | null;

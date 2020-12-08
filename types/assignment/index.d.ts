@@ -13,7 +13,8 @@ export type AssignmentRetrieveError =
 	| 'PAST_DEADLINE';
 
 export interface AssignmentSchema {
-	id: number;
+	id: string;
+	_id: number; // Deprecated, use id instead
 	title: string;
 	description: string;
 	assignment_type: AssignmentType;
