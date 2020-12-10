@@ -40,7 +40,8 @@ export interface AssignmentSchema {
 
 export interface AssignmentResponse {
 	id: number;
-	assignment_id: string;
+	assignment_uuid: string;
+	assignment_id: number;
 	collection_uuid?: string | null;
 	submitted_at?: string | null; // ISO date string
 	owner_profile_ids: string[];
