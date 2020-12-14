@@ -58,7 +58,14 @@ import {
 } from './search';
 import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek';
 import { StatusSchema } from './status';
-import { UserProfile, UserRole, UserSchema } from './user';
+import {
+	BulkBlockUsersBodySchema,
+	BulkDeleteUsersBodySchema,
+	UserDeleteOptionSchema,
+	UserProfile,
+	UserRole,
+	UserSchema,
+} from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
 import { SiteVariableSchema } from './site-variable';
 import {
@@ -194,5 +201,8 @@ export namespace Avo {
 		type Profile = UserProfile;
 		type Role = UserRole;
 		type User = UserSchema;
+		type BulkBlockUsersBody = BulkBlockUsersBodySchema;
+		type BulkDeleteUsersBody = BulkDeleteUsersBodySchema;
+		type UserDeleteOption = UserDeleteOptionSchema;
 	}
 }

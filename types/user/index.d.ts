@@ -51,3 +51,21 @@ export interface UserRole {
 	label: string;
 	name: string;
 }
+
+export type UserDeleteOptionSchema =
+	| 'DELETE_PRIVATE_KEEP_NAME'
+	| 'TRANSFER_PUBLIC'
+	| 'TRANSFER_ALL'
+	| 'ANONYMIZE_PUBLIC'
+	| 'DELETE_ALL';
+
+export interface BulkDeleteUsersBodySchema {
+	profileIds: string[];
+	deleteOption: UserDeleteOptionSchema;
+	transferToProfileId?: string;
+}
+
+export interface BulkBlockUsersBodySchema {
+	profileIds: string[];
+	isBlocked: boolean;
+}
