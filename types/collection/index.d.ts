@@ -46,12 +46,36 @@ export interface CollectionSchema {
 	briefing_id: string | null;
 	collection_labels: CollectionLabelSchema[] | null;
 	relations: Array<RelationEntry<CollectionSchema>> | null;
+	is_managed: boolean;
+	management: CollectionManagementSchema | null;
 }
 
 export interface CollectionLabelSchema {
 	id: number;
 	label: string;
 	collection_uuid: string;
+	created_at: string;
+	updated_at: string;
+}
+
+export interface CollectionManagementSchema {
+	id: number;
+	collection_id: string;
+	manager_profile_id: string | null;
+	current_status: ManagementStatus | null;
+	status_valid_until: string | null;
+	created_at: string;
+	updated_at: string;
+	QC: CollectionManagementQualityCheckSchema[] | null;
+}
+
+export interface CollectionManagementQualityCheckSchema {
+	id: number;
+	collection_id: string;
+	qc_label: string;
+	assignee_profile_id: string;
+	comment: string | null;
+	qc_status: string | null;
 	created_at: string;
 	updated_at: string;
 }
@@ -95,3 +119,9 @@ export interface RelationEntry<T> {
 	predicate: RelationType;
 	object_meta?: T;
 }
+
+export type ManagementStatus =
+	| 'Actueel'
+	| 'Te actualiseren'
+	| 'Volledig te herzien'
+	| 'Gearchiveerd';
