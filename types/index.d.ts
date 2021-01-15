@@ -20,6 +20,8 @@ import {
 	CollectionFragment,
 	CollectionFragmentExternalId,
 	CollectionLabelSchema,
+	CollectionManagementQualityCheckSchema,
+	CollectionManagementSchema,
 	CollectionSchema,
 } from './collection';
 import {
@@ -101,6 +103,8 @@ export namespace Avo {
 		type ExternalId = CollectionFragmentExternalId;
 		type Fragment = CollectionFragment;
 		type Label = CollectionLabelSchema;
+		type Management = CollectionManagementSchema;
+		type ManagementQualityCheck = CollectionManagementQualityCheckSchema;
 	}
 
 	namespace ContentPage {
