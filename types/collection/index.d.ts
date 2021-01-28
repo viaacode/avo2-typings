@@ -64,6 +64,7 @@ export interface CollectionManagementSchema {
 	manager_profile_id: string | null;
 	current_status: ManagementStatus | null;
 	status_valid_until: string | null;
+	note: string | null;
 	created_at: string;
 	updated_at: string;
 	QC: CollectionManagementQualityCheckSchema[] | null;
@@ -75,7 +76,7 @@ export interface CollectionManagementQualityCheckSchema {
 	qc_label: string;
 	assignee_profile_id: string;
 	comment: string | null;
-	qc_status: string | null;
+	qc_status: boolean | null;
 	created_at: string;
 	updated_at: string;
 }
