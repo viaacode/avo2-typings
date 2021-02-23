@@ -16,8 +16,6 @@ export interface UserSchema {
 	expires_at: string | null;
 	mail: string;
 	is_blocked: boolean | null;
-	blocked_at: string;
-	unblocked_at: string;
 	idpmaps: IdpTypeSchema[];
 	idpmapObjects: Array<{
 		idp: IdpTypeSchema;
