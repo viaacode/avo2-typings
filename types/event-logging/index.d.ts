@@ -26,7 +26,7 @@ export type EventAction =
 	| 'assign'
 	| 'mail'
 	| 'deactivate'
-	| 'activate'
+	| 'activate';
 
 export interface ClientEvent {
 	action: EventAction;
@@ -37,6 +37,7 @@ export interface ClientEvent {
 	message: any; // user played item xxx on avo
 	occurred_at: string | null;
 	source_url: string; // eg: url when the event was triggered
+	source_querystring: string;
 }
 
 export type EventSubjectType = 'user' | 'system';

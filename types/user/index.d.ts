@@ -18,8 +18,8 @@ export interface UserSchema {
 	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
 	idpmapObjects: Array<{
-		idp: IdpTypeSchema,
-		idp_user_id: string
+		idp: IdpTypeSchema;
+		idp_user_id: string;
 	}>;
 }
 
@@ -38,7 +38,10 @@ export interface UserProfile {
 	permissions: string[] | undefined;
 	educationLevels: string[];
 	subjects: string[];
-	organizations: Array<{ organizationName: string, unitAddress?: string }>;
+	organizations: Array<{
+		organizationName: string;
+		unitAddress?: string;
+	}>;
 	company_id: string | null;
 	organisation: OrganizationSchema | null;
 	is_exception: boolean;
