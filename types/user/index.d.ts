@@ -80,3 +80,7 @@ export interface BulkBlockUsersBodySchema {
 	profileIds: string[];
 	isBlocked: boolean;
 }
+
+export interface BulkTempAccessBodySchema extends BulkBlockUsersBodySchema {
+	tempAccessUntil: string;
+}

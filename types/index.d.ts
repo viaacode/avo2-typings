@@ -26,7 +26,8 @@ import {
 } from './collection';
 import {
 	ContentPageLabelLinkSchema,
-	ContentPageLabelSchema, ContentPageTypeSchema,
+	ContentPageLabelSchema,
+	ContentPageTypeSchema,
 	ContentPageSchema,
 	ContentWidthSchema,
 } from './content-page';
@@ -63,6 +64,7 @@ import { StatusSchema } from './status';
 import {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
+	BulkTempAccessBodySchema,
 	UserDeleteOptionSchema,
 	UserProfile,
 	UserRole,
@@ -206,6 +208,7 @@ export namespace Avo {
 		type Role = UserRole;
 		type User = UserSchema;
 		type BulkBlockUsersBody = BulkBlockUsersBodySchema;
+		type BulkTempAccessBody = BulkTempAccessBodySchema;
 		type BulkDeleteUsersBody = BulkDeleteUsersBodySchema;
 		type UserDeleteOption = UserDeleteOptionSchema;
 	}

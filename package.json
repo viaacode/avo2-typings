@@ -1,25 +1,25 @@
 {
-  "name": "@viaa/avo2-types",
-  "version": "2.31.0",
-  "description": "TypeScript types for the AVO2 NodeJS & React apps",
-  "types": "./types/index.d.ts",
-  "scripts": {
-    "test": "dtslint types",
-    "lint": "tslint -p ./types"
-  },
-  "publishConfig": {
-    "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
-  },
-  "author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
-  "contributors": [
-    "Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
-    "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "dtslint": "^3.6.10",
-    "tslint": "5.16.0",
-    "tslint-config-airbnb": "5.11.1",
-    "typescript": "3.4.5"
-  }
+	"name": "@viaa/avo2-types",
+	"version": "2.32.0",
+	"description": "TypeScript types for the AVO2 NodeJS & React apps",
+	"types": "./types/index.d.ts",
+	"scripts": {
+		"test": "dtslint types",
+		"lint": "tslint -p ./types"
+	},
+	"publishConfig": {
+		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
+	},
+	"author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
+	"contributors": [
+		"Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
+		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"dtslint": "^3.6.10",
+		"tslint": "5.16.0",
+		"tslint-config-airbnb": "5.11.1",
+		"typescript": "3.4.5"
+	}
 }
