@@ -21,6 +21,7 @@ export interface UserSchema {
 		idp: IdpTypeSchema;
 		idp_user_id: string;
 	}>;
+	temp_access: UserTempAccess | null;
 }
 
 export interface UserProfile {
@@ -53,6 +54,13 @@ export interface UserRole {
 	id: number;
 	label: string;
 	name: string;
+}
+
+export interface UserTempAccess {
+	created_at?: string | null;
+	updated_at?: string | null;
+	from?: string | null;
+	until?: string | null;
 }
 
 export type UserDeleteOptionSchema =

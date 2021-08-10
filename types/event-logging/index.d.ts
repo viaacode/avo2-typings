@@ -53,4 +53,5 @@ export type EventObjectType =
 	| 'collection'
 	| 'bundle'
 	| 'assignment'
-	| 'search';
+	| 'search'
+	| 'avo_assignment';
