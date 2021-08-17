@@ -69,12 +69,14 @@ pipeline {
             }
             steps {
                   container('npm') {
-
-					script {
-								sh'''#!/bin/bash
-								npm --registry=https://registry.npmjs.org install && npm run build || exit 1
-								'''
-					} // script
+			script {
+				sh'''#!/bin/bash
+				if [ -f /tmp/.npmrc ]; then
+                                  rm /tmp/.npmrc
+                                fi
+				npm --registry=https://registry.npmjs.org install || exit 1
+				'''
+				} // script
                 }
             }
         }// end stage build
