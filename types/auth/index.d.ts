@@ -9,7 +9,13 @@ export type LoginResponseSchema = {
 	message: 'LOGGED_OUT';
 }
 
-export type IdpTypeSchema = 'HETARCHIEF' | 'SMARTSCHOOL' | 'KLASCEMENT';
+
+export enum IdpTypeSchema {
+	HetArchief = 'HETARCHIEF',
+	Smartschool = 'SMARTSCHOOL',
+	KlasCement = 'KLASCEMENT',
+	AcmIdm = 'ACMIDM',
+}
 
 export type LoginMessageSchema  = 'LOGGED_IN' | 'LOGGED_OUT';
 
