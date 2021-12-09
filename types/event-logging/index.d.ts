@@ -38,6 +38,7 @@ export interface ClientEvent {
 	occurred_at: string | null;
 	source_url: string; // eg: url when the event was triggered
 	source_querystring?: string;
+	resource?: Record<string, string | boolean | number>;
 }
 
 export type EventSubjectType = 'user' | 'system';
