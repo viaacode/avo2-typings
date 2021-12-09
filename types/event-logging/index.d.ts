@@ -34,7 +34,7 @@ export interface ClientEvent {
 	subject_type: EventSubjectType;
 	object: string; // entity being modified
 	object_type: EventObjectType;
-	message: any; // user played item xxx on avo
+	message?: any; // user played item xxx on avo
 	occurred_at: string | null;
 	source_url: string; // eg: url when the event was triggered
 	source_querystring?: string;
