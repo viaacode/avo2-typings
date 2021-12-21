@@ -54,4 +54,5 @@ export type EventObjectType =
 	| 'bundle'
 	| 'assignment'
 	| 'search'
-	| 'avo_assignment';
+	| 'avo_assignment'
+	| 'quick_lane';
