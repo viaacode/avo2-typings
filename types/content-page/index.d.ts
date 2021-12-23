@@ -27,6 +27,7 @@ export interface ContentPageLabelLinkSchema {
 export interface ContentPageSchema {
 	id: number;
 	thumbnail_path: string | null;
+	seo_image_path: string | null;
 	title: string;
 	description: string | null;
 	seo_description: string | null;
