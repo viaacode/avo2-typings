@@ -11,7 +11,7 @@ export type LoginResponseSchema =
 			message: 'LOGGED_OUT';
 	  };
 
-export type IdpTypeSchema = 'HETARCHIEF' | 'SMARTSCHOOL' | 'KLASCEMENT' | 'VLAAMSEOVERHEID' | 'LEERID';
+export type IdpTypeSchema = 'HETARCHIEF' | 'SMARTSCHOOL' | 'KLASCEMENT' | 'VLAAMSEOVERHEID';
 
 export type LoginMessageSchema = 'LOGGED_IN' | 'LOGGED_OUT';
 
