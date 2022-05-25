@@ -81,6 +81,9 @@ export interface CollectionManagementQualityCheckSchema {
 	updated_at: string;
 }
 
+type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';
+type CollectionFragmentTypeDict<T> = { [key in CollectionFragmentType]: T }; // eslint-disable-line
+
 export interface CollectionFragment {
 	id: number;
 	collection_uuid: string;
@@ -100,7 +103,7 @@ export interface CollectionFragment {
 	is_media_fragment: boolean; // Deprecated, use type instead
 
 	// A collection can contain ITEM or TEXT fragments, a bundle can contain COLLECTION fragments
-	type: 'ITEM' | 'TEXT' | 'COLLECTION';
+	type: CollectionFragmentType;
 }
 
 export interface CollectionFragmentExternalId {
