@@ -1,12 +1,18 @@
 // Minimum TypeScript Version: 3.4
 import {
+	AssignmentBlock,
+	AssignmentBlockType,
 	AssignmentContent,
 	AssignmentContentLabel,
 	AssignmentLabel,
+	AssignmentLabelType,
+	AssignmentLabel_v2,
 	AssignmentLayout,
 	AssignmentResponse,
+	AssignmentResponse_v2,
 	AssignmentRetrieveError,
 	AssignmentSchema,
+	AssignmentSchema_v2,
 	AssignmentType,
 	AssignmentView,
 } from './assignment';
@@ -84,13 +90,19 @@ export namespace Avo {
 	namespace Assignment {
 		type Layout = AssignmentLayout;
 		type Assignment = AssignmentSchema;
+		type Assignment_v2 = AssignmentSchema_v2;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
 		type Response = AssignmentResponse;
+		type Response_v2 = AssignmentResponse_v2;
 		type RetrieveError = AssignmentRetrieveError;
 		type Label = AssignmentLabel;
+		type Label_v2 = AssignmentLabel_v2;
 		type Type = AssignmentType;
 		type View = AssignmentView;
+		type BlockType = AssignmentBlockType;
+		type LabelType = AssignmentLabelType;
+		type Block = AssignmentBlock;
 	}
 
 	namespace Auth {
