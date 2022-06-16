@@ -59,6 +59,7 @@ export interface AssignmentSchema_v2 {
 		assignment_label: AssignmentLabel;
 	}>;
 	responses: AssignmentResponse[];
+	blocks: AssignmentBlock[];
 }
 
 export interface AssignmentBlock {
