@@ -55,10 +55,8 @@ export interface AssignmentSchema_v2 {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	labels: Array<{
-		assignment_label: AssignmentLabel;
-	}>;
-	responses: AssignmentResponse[];
+	labels: AssignmentLabel_v2[]
+	responses: AssignmentResponse_v2[];
 	blocks: AssignmentBlock[];
 }
 
