@@ -9,10 +9,7 @@ export type AssignmentView = 'assignments' | 'finished_assignments';
 export type AssignmentBlockType = 'TEXT' | 'ITEM' | 'ZOEK';
 export type AssignmentLabelType = 'LABEL' | 'CLASS';
 
-export type AssignmentRetrieveError =
-	| 'DELETED'
-	| 'NOT_YET_AVAILABLE'
-	| 'PAST_DEADLINE';
+export type AssignmentRetrieveError = 'DELETED' | 'NOT_YET_AVAILABLE' | 'PAST_DEADLINE';
 
 export interface AssignmentSchema {
 	uuid: string;
@@ -55,7 +52,7 @@ export interface AssignmentSchema_v2 {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	labels: AssignmentLabel_v2[]
+	labels: { assignment_label: AssignmentLabel_v2 }[];
 	responses: AssignmentResponse_v2[];
 	blocks: AssignmentBlock[];
 }
@@ -75,7 +72,7 @@ export interface AssignmentBlock {
 	position: number;
 	thumbnail_path: string;
 	is_deleted: boolean;
-	item?: ItemSchema & { replacement_for?: string } | null;
+	item?: (ItemSchema & { replacement_for?: string }) | null;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
 }
