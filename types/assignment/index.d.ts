@@ -92,7 +92,7 @@ export interface AssignmentResponse {
 export interface AssignmentResponse_v2 {
 	id: string;
 	assignment_id: string;
-	owner_profile_ids: string[];
+	owner_profile_id: string;
 	collection_title?: string | null;
 	assignment?: Partial<AssignmentSchema>;
 }
