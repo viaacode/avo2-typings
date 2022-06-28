@@ -54,6 +54,9 @@ export interface AssignmentSchema_v2 {
 	updated_at: string; // ISO date string
 	labels: { assignment_label: AssignmentLabel_v2 }[];
 	responses: AssignmentResponse_v2[];
+	view_count: {
+		count: number;
+	};
 	blocks: AssignmentBlock[];
 }
 
