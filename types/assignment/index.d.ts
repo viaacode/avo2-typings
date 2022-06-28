@@ -1,6 +1,6 @@
 import { ItemSchema } from '../item';
 import { CollectionSchema } from '../collection';
-import { UserProfile } from '../user';
+import { UserProfile, UserSchema } from '../user';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -47,6 +47,7 @@ export interface AssignmentSchema_v2 {
 	available_at?: string | null; // ISO date string
 	deadline_at?: string | null; // ISO date string
 	owner_profile_id: string;
+	owner?: Partial<UserSchema>;
 	profile?: UserProfile;
 	is_deleted: boolean;
 	is_collaborative: boolean;
@@ -95,9 +96,12 @@ export interface AssignmentResponse {
 export interface AssignmentResponse_v2 {
 	id: string;
 	assignment_id: string;
-	owner_profile_id: string;
 	collection_title?: string | null;
 	assignment?: Partial<AssignmentSchema>;
+	owner_profile_id: string;
+	owner?: Partial<UserSchema>;
+	created_at: string
+	updated_at: string
 }
 
 export interface AssignmentLabel {
