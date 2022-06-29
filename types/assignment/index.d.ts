@@ -97,7 +97,7 @@ export interface AssignmentResponse_v2 {
 	id: string;
 	assignment_id: string;
 	collection_title?: string | null;
-	assignment?: Partial<AssignmentSchema>;
+	assignment?: Partial<AssignmentSchema_v2>;
 	owner_profile_id: string;
 	owner?: Partial<UserSchema>;
 	created_at: string
