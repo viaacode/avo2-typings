@@ -55,7 +55,7 @@ export interface ItemSchema {
 	updated_at: string;
 	note: string | null;
 	views: null;
-	relations: Array<RelationEntry<ItemSchema>> | null;
+	relations?: Array<RelationEntry<ItemSchema>> | null;
 	item_counts: ItemCountSchema | null;
 	item_collaterals: SubtitleSchema[] | null;
 }

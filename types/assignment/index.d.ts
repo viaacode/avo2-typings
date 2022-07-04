@@ -76,9 +76,11 @@ export interface AssignmentBlock {
 	position: number;
 	thumbnail_path: string;
 	is_deleted: boolean;
-	item?: (ItemSchema & { replacement_for?: string }) | null;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
+
+	// This property won't be selectable from the database but has to be manually filled using the Assignment.getAssignmentWithContent
+	item_meta?: (ItemSchema & { replacement_for?: string }) | null;
 }
 
 export interface AssignmentResponse {
