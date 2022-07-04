@@ -55,7 +55,7 @@ export interface ItemSchema {
 	updated_at: string;
 	note: string | null;
 	views: null;
-	relations?: Array<RelationEntry<ItemSchema>> | null;
+	relations?: Array<RelationEntry<any>> | null; // any => ItemSchema, but causes: TS2615: Type of property 'object_meta' circularly references itself in mapped type
 	item_counts: ItemCountSchema | null;
 	item_collaterals: SubtitleSchema[] | null;
 }
