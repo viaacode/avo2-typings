@@ -6,7 +6,7 @@ export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = ItemSchema | CollectionSchema;
 export type AssignmentView = 'assignments' | 'finished_assignments';
-export type AssignmentBlockType = 'TEXT' | 'ITEM' | 'ZOEK';
+export type AssignmentBlockType = 'TEXT' | 'ITEM' | 'ZOEK' | 'BOUW';
 export type AssignmentLabelType = 'LABEL' | 'CLASS';
 
 export type AssignmentRetrieveError = 'DELETED' | 'NOT_YET_AVAILABLE' | 'PAST_DEADLINE';
