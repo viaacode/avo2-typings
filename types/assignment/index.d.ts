@@ -65,10 +65,10 @@ export interface AssignmentBlock {
 	id: string;
 	assignment_id: string;
 	fragment_id: string;
-	custom_title: string;
-	custom_description: string;
-	original_title: string;
-	original_description: string;
+	custom_title: string | null;
+	custom_description: string | null;
+	original_title: string | null;
+	original_description: string | null;
 	use_custom_fields: boolean;
 	start_oc: number;
 	end_oc: number;
