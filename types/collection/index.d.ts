@@ -1,5 +1,5 @@
 import { UserProfile } from '../user';
-import { ContentTypeSchema, MediaTypeSchema } from '../core';
+import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import { ItemSchema } from '../item';
 import { OrganizationSchema } from '../organization';
 
@@ -84,26 +84,11 @@ export interface CollectionManagementQualityCheckSchema {
 type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';
 type CollectionFragmentTypeDict<T> = { [key in CollectionFragmentType]: T }; // eslint-disable-line
 
-export interface CollectionFragment {
-	id: number;
+export interface CollectionFragment extends BlockItemBaseSchema {
 	collection_uuid: string;
-	created_at: string;
-	custom_description: string | null;
-	custom_title: string | null;
-	end_oc: number | null;
 	external_id: string;
-	position: number;
-	start_oc: number | null;
-	updated_at: string;
-	use_custom_fields: boolean;
-	thumbnail_path: string | null;
 
-	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems
-	item_meta?: ItemSchema | CollectionSchema;
 	is_media_fragment: boolean; // Deprecated, use type instead
-
-	// A collection can contain ITEM or TEXT fragments, a bundle can contain COLLECTION fragments
-	type: CollectionFragmentType;
 }
 
 export interface CollectionFragmentExternalId {
