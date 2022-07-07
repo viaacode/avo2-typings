@@ -82,7 +82,6 @@ export interface CollectionManagementQualityCheckSchema {
 }
 
 type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';
-type CollectionFragmentTypeDict<T> = { [key in CollectionFragmentType]: T }; // eslint-disable-line
 
 export interface CollectionFragment extends BlockItemBaseSchema {
 	collection_uuid: string;
