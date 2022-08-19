@@ -26,6 +26,7 @@ export interface CollectionSchema {
 	description_long: string | null;
 	lom_classification: string[] | null;
 	lom_context: string[] | null;
+	lom_thema: string[] | null;
 	lom_typicalagerange: string[] | null;
 	lom_intendedenduserrole: string[] | null;
 	lom_keywords: string[] | null;

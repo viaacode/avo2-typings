@@ -84,6 +84,7 @@ export interface SearchResultItem {
 	original_cp: string | null;
 	original_cp_id: string | null;
 	lom_context: string[];
+	lom_thema: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
 	dcterms_issued: string;

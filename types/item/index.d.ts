@@ -38,6 +38,7 @@ export interface ItemSchema {
 	issued_edtf: string;
 	lom_classification: string[];
 	lom_context: string[];
+	lom_thema: string[];
 	lom_intendedenduserrole: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
