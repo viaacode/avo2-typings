@@ -1,11 +1,13 @@
 {
 	"name": "@viaa/avo2-types",
-	"version": "2.40.3",
+	"version": "2.41.0",
 	"description": "TypeScript types for the AVO2 NodeJS & React apps",
 	"types": "./types/index.d.ts",
 	"scripts": {
 		"test": "dtslint types",
-		"lint": "tslint -p ./types"
+		"lint": "tslint -p ./types",
+		"copy-to-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/types && cp -r types package.json ../avo2-client/node_modules/@viaa/avo2-types",
+		"copy-to-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/types && cp -r types package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types"
 	},
 	"publishConfig": {
 		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
@@ -15,9 +17,9 @@
 		"Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
 		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
 	],
-	"dependencies": {},
 	"devDependencies": {
 		"dtslint": "^3.6.10",
+		"rimraf": "3.0.2",
 		"tslint": "5.16.0",
 		"tslint-config-airbnb": "5.11.1",
 		"typescript": "4.7.4"

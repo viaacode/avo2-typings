@@ -9,6 +9,7 @@ export interface SearchFilterOption {
 	type: ContentTypeSchema;
 	educationLevel: string;
 	domain: string;
+	thema: string;
 	language: string;
 	keyword: string;
 	subject: string;
@@ -25,6 +26,7 @@ export interface SearchFilters {
 	type: ContentTypeSchema[];
 	educationLevel: string[];
 	domain: string[];
+	thema: string[];
 	broadcastDate: SearchDateRange;
 	language: string[];
 	keyword: string[];
