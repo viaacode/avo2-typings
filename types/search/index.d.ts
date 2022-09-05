@@ -8,7 +8,7 @@ export interface SearchDateRange {
 export interface SearchFilterOption {
 	type: ContentTypeSchema;
 	educationLevel: string;
-	domain: string;
+	educationDegree: string;
 	thema: string;
 	language: string;
 	keyword: string;
@@ -25,7 +25,7 @@ export interface SearchFilters {
 	query: string;
 	type: ContentTypeSchema[];
 	educationLevel: string[];
-	domain: string[];
+	educationDegree: string[];
 	thema: string[];
 	broadcastDate: SearchDateRange;
 	language: string[];

@@ -42,7 +42,7 @@ export interface ItemSchema {
 	lom_intendedenduserrole: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
-	lom_typicalagerange: string[];
+	lom_typical_age_range: string[];
 	org_id: string;
 	organisation: OrganizationSchema;
 	publish_at: string | null;
