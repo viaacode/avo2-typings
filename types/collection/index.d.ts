@@ -27,7 +27,7 @@ export interface CollectionSchema {
 	lom_classification: string[] | null;
 	lom_context: string[] | null;
 	lom_thema: string[] | null;
-	lom_typicalagerange: string[] | null;
+	lom_typical_age_range: string[] | null;
 	lom_intendedenduserrole: string[] | null;
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
