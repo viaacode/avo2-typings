@@ -20,7 +20,7 @@ export type IdpTypeSchema =
 	// Deprecated, use VLAAMSEOVERHEID__SUB_ID instead
 	| 'VLAAMSEOVERHEID';
 
-export const IdpLinkedSuccessQueryParam = 'linked';
+export type IdpLinkedSuccessQueryParam = 'linked';
 
 export type LoginMessageSchema = 'LOGGED_IN' | 'LOGGED_OUT';
 
