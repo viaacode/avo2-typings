@@ -53,7 +53,7 @@ export interface AssignmentSchema_v2 {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	labels: { assignment_label: AssignmentLabel_v2 }[];
+	labels: Array<{ assignment_label: AssignmentLabel_v2 }>;
 	responses: AssignmentResponse_v2[];
 	view_count: {
 		count: number;
