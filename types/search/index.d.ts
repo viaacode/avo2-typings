@@ -8,7 +8,8 @@ export interface SearchDateRange {
 export interface SearchFilterOption {
 	type: ContentTypeSchema;
 	educationLevel: string;
-	domain: string;
+	educationDegree: string;
+	thema: string;
 	language: string;
 	keyword: string;
 	subject: string;
@@ -24,7 +25,8 @@ export interface SearchFilters {
 	query: string;
 	type: ContentTypeSchema[];
 	educationLevel: string[];
-	domain: string[];
+	educationDegree: string[];
+	thema: string[];
 	broadcastDate: SearchDateRange;
 	language: string[];
 	keyword: string[];
@@ -82,6 +84,7 @@ export interface SearchResultItem {
 	original_cp: string | null;
 	original_cp_id: string | null;
 	lom_context: string[];
+	lom_thema: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
 	dcterms_issued: string;

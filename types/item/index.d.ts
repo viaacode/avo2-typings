@@ -38,10 +38,11 @@ export interface ItemSchema {
 	issued_edtf: string;
 	lom_classification: string[];
 	lom_context: string[];
+	lom_thema: string[];
 	lom_intendedenduserrole: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
-	lom_typicalagerange: string[];
+	lom_typical_age_range: string[];
 	org_id: string;
 	organisation: OrganizationSchema;
 	publish_at: string | null;

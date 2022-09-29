@@ -10,7 +10,16 @@ export type LoginResponseSchema =
 		message: 'LOGGED_OUT';
 	};
 
-export type IdpTypeSchema = 'HETARCHIEF' | 'SMARTSCHOOL' | 'KLASCEMENT' | 'VLAAMSEOVERHEID';
+export type IdpTypeSchema =
+	| 'HETARCHIEF'
+	| 'SMARTSCHOOL'
+	| 'KLASCEMENT'
+	| 'VLAAMSEOVERHEID__SUB_ID'
+	| 'VLAAMSEOVERHEID__ACCOUNT_ID'
+
+	// Deprecated, use VLAAMSEOVERHEID__SUB_ID instead
+	| 'VLAAMSEOVERHEID';
+
 export const IdpLinkedSuccessQueryParam = 'linked';
 
 export type LoginMessageSchema = 'LOGGED_IN' | 'LOGGED_OUT';

@@ -1,6 +1,7 @@
 import { ItemSchema } from '../item';
 import { CollectionSchema } from '../collection';
 import { UserProfile, UserSchema } from '../user';
+import { BlockItemBaseSchema } from '../core';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -61,26 +62,12 @@ export interface AssignmentSchema_v2 {
 	blocks: AssignmentBlock[];
 }
 
-export interface AssignmentBlock {
-	id: string;
+export interface AssignmentBlock extends BlockItemBaseSchema {
 	assignment_id: string;
 	fragment_id: string;
-	custom_title: string;
-	custom_description: string;
-	original_title: string;
-	original_description: string;
-	use_custom_fields: boolean;
-	start_oc: number;
-	end_oc: number;
-	type: AssignmentBlockType;
-	position: number;
-	thumbnail_path: string;
+	original_title: string | null;
+	original_description: string | null;
 	is_deleted: boolean;
-	created_at: string; // ISO date string
-	updated_at: string; // ISO date string
-
-	// This property won't be selectable from the database but has to be manually filled using the Assignment.getAssignmentWithContent
-	item_meta?: (ItemSchema & { replacement_for?: string }) | null;
 }
 
 export interface AssignmentResponse {
@@ -104,6 +91,7 @@ export interface AssignmentResponse_v2 {
 	owner?: Partial<UserSchema>;
 	created_at: string
 	updated_at: string
+	pupil_collection_blocks?: BlockItemBaseSchema[];
 }
 
 export interface AssignmentLabel {

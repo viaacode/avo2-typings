@@ -43,7 +43,7 @@ import {
 	ContentPickerTypeSchema,
 	MediaTypeSchema,
 	LinkTargetSchema,
-	PickerItemSchema,
+	PickerItemSchema, BlockItemBaseSchema, BlockItemTypeSchema,
 } from './core';
 import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
@@ -136,6 +136,8 @@ export namespace Avo {
 		type MediaType = MediaTypeSchema;
 		type PickerItem = PickerItemSchema;
 		type LinkTarget = LinkTargetSchema;
+		type BlockItemType = BlockItemTypeSchema;
+		type BlockItemBase = BlockItemBaseSchema;
 	}
 
 	namespace EducationOrganization {
