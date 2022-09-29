@@ -21,6 +21,7 @@ import {
 	IdpTypeSchema,
 	LoginResponseSchema,
 	ErrorActionButtonSchema,
+	IdpLinkedSuccessQueryParamSchema
 } from './auth';
 import {
 	CollectionFragment,
@@ -110,6 +111,7 @@ export namespace Avo {
 		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
 		type ErrorActionButton = ErrorActionButtonSchema;
+		type IdpLinkedSuccessQueryParam = IdpLinkedSuccessQueryParamSchema;
 	}
 
 	namespace Collection {
