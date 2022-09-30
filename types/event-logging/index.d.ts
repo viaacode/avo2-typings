@@ -46,16 +46,28 @@ export interface ClientEvent {
 export type EventSubjectType = 'user' | 'system';
 
 export type EventObjectType =
-	| 'account'
-	| 'profile'
-	| 'password'
-	| 'user'
-	| 'mail'
-	| 'information'
+	| 'bundels'
+	| 'collections'
+	| 'avo_item_pid'
+	| 'archief_item_pid'
+	| 'user_uuid'
+	| 'anonymous_user'
+	| 'system'
+	| 'avo_search_query'
+	| 'avo_assignment'
 	| 'item'
 	| 'collection'
 	| 'bundle'
+	| 'user'
+	| 'group'
+	| 'query'
 	| 'assignment'
-	| 'search'
-	| 'avo_assignment'
-	| 'quick_lane';
+	| 'message'
+	| 'account'
+	| 'profile'
+// These event objects were present in this code, but are not available in the database
+// | 'password'
+// | 'mail'
+// | 'information'
+// | 'search'
+// | 'quick_lane';
