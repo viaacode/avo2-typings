@@ -25,27 +25,28 @@ export interface ContentPageLabelLinkSchema {
 }
 
 export interface ContentPageSchema {
-	id: number;
-	thumbnail_path: string | null;
-	title: string;
-	description: string | null;
-	seo_description: string | null;
-	meta_description: string | null;
-	path: string | null;
-	is_public: boolean;
-	published_at: string;
-	publish_at: string | null;
-	depublish_at: string | null;
-	created_at: string;
-	updated_at: string | null;
-	is_protected: boolean;
+	content_content_labels: ContentPageLabelLinkSchema[];
 	content_type: string;
 	content_width: ContentWidthSchema;
-	profile: UserProfile;
-	user_profile_id: string | null;
-	user_group_ids: number[] | null;
 	contentBlockssBycontentId: ContentBlockSchema[];
-	content_content_labels: ContentPageLabelLinkSchema[];
+	created_at: string;
+	depublish_at: string | null;
+	description: string | null;
+	id: number;
+	is_protected: boolean;
+	is_public: boolean;
+	is_deleted: boolean;
+	meta_description: string | null;
+	path: string | null;
+	profile: UserProfile;
+	publish_at: string | null;
+	published_at: string;
+	seo_description: string | null;
+	thumbnail_path: string | null;
+	title: string;
+	updated_at: string | null;
+	user_group_ids: number[] | null;
+	user_profile_id: string | null;
 }
 
 export type ContentPageTypeSchema =
