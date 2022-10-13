@@ -40,7 +40,7 @@ export interface ContentPageSchema {
 	path: string | null;
 	profile: UserProfile;
 	publish_at: string | null;
-	published_at: string;
+	published_at: string | null;
 	seo_description: string | null;
 	thumbnail_path: string | null;
 	title: string;
