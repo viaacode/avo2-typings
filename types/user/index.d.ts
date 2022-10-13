@@ -74,11 +74,13 @@ export interface BulkDeleteUsersBodySchema {
 	profileIds: string[];
 	deleteOption: UserDeleteOptionSchema;
 	transferToProfileId?: string;
+	sendEmail: boolean;
 }
 
 export interface BulkBlockUsersBodySchema {
 	profileIds: string[];
 	isBlocked: boolean;
+	sendEmail: boolean;
 }
 
 export interface BulkTempAccessBodySchema extends BulkBlockUsersBodySchema {
