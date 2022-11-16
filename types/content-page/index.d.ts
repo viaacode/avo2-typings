@@ -16,12 +16,12 @@ export interface ContentPageLabelSchema {
 
 export interface ContentPageLabelLinkSchema {
 	id: number;
-	content_id: number;
+	content_id?: number;
 	label_id: number;
 	created_at: string;
 	updated_at: string;
 	content_label: ContentPageLabelSchema;
-	content: ContentPageSchema[];
+	content?: ContentPageSchema[];
 }
 
 export interface ContentPageSchema {
