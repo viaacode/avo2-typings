@@ -28,7 +28,8 @@ export interface ContentPageSchema {
 	content_content_labels: ContentPageLabelLinkSchema[];
 	content_type: string;
 	content_width: ContentWidthSchema;
-	contentBlockssBycontentId: ContentBlockSchema[];
+	contentBlockssBycontentId?: ContentBlockSchema[];
+	content_blocks?: ContentBlockSchema[];
 	created_at: string;
 	depublish_at: string | null;
 	description: string | null;
