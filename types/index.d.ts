@@ -21,7 +21,7 @@ import {
 	IdpTypeSchema,
 	LoginResponseSchema,
 	ErrorActionButtonSchema,
-	IdpLinkedSuccessQueryParamSchema
+	IdpLinkedSuccessQueryParamSchema,
 } from './auth';
 import {
 	CollectionFragment,
@@ -44,7 +44,9 @@ import {
 	ContentPickerTypeSchema,
 	MediaTypeSchema,
 	LinkTargetSchema,
-	PickerItemSchema, BlockItemBaseSchema, BlockItemTypeSchema,
+	PickerItemSchema,
+	BlockItemBaseSchema,
+	BlockItemTypeSchema,
 } from './core';
 import { ClientEducationOrganization } from './education-organizations';
 import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
@@ -86,6 +88,7 @@ import {
 	ZendeskFileInfoSchema,
 } from './file-upload';
 import { InteractiveTourSchema, StepSchema } from './interactive-tour';
+import { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
 
 export namespace Avo {
 	namespace Assignment {
@@ -227,5 +230,12 @@ export namespace Avo {
 		type BulkTempAccessBody = BulkTempAccessBodySchema;
 		type BulkDeleteUsersBody = BulkDeleteUsersBodySchema;
 		type UserDeleteOption = UserDeleteOptionSchema;
+	}
+
+	namespace ContentType {
+		type Dict = ContentTypeDict;
+
+		type Dutch = DutchContentType;
+		type English = EnglishContentType;
 	}
 }
