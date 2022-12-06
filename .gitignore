@@ -242,3 +242,7 @@ jspm_packages
 
 # ImageProcessor DiskCache
 **/App_Data/cache/
+
+# Project specific
+types/**/*.js
+types/*.js

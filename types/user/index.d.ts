@@ -89,3 +89,31 @@ export interface BulkBlockUsersBodySchema {
 export interface BulkTempAccessBodySchema extends BulkBlockUsersBodySchema {
 	tempAccessUntil: string;
 }
+
+export interface UpdateProfileValuesSchema {
+	userId: string; // User id of the user that you want to update
+	educationLevels: {
+		profile_id: string;
+		key: string;
+	}[];
+	subjects: {
+		profile_id: string;
+		key: string;
+	}[];
+	organizations: {
+		profile_id: string;
+		organization_id: string;
+		unit_id: string | null;
+	}[];
+	firstName: string;
+	lastName: string;
+	company_id: string | null;
+	alias: string;
+	title: string | null;
+	alternativeEmail: string;
+	avatar: string | null;
+	bio: string | null;
+	stamboek: string | null;
+	is_exception: boolean;
+	business_category: string | null;
+}

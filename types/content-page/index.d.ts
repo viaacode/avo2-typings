@@ -28,15 +28,13 @@ export interface ContentPageSchema {
 	content_content_labels: ContentPageLabelLinkSchema[];
 	content_type: string;
 	content_width: ContentWidthSchema;
-	contentBlockssBycontentId?: ContentBlockSchema[];
-	content_blocks?: ContentBlockSchema[];
+	content_blocks: ContentBlockSchema[];
 	created_at: string;
 	depublish_at: string | null;
 	description: string | null;
 	id: number;
 	is_protected: boolean;
 	is_public: boolean;
-	is_deleted: boolean;
 	meta_description: string | null;
 	path: string | null;
 	profile: UserProfile;

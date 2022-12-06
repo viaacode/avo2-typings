@@ -74,6 +74,7 @@ import {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
 	BulkTempAccessBodySchema,
+	UpdateProfileValuesSchema,
 	UserDeleteOptionSchema,
 	UserProfile,
 	UserRole,
@@ -89,6 +90,8 @@ import {
 } from './file-upload';
 import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 import { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
+
+export * from './enums';
 
 export namespace Avo {
 	namespace Assignment {
@@ -230,6 +233,7 @@ export namespace Avo {
 		type BulkTempAccessBody = BulkTempAccessBodySchema;
 		type BulkDeleteUsersBody = BulkDeleteUsersBodySchema;
 		type UserDeleteOption = UserDeleteOptionSchema;
+		type UpdateProfileValues = UpdateProfileValuesSchema;
 	}
 
 	namespace ContentType {

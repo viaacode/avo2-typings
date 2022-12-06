@@ -68,41 +68,40 @@ pipeline {
                 }
             }
             steps {
-                  container('npm') {
-			script {
-				sh'''#!/bin/bash
-				if [ -f /tmp/.npmrc ]; then
-                                  rm /tmp/.npmrc
-                                fi
-				npm --registry=https://registry.npmjs.org install || exit 1
-				'''
-				} // script
-                }
-            }
-        }// end stage build
+                container('npm') {
+					script {
+						sh'''#!/bin/bash
+						if [ -f /tmp/.npmrc ]; then
+							rm /tmp/.npmrc
+						fi
+						npm run build
+						npm --registry=https://registry.npmjs.org install || exit 1
+						'''
+					} // script
+				} // container npm
+			} // steps
+		}// end stage build
 
 
 
-	stage('Publish') {
+		stage('Publish') {
             steps {
-             container('npm') {
-
-                script {
-					echo "Publishing package to registry"
-					configFileProvider([configFile(fileId: "npm-config", variable: 'configFile')]) {
-						sh "cat $configFile > .npmrc"
-					}
-					sh '''#/bin/bash
-					npm publish
-					echo "removing .npmrc for installto nexus not seems @viaa:registry=.."
-					rm -f .npmrc
-					'''
-                } // script
-              }// end container
+             	container('npm') {
+					script {
+						echo "Publishing package to registry"
+						configFileProvider([configFile(fileId: "npm-config", variable: 'configFile')]) {
+							sh "cat $configFile > .npmrc"
+						}
+						sh '''#/bin/bash
+						npm publish
+						echo "removing .npmrc for installto nexus not seems @viaa:registry=.."
+						rm -f .npmrc
+						'''
+					} // script
+              	}// end container
             } // steps
         } // stage
-      
-    }
+    } // stages
     post {
         success {
             script {

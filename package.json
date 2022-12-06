@@ -1,13 +1,16 @@
 {
 	"name": "@viaa/avo2-types",
-	"version": "2.45.5",
+	"version": "2.46.0",
 	"description": "TypeScript types for the AVO2 NodeJS & React apps",
 	"types": "./types/index.d.ts",
+	"main": "./types/enums.js",
 	"scripts": {
+		"build": "tsc -p ./types/tsconfig.json",
 		"test": "dtslint types",
 		"lint": "tslint -p ./types",
 		"copy-to-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/types && cp -r types package.json ../avo2-client/node_modules/@viaa/avo2-types",
-		"copy-to-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/types && cp -r types package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types"
+		"copy-to-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/types && cp -r types package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
+		"copy-to-admin-core": "rimraf ../react-admin-core-module/node_modules/@viaa/avo2-types/types && cp -r types package.json ../react-admin-core-module/node_modules/@viaa/avo2-types"
 	},
 	"publishConfig": {
 		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
