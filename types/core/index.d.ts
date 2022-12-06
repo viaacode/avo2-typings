@@ -51,4 +51,3 @@ export interface BlockItemBaseSchema {
 	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems or Assignment.getAssignmentWithContent
 	item_meta?: ItemSchema | CollectionSchema;
 }
-

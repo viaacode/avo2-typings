@@ -74,7 +74,7 @@ pipeline {
 						if [ -f /tmp/.npmrc ]; then
 							rm /tmp/.npmrc
 						fi
-						npm i typescript@4.7.4
+						npm i typescript@4.9.3
 						npm run build
 						npm --registry=https://registry.npmjs.org install || exit 1
 						'''
