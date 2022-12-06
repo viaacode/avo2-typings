@@ -1,6 +1,5 @@
 import { UserProfile } from '../user';
 import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
-import { ItemSchema } from '../item';
 import { OrganizationSchema } from '../organization';
 
 interface Aggregate {
@@ -46,7 +45,7 @@ export interface CollectionSchema {
 	type: MediaTypeSchema | null;
 	briefing_id: string | null;
 	collection_labels: CollectionLabelSchema[] | null;
-	relations: Array<RelationEntry<CollectionSchema>> | null;
+	relations: RelationEntrySchema<CollectionSchema>[] | null;
 	is_managed: boolean;
 	management: CollectionManagementSchema | null;
 }
@@ -97,15 +96,15 @@ export interface CollectionFragmentExternalId {
 	type_label: ContentTypeSchema;
 }
 
-export type RelationType = 'IS_COPY_OF' | 'IS_REPLACED_BY' | 'REPLACES' | 'HAS_COPY';
+export type RelationTypeSchema = 'IS_COPY_OF' | 'IS_REPLACED_BY' | 'REPLACES' | 'HAS_COPY';
 
-export interface RelationEntry<T> {
+export interface RelationEntrySchema<T> {
 	id: number;
 	object: string;
 	subject: string;
 	created_at: string;
 	updated_at: string;
-	predicate: RelationType;
+	predicate: RelationTypeSchema;
 	object_meta?: T;
 }
 

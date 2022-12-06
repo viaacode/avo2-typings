@@ -30,6 +30,8 @@ import {
 	CollectionManagementQualityCheckSchema,
 	CollectionManagementSchema,
 	CollectionSchema,
+	RelationEntrySchema,
+	RelationTypeSchema,
 } from './collection';
 import {
 	ContentPageLabelLinkSchema,
@@ -78,7 +80,7 @@ import {
 	UserDeleteOptionSchema,
 	UserProfile,
 	UserRole,
-	UserSchema,
+	UserSchema, UserTempAccess,
 } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
 import { SiteVariableSchema } from './site-variable';
@@ -127,6 +129,8 @@ export namespace Avo {
 		type Label = CollectionLabelSchema;
 		type Management = CollectionManagementSchema;
 		type ManagementQualityCheck = CollectionManagementQualityCheckSchema;
+		type RelationEntry<T> = RelationEntrySchema<T>;
+		type RelationType = RelationTypeSchema;
 	}
 
 	namespace ContentPage {
@@ -229,6 +233,7 @@ export namespace Avo {
 		type Profile = UserProfile;
 		type Role = UserRole;
 		type User = UserSchema;
+		type TempAccess = UserTempAccess;
 		type BulkBlockUsersBody = BulkBlockUsersBodySchema;
 		type BulkTempAccessBody = BulkTempAccessBodySchema;
 		type BulkDeleteUsersBody = BulkDeleteUsersBodySchema;
