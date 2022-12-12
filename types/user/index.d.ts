@@ -61,7 +61,9 @@ export interface UserTempAccess {
 	updated_at?: string | null;
 	from?: string | null;
 	until?: string | null;
-	status?: boolean | null;
+	current?: {
+		status?: number | null;
+	} | null;
 }
 
 export type UserDeleteOptionSchema =
