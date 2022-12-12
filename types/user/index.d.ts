@@ -17,10 +17,10 @@ export interface UserSchema {
 	mail: string;
 	is_blocked: boolean | null;
 	idpmaps: IdpTypeSchema[];
-	idpmapObjects: Array<{
+	idpmapObjects: {
 		idp: IdpTypeSchema;
 		idp_user_id: string;
-	}>;
+	}[];
 	temp_access: UserTempAccess | null;
 }
 
@@ -39,10 +39,10 @@ export interface UserProfile {
 	permissions: string[] | undefined;
 	educationLevels: string[];
 	subjects: string[];
-	organizations: Array<{
+	organizations: {
 		organizationName: string;
 		unitAddress?: string;
-	}>;
+	}[];
 	company_id: string | null;
 	organisation: OrganizationSchema | null;
 	is_exception: boolean;
@@ -61,9 +61,7 @@ export interface UserTempAccess {
 	updated_at?: string | null;
 	from?: string | null;
 	until?: string | null;
-	current?: {
-		status?: number | null;
-	} | null;
+	status?: boolean | null;
 }
 
 export type UserDeleteOptionSchema =
