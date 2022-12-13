@@ -41,7 +41,7 @@ export interface SearchOptionProp {
 	option_count: number;
 }
 
-export type SearchOrderDirection = 'asc' | 'desc';
+export type SearchOrderDirection = 'asc' | 'asc_nulls_first' | 'asc_nulls-last' | 'desc' | 'desc_nulls_first' | 'desc_nulls-last';
 
 export type SearchOrderProperty =
 	| 'relevance'
