@@ -65,6 +65,7 @@ import {
 	SearchFilters,
 	SearchOptionProp,
 	SearchOrderDirection,
+	SearchOrderDirectionGraphql,
 	SearchOrderProperty,
 	SearchRequest,
 	SearchResultItem,
@@ -203,6 +204,7 @@ export namespace Avo {
 		type Filters = SearchFilters;
 		type OptionProp = SearchOptionProp;
 		type OrderDirection = SearchOrderDirection;
+		type OrderDirectionGraphql = SearchOrderDirectionGraphql;
 		type OrderProperty = SearchOrderProperty;
 		type Request = SearchRequest;
 		type ResultItem = SearchResultItem;
