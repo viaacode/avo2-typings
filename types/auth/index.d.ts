@@ -1,9 +1,10 @@
-import { UserSchema } from '../user';
+import { CommonUser, UserSchema } from '../user';
 
 export type LoginResponseSchema =
 	| {
 		message: 'LOGGED_IN';
 		userInfo: UserSchema;
+		commonUserInfo: CommonUser;
 		acceptedConditions: boolean;
 		sessionExpiresAt: string;
 	} | {

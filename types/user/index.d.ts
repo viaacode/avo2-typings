@@ -1,5 +1,7 @@
 import { IdpTypeSchema } from '../auth';
 import { OrganizationSchema } from '../organization';
+import { Avo, PermissionName } from 'avo2-types';
+import EducationOrganization = Avo.EducationOrganization;
 
 export interface UserSchema {
 	first_name: string | null;
@@ -117,3 +119,55 @@ export interface UpdateProfileValuesSchema {
 	is_exception: boolean;
 	business_category: string | null;
 }
+
+export enum Idp {
+	HETARCHIEF = 'HETARCHIEF',
+	MEEMOO = 'MEEMOO',
+	SMARTSCHOOL = 'SMARTSCHOOL',
+	KLASCEMENT = 'KLASCEMENT',
+	VLAAMSEOVERHEID = 'VLAAMSEOVERHEID',
+}
+
+export interface UserGroupInfo {
+	label: string;
+	name: string;
+	id: string | number; // Numeric ids in avo, uuid's in hetarchief. We would like to switch to uuids for avo as well at some point
+}
+
+/**
+ * User model for both hetarchief and avo
+ */
+export type CommonUser = {
+	profileId: string;
+	email?: string;
+	firstName?: string;
+	lastName?: string;
+	fullName?: string;
+	avatar?: string;
+	acceptedTosAt?: string | null;
+	idp?: Idp;
+	permissions?: PermissionName[];
+	stamboek?: string;
+	organisation?: OrganizationSchema;
+	educationalOrganisations?: EducationOrganization.Organization[];
+	subjects?: string[];
+	educationLevels?: string[];
+	isException?: boolean;
+	businessCategory?: string;
+	createdAt?: string;
+	userGroup?: Partial<UserGroupInfo>;
+	userId?: string;
+	uid?: string;
+	isBlocked?: boolean;
+	blockedAt?: string;
+	unblockedAt?: string;
+	lastAccessAt?: string;
+	tempAccess?: UserTempAccess;
+	idps?: Partial<Record<Idp, string | null>>;
+	alias?: string;
+	title?: string;
+	bio?: string;
+	alternativeEmail?: string;
+	updatedAt?: string;
+	companyId?: string;
+};
