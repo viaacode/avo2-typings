@@ -21,7 +21,7 @@ import {
 	IdpTypeSchema,
 	LoginResponseSchema,
 	ErrorActionButtonSchema,
-	IdpLinkedSuccessQueryParamSchema,
+	IdpLinkedSuccessQueryParamSchema, LoginResponseLoggedInSchema, LoginResponseLoggedOutSchema,
 } from './auth';
 import {
 	CollectionFragment,
@@ -76,7 +76,7 @@ import { StatusSchema } from './status';
 import {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
-	BulkTempAccessBodySchema,
+	BulkTempAccessBodySchema, CommonUserSchema,
 	UpdateProfileValuesSchema,
 	UserDeleteOptionSchema,
 	UserProfile,
@@ -119,6 +119,8 @@ export namespace Avo {
 		type IdpType = IdpTypeSchema;
 		type LoginMessage = LoginMessageSchema;
 		type LoginResponse = LoginResponseSchema;
+		type LoginResponseLoggedIn = LoginResponseLoggedInSchema;
+		type LoginResponseLoggedOut = LoginResponseLoggedOutSchema;
 		type ErrorActionButton = ErrorActionButtonSchema;
 		type IdpLinkedSuccessQueryParam = IdpLinkedSuccessQueryParamSchema;
 	}
@@ -232,9 +234,17 @@ export namespace Avo {
 	}
 
 	namespace User {
+		/**
+		 * @deprecated Use CommonUser instead. There is a conversion function in the admin-core-api: convertUserInfoToCommonUser
+		 */
 		type Profile = UserProfile;
-		type Role = UserRole;
+		/**
+		 * @deprecated Use CommonUser instead. There is a conversion function in the admin-core-api: convertUserInfoToCommonUser
+		 */
 		type User = UserSchema;
+
+		type Role = UserRole;
+		type CommonUser = CommonUserSchema;
 		type TempAccess = UserTempAccess;
 		type BulkBlockUsersBody = BulkBlockUsersBodySchema;
 		type BulkTempAccessBody = BulkTempAccessBodySchema;

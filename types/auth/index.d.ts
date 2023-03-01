@@ -1,15 +1,18 @@
-import { CommonUser, UserSchema } from '../user';
+import { CommonUserSchema, UserSchema } from '../user';
 
-export type LoginResponseSchema =
-	| {
-		message: 'LOGGED_IN';
-		userInfo: UserSchema;
-		commonUserInfo: CommonUser;
-		acceptedConditions: boolean;
-		sessionExpiresAt: string;
-	} | {
-		message: 'LOGGED_OUT';
-	};
+export type LoginResponseLoggedInSchema = {
+	message: 'LOGGED_IN';
+	userInfo: UserSchema;
+	commonUserInfo: CommonUserSchema;
+	acceptedConditions: boolean;
+	sessionExpiresAt: string;
+};
+
+export type LoginResponseLoggedOutSchema = {
+	message: 'LOGGED_OUT';
+};
+
+export type LoginResponseSchema = LoginResponseLoggedInSchema | LoginResponseLoggedOutSchema;
 
 export type IdpTypeSchema =
 	| 'HETARCHIEF'

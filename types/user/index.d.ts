@@ -137,7 +137,7 @@ export interface UserGroupInfo {
 /**
  * User model for both hetarchief and avo
  */
-export type CommonUser = {
+export type CommonUserSchema = {
 	profileId: string;
 	email?: string;
 	firstName?: string;
