@@ -47,7 +47,8 @@ export interface CollectionSchema {
 	collection_labels: CollectionLabelSchema[] | null;
 	relations: RelationEntrySchema<CollectionSchema>[] | null;
 	is_managed: boolean;
-	management: CollectionManagementSchema | null;
+	management?: CollectionManagementSchema | null;
+	management_language_check?: CollectionManagementLanguageCheck[] | null;
 }
 
 export interface CollectionLabelSchema {
@@ -62,6 +63,11 @@ export interface CollectionManagementSchema {
 	id: number;
 	collection_id: string;
 	manager_profile_id: string | null;
+	manager?: {
+		profile_id: string;
+		full_name: string;
+		mail: string;
+	};
 	current_status: ManagementStatus | null;
 	status_valid_until: string | null;
 	note: string | null;
@@ -79,6 +85,15 @@ export interface CollectionManagementQualityCheckSchema {
 	qc_status: boolean | null;
 	created_at: string;
 	updated_at: string;
+}
+
+export interface CollectionManagementLanguageCheck {
+	assignee_profile_id: string | null,
+	assignee?: {
+		profile_id: string;
+		full_name: string;
+		mail: string;
+	};
 }
 
 type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';
