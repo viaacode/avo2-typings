@@ -134,6 +134,27 @@ export interface UserGroupInfo {
 	id: string | number; // Numeric ids in avo, uuid's in hetarchief. We would like to switch to uuids for avo as well at some point
 }
 
+export interface HetArchiefUserSchema {
+	id: string;
+	fullName: string;
+	firstName: string;
+	lastName: string;
+	email: string;
+	acceptedTosAt: string;
+	groupId: string;
+	groupName: string;
+	permissions: PermissionName[];
+	idp: Idp;
+	maintainerId?: string;
+	visitorSpaceSlug?: string;
+	isKeyUser: boolean;
+	lastAccessAt: string;
+	createdAt: string;
+	organisationName: string | null;
+	organisationId: string | null;
+	sector: string | null;
+}
+
 /**
  * User model for both hetarchief and avo
  */

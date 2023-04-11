@@ -76,7 +76,7 @@ import { StatusSchema } from './status';
 import {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
-	BulkTempAccessBodySchema, CommonUserSchema,
+	BulkTempAccessBodySchema, CommonUserSchema, HetArchiefUserSchema,
 	UpdateProfileValuesSchema,
 	UserDeleteOptionSchema,
 	UserProfile,
@@ -238,10 +238,16 @@ export namespace Avo {
 		 * @deprecated Use CommonUser instead. There is a conversion function in the admin-core-api: convertUserInfoToCommonUser
 		 */
 		type Profile = UserProfile;
+
 		/**
 		 * @deprecated Use CommonUser instead. There is a conversion function in the admin-core-api: convertUserInfoToCommonUser
 		 */
 		type User = UserSchema;
+
+		/**
+		 * @deprecated Use CommonUser instead. There is a conversion function in the admin-core-api: convertUserInfoToCommonUser
+		 */
+		type HetArchiefUser = HetArchiefUserSchema;
 
 		type Role = UserRole;
 		type CommonUser = CommonUserSchema;
