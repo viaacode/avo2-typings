@@ -60,6 +60,8 @@ export interface AssignmentSchema_v2 {
 		count: number;
 	};
 	blocks: AssignmentBlock[];
+	is_public?: boolean;
+	published_at?: string;
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
@@ -124,4 +126,35 @@ export interface AssignmentLabel_v2 {
 export enum AssignmentLayout {
 	OnlyPlayer = 0,
 	PlayerAndText = 1,
+}
+
+export type AssignmentsRightTypes = 'VIEWER' | 'CONTRIBUTOR';
+
+export interface AssignmentContributor {
+	id: string;
+	profileId: string | null;
+	assignmentId: string;
+	rights: AssignmentsRightTypes,
+	createdAt: string;
+	updatedAt: string;
+	inviteToken: string | null;
+	inviteEmail: string | null;
+}
+
+export interface GqlAssignmentContributor {
+	id: string;
+	profile_id: string | null;
+	assignment_id: string;
+	rights: AssignmentsRightTypes,
+	created_at: string;
+	updated_at: string;
+	invite_token: string | null;
+	invite_email: string | null;
+}
+
+export interface AssignmentContributorInfo {
+	email: string | null;
+	rights: AssignmentsRightTypes;
+	profileId: string | null;
+	inviteToken: string | null;
 }
