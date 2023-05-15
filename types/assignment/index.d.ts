@@ -156,4 +156,5 @@ export interface AssignmentContributorInfo {
 	email: string | null;
 	rights: AssignmentsRightTypes;
 	profileId: string | null;
+	inviteToken: string | null;
 }
