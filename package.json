@@ -1,6 +1,6 @@
 {
 	"name": "@viaa/avo2-types",
-	"version": "2.48.5",
+	"version": "2.48.6",
 	"description": "TypeScript types for the AVO2 NodeJS & React apps",
 	"types": "./types/index.d.ts",
 	"main": "./types/enums.js",
@@ -15,7 +15,8 @@
 		"copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
 		"copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
 		"copy-to-avo-proxy-admin-core-api": "rimraf ../avo2-proxy/server/node_modules/@meemoo/admin-core-ui/node_modules/@viaa/avo2-types/types ../avo2-proxy/server/node_modules/.cache && cp -r types package.json ../avo2-proxy/server/node_modules/@meemoo/admin-core-ui/node_modules/@viaa/avo2-types",
-		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api && npm run copy-to-avo-proxy-admin-core-api"
+		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api && npm run copy-to-avo-proxy-admin-core-api",
+		"bump": "bump-package-versions --part=patch --strategy=highest ./package.json"
 	},
 	"publishConfig": {
 		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
@@ -26,6 +27,7 @@
 		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
 	],
 	"devDependencies": {
+		"bump-package-versions": "1.0.3",
 		"dtslint": "^3.6.10",
 		"rimraf": "3.0.2",
 		"tslint": "5.16.0",
