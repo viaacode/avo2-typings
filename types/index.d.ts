@@ -4,17 +4,14 @@ import {
 	AssignmentBlockType,
 	AssignmentContent,
 	AssignmentContentLabel,
-	AssignmentLabel,
 	AssignmentLabelType,
-	AssignmentLabel_v2,
+	AssignmentLabel_v2Schema,
 	AssignmentLayout,
-	AssignmentResponse,
-	AssignmentResponse_v2,
+	AssignmentResponse_v2Schema,
 	AssignmentRetrieveError,
-	AssignmentSchema,
-	AssignmentSchema_v2,
 	AssignmentType,
 	AssignmentView,
+	ShareRightType, Assignment_v2Schema, AssignmentContributorSchema, AssignmentContributorInfoSchema,
 } from './assignment';
 import {
 	LoginMessageSchema,
@@ -99,20 +96,19 @@ export * from './enums';
 export namespace Avo {
 	namespace Assignment {
 		type Layout = AssignmentLayout;
-		type Assignment = AssignmentSchema;
-		type Assignment_v2 = AssignmentSchema_v2;
+		type Assignment = Assignment_v2Schema;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;
-		type Response = AssignmentResponse;
-		type Response_v2 = AssignmentResponse_v2;
+		type Response = AssignmentResponse_v2Schema;
 		type RetrieveError = AssignmentRetrieveError;
-		type Label = AssignmentLabel;
-		type Label_v2 = AssignmentLabel_v2;
+		type Label = AssignmentLabel_v2Schema;
 		type Type = AssignmentType;
 		type View = AssignmentView;
 		type BlockType = AssignmentBlockType;
 		type LabelType = AssignmentLabelType;
 		type Block = AssignmentBlock;
+		type Contributor = AssignmentContributorSchema;
+		type ContributorInfo = AssignmentContributorInfoSchema;
 	}
 
 	namespace Auth {
@@ -134,6 +130,10 @@ export namespace Avo {
 		type ManagementQualityCheck = CollectionManagementQualityCheckSchema;
 		type RelationEntry<T> = RelationEntrySchema<T>;
 		type RelationType = RelationTypeSchema;
+	}
+
+	namespace Share {
+		type Rights = ShareRightType;
 	}
 
 	namespace ContentPage {
