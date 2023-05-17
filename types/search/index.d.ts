@@ -51,7 +51,7 @@ export type SearchOrderProperty =
 	| 'addedDate'
 	| 'editDate';
 
-export type EsIndexTypeSchema = 'items' | 'collections' | 'bundles';
+export type EsIndexTypeSchema = 'items' | 'collections' | 'bundles' | 'assignments';
 export type EsIndexSchema = 'all' | EsIndexTypeSchema;
 
 export interface SearchRequest {
@@ -62,7 +62,7 @@ export interface SearchRequest {
 	from: number;
 	size: number; // If you only want to receive aggs, you can set the size to 0
 	index: EsIndexSchema;
-	requestedAggs?: Array<keyof SearchFilters>;
+	requestedAggs?: (keyof SearchFilters)[];
 	aggsSize?: number;
 }
 

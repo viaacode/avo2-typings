@@ -14,7 +14,8 @@
 		"copy-to-hetarchief-proxy": "rimraf ../hetarchief-proxy/node_modules/@viaa/avo2-types/types ../hetarchief-proxy/node_modules/.cache && cp -r types package.json ../hetarchief-proxy/node_modules/@viaa/avo2-types",
 		"copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
 		"copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
-		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api"
+		"copy-to-avo-proxy-admin-core-api": "rimraf ../avo2-proxy/server/node_modules/@meemoo/admin-core-ui/node_modules/@viaa/avo2-types/types ../avo2-proxy/server/node_modules/.cache && cp -r types package.json ../avo2-proxy/server/node_modules/@meemoo/admin-core-ui/node_modules/@viaa/avo2-types",
+		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api && npm run copy-to-avo-proxy-admin-core-api"
 	},
 	"publishConfig": {
 		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
