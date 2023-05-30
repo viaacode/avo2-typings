@@ -36,6 +36,8 @@ export interface Assignment_v2Schema {
 	blocks: AssignmentBlock[];
 	is_public?: boolean;
 	published_at?: string;
+	updated_by_profile_id?: string | null;
+	last_user_edit_at?: string | null;
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
