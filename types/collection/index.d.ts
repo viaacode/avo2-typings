@@ -49,6 +49,7 @@ export interface CollectionSchema {
 	is_managed: boolean;
 	management?: CollectionManagementSchema | null;
 	management_language_check?: CollectionManagementLanguageCheck[] | null;
+	last_user_edit_at?: string | null;
 }
 
 export interface CollectionLabelSchema {
