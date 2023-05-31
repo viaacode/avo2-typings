@@ -1,6 +1,7 @@
 import { UserProfile } from '../user';
 import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
+import { ShareRightType } from '../assignment';
 
 interface Aggregate {
 	aggregate: {
@@ -50,6 +51,18 @@ export interface CollectionSchema {
 	management?: CollectionManagementSchema | null;
 	management_language_check?: CollectionManagementLanguageCheck[] | null;
 	last_user_edit_at?: string | null;
+	contributors: CollectionContributorSchema[] | null;
+}
+
+export interface CollectionContributorSchema {
+	id: string;
+	profile_id: string | null;
+	collection_id: string;
+	rights: ShareRightType;
+	created_at: string;
+	updated_at: string;
+	invite_token: string | null;
+	invite_email: string | null;
 }
 
 export interface CollectionLabelSchema {

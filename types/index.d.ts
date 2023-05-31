@@ -21,6 +21,7 @@ import {
 	IdpLinkedSuccessQueryParamSchema, LoginResponseLoggedInSchema, LoginResponseLoggedOutSchema,
 } from './auth';
 import {
+	CollectionContributorSchema,
 	CollectionFragment,
 	CollectionFragmentExternalId,
 	CollectionLabelSchema,
@@ -130,6 +131,7 @@ export namespace Avo {
 		type ManagementQualityCheck = CollectionManagementQualityCheckSchema;
 		type RelationEntry<T> = RelationEntrySchema<T>;
 		type RelationType = RelationTypeSchema;
+		type Contributor = CollectionContributorSchema;
 	}
 
 	namespace Share {
