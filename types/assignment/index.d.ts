@@ -84,13 +84,13 @@ export type ShareRightType = 'VIEWER' | 'CONTRIBUTOR';
 
 export interface AssignmentContributorSchema {
 	id: string;
-	profileId: string | null;
-	assignmentId: string;
+	profile_id: string | null;
+	assignment_id: string;
 	rights: ShareRightType,
-	createdAt: string;
-	updatedAt: string;
-	inviteToken: string | null;
-	inviteEmail: string | null;
+	created_at: string;
+	updated_at: string;
+	invite_token: string | null;
+	invite_email: string | null;
 }
 
 export interface AssignmentContributorInfoSchema {
