@@ -1,6 +1,6 @@
 {
 	"name": "@viaa/avo2-types",
-	"version": "2.48.11",
+	"version": "2.48.12",
 	"description": "TypeScript types for the AVO2 NodeJS & React apps",
 	"types": "./types/index.d.ts",
 	"main": "./types/enums.js",
@@ -27,7 +27,7 @@
 		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
 	],
 	"devDependencies": {
-		"bump-package-versions": "1.0.3",
+		"bump-package-versions": "1.0.5",
 		"dtslint": "^3.6.10",
 		"rimraf": "3.0.2",
 		"tslint": "5.16.0",
