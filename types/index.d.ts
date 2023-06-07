@@ -99,7 +99,7 @@ import {
 } from './file-upload';
 import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 import { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
-import { LomEntrySchema, LomFieldSchema, LomSchema } from './lom';
+import { LomFieldSchema, LomSchema } from './lom';
 
 export * from './enums';
 
@@ -279,7 +279,6 @@ export namespace Avo {
 
 	namespace Lom {
 		type Lom = LomSchema;
-		type LomEntry = LomEntrySchema;
 		type LomField = LomFieldSchema;
 	}
 }
