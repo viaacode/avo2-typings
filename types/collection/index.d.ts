@@ -42,6 +42,7 @@ export interface CollectionSchema {
 	redaction: boolean | null;
 	redaction_at: string | null;
 	thumbnail_path: string | null;
+	seo_image_path: string | null;
 	title: string;
 	type_id: number;
 	type: MediaTypeSchema | null;

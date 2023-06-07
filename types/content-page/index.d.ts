@@ -41,6 +41,7 @@ export interface ContentPageSchema {
 	publish_at: string | null;
 	published_at: string | null;
 	seo_description: string | null;
+	seo_image_path: string | null;
 	thumbnail_path: string | null;
 	title: string;
 	updated_at: string | null;

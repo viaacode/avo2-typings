@@ -50,6 +50,7 @@ export interface ItemSchema {
 	depublish_reason: string | null;
 	series: string;
 	thumbnail_path: string;
+	seo_image_path: string;
 	title: string;
 	type: MediaTypeSchema;
 	type_id: number;
