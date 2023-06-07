@@ -2,6 +2,7 @@ import { UserProfile } from '../user';
 import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
 import { ShareRightType } from '../assignment';
+import { LomSchema } from 'lom';
 
 interface Aggregate {
 	aggregate: {
@@ -52,6 +53,7 @@ export interface CollectionSchema {
 	management_language_check?: CollectionManagementLanguageCheck[] | null;
 	last_user_edit_at?: string | null;
 	contributors: CollectionContributorSchema[] | null;
+	loms: LomSchema[] | null;
 }
 
 export interface CollectionContributorSchema {
@@ -102,7 +104,7 @@ export interface CollectionManagementQualityCheckSchema {
 }
 
 export interface CollectionManagementLanguageCheck {
-	assignee_profile_id: string | null,
+	assignee_profile_id: string | null;
 	assignee?: {
 		profile_id: string;
 		full_name: string;
