@@ -17,7 +17,11 @@ export interface Assignment_v2Schema {
 	id: string;
 	title: string;
 	description: string;
-	assignment_type: AssignmentType;
+	/**
+	 * @deprecated use lom_learning_resource_type instead
+	 */
+	assignment_type?: AssignmentType;
+	lom_learning_resource_type: AssignmentType[] | null;
 	answer_url?: string | null;
 	available_at?: string | null; // ISO date string
 	deadline_at?: string | null; // ISO date string
@@ -28,16 +32,16 @@ export interface Assignment_v2Schema {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	labels: { assignment_label: AssignmentLabel_v2Schema }[];
-	responses: AssignmentResponse_v2Schema[];
 	view_count: {
 		count: number;
 	};
-	blocks: AssignmentBlock[];
 	is_public?: boolean;
 	published_at?: string;
 	updated_by_profile_id?: string | null;
 	last_user_edit_at?: string | null;
+	blocks?: AssignmentBlock[];
+	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
+	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 }
 
