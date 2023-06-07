@@ -11,14 +11,19 @@ import {
 	AssignmentRetrieveError,
 	AssignmentType,
 	AssignmentView,
-	ShareRightType, Assignment_v2Schema, AssignmentContributorSchema, AssignmentContributorInfoSchema,
+	ShareRightType,
+	Assignment_v2Schema,
+	AssignmentContributorSchema,
+	AssignmentContributorInfoSchema,
 } from './assignment';
 import {
 	LoginMessageSchema,
 	IdpTypeSchema,
 	LoginResponseSchema,
 	ErrorActionButtonSchema,
-	IdpLinkedSuccessQueryParamSchema, LoginResponseLoggedInSchema, LoginResponseLoggedOutSchema,
+	IdpLinkedSuccessQueryParamSchema,
+	LoginResponseLoggedInSchema,
+	LoginResponseLoggedOutSchema,
 } from './auth';
 import {
 	CollectionContributorSchema,
@@ -74,12 +79,15 @@ import { StatusSchema } from './status';
 import {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
-	BulkTempAccessBodySchema, CommonUserSchema, HetArchiefUserSchema,
+	BulkTempAccessBodySchema,
+	CommonUserSchema,
+	HetArchiefUserSchema,
 	UpdateProfileValuesSchema,
 	UserDeleteOptionSchema,
 	UserProfile,
 	UserRole,
-	UserSchema, UserTempAccess,
+	UserSchema,
+	UserTempAccess,
 } from './user';
 import { VideoStillInfo, VideoStillRequest } from './video-stills';
 import { SiteVariableSchema } from './site-variable';
@@ -91,6 +99,7 @@ import {
 } from './file-upload';
 import { InteractiveTourSchema, StepSchema } from './interactive-tour';
 import { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
+import { LomEntrySchema, LomFieldSchema, LomSchema } from './lom';
 
 export * from './enums';
 
@@ -266,5 +275,11 @@ export namespace Avo {
 
 		type Dutch = DutchContentType;
 		type English = EnglishContentType;
+	}
+
+	namespace Lom {
+		type Lom = LomSchema;
+		type LomEntry = LomEntrySchema;
+		type LomField = LomFieldSchema;
 	}
 }
