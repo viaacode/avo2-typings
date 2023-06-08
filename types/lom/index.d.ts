@@ -7,7 +7,8 @@ export interface LomFieldSchema {
 
 export interface LomSchema {
 	id: string | null;
-	collection_id: string | null;
+	collection_id?: string | null;
+	assignment_id?: string | null;
 	lom_id: string | null;
 	lom: LomFieldSchema;
 }
