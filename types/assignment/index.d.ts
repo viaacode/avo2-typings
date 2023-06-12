@@ -2,6 +2,7 @@ import { ItemSchema } from '../item';
 import { CollectionSchema } from '../collection';
 import { UserProfile, UserSchema } from '../user';
 import { BlockItemBaseSchema } from '../core';
+import { LomSchema } from 'lom';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -43,6 +44,7 @@ export interface Assignment_v2Schema {
 	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
+	loms?: LomSchema[];
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
@@ -60,8 +62,8 @@ export interface AssignmentResponse_v2Schema {
 	assignment?: Partial<Assignment_v2Schema>;
 	owner_profile_id: string;
 	owner?: Partial<UserSchema>;
-	created_at: string
-	updated_at: string
+	created_at: string;
+	updated_at: string;
 	pupil_collection_blocks?: BlockItemBaseSchema[];
 }
 
@@ -90,7 +92,7 @@ export interface AssignmentContributorSchema {
 	id: string;
 	profile_id: string | null;
 	assignment_id: string;
-	rights: ShareRightType,
+	rights: ShareRightType;
 	created_at: string;
 	updated_at: string;
 	invite_token: string | null;
