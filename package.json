@@ -1,6 +1,6 @@
 {
 	"name": "@viaa/avo2-types",
-	"version": "2.48.15",
+	"version": "2.48.16",
 	"description": "TypeScript types for the AVO2 NodeJS & React apps",
 	"types": "./types/index.d.ts",
 	"main": "./types/enums.js",
