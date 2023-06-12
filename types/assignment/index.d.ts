@@ -2,7 +2,8 @@ import { ItemSchema } from '../item';
 import { CollectionSchema } from '../collection';
 import { UserProfile, UserSchema } from '../user';
 import { BlockItemBaseSchema } from '../core';
-import { LomSchema } from 'lom';
+import { LomSchema } from '../lom';
+import { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -45,6 +46,7 @@ export interface Assignment_v2Schema {
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 	loms?: LomSchema[];
+	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {

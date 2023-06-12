@@ -2,7 +2,8 @@ import { UserProfile } from '../user';
 import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import { OrganizationSchema } from '../organization';
 import { ShareRightType } from '../assignment';
-import { LomSchema } from 'lom';
+import { LomSchema } from '../lom';
+import { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
 
 interface Aggregate {
 	aggregate: {
@@ -55,6 +56,7 @@ export interface CollectionSchema {
 	last_user_edit_at?: string | null;
 	contributors: CollectionContributorSchema[] | null;
 	loms: LomSchema[] | null;
+	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the collections_overview table
 }
 
 export interface CollectionContributorSchema {
