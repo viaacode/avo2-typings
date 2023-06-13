@@ -1,9 +1,9 @@
-import { UserProfile } from '../user';
-import { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
-import { OrganizationSchema } from '../organization';
-import { ShareRightType } from '../assignment';
-import { LomSchema } from '../lom';
-import { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
+import type { UserProfile } from '../user';
+import type { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
+import type { OrganizationSchema } from '../organization';
+import type { ShareRightType } from '../assignment';
+import type { LomSchema } from '../lom';
+import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
 
 interface Aggregate {
 	aggregate: {

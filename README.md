@@ -8,7 +8,7 @@ Every type in this package is namespaces under `Avo`.
 ### How to include ###
 
 ```typescript
-import { Avo } from "@viaa/avo2-types";
+import type { Avo } from "@viaa/avo2-types";
 
 ...
 ```

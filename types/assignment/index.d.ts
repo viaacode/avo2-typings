@@ -1,9 +1,9 @@
-import { ItemSchema } from '../item';
-import { CollectionSchema } from '../collection';
-import { UserProfile, UserSchema } from '../user';
-import { BlockItemBaseSchema } from '../core';
-import { LomSchema } from '../lom';
-import { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
+import type { ItemSchema } from '../item';
+import type { CollectionSchema } from '../collection';
+import type { UserProfile, UserSchema } from '../user';
+import type { BlockItemBaseSchema } from '../core';
+import type { LomSchema } from '../lom';
+import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -34,7 +34,7 @@ export interface Assignment_v2Schema {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	view_count: {
+	view_count?: {
 		count: number;
 	};
 	is_public?: boolean;
@@ -99,6 +99,7 @@ export interface AssignmentContributorSchema {
 	updated_at: string;
 	invite_token: string | null;
 	invite_email: string | null;
+	profile?: UserProfile;
 }
 
 export interface AssignmentContributorInfoSchema {

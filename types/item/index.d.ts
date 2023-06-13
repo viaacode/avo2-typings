@@ -1,6 +1,6 @@
-import { MediaTypeSchema } from '../core';
-import { OrganizationSchema } from '../organization';
-import { RelationEntrySchema } from '../collection';
+import type { MediaTypeSchema } from '../core';
+import type { OrganizationSchema } from '../organization';
+import type { RelationEntrySchema } from '../collection';
 
 export interface ItemCountSchema {
 	bookmarks: number;

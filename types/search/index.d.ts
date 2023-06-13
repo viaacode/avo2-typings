@@ -1,4 +1,4 @@
-import { ContentTypeSchema } from '../core';
+import type { ContentTypeSchema } from '../core';
 
 export interface SearchDateRange {
 	gte: string | '' | undefined;

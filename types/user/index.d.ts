@@ -1,7 +1,7 @@
-import { IdpTypeSchema } from '../auth';
-import { OrganizationSchema } from '../organization';
-import { Avo, PermissionName } from 'avo2-types';
-import EducationOrganization = Avo.EducationOrganization;
+import { PermissionName } from 'permissions/enums';
+import type { IdpTypeSchema } from '../auth';
+import type { OrganizationSchema } from '../organization';
+import { EducationOrganizationSchema } from '../education-organizations';
 
 export interface UserSchema {
 	first_name: string | null;
@@ -170,7 +170,7 @@ export type CommonUserSchema = {
 	permissions?: PermissionName[];
 	stamboek?: string;
 	organisation?: OrganizationSchema;
-	educationalOrganisations?: EducationOrganization.Organization[];
+	educationalOrganisations?: EducationOrganizationSchema[];
 	subjects?: string[];
 	educationLevels?: string[];
 	isException?: boolean;
