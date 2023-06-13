@@ -50,4 +50,14 @@ export interface BlockItemBaseSchema {
 
 	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems or Assignment.getAssignmentWithContent
 	item_meta?: ItemSchema | CollectionSchema;
+
+	// Pupil collection / assignment response
+	fragment_id?: string | null,
+	assignment_response_id?: any
+
+	// Assignment block
+	assignment_id?: string;
+	original_title?: string | null;
+	original_description?: string | null;
+	is_deleted?: boolean;
 }
