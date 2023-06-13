@@ -1,5 +1,5 @@
 // Minimum TypeScript Version: 3.4
-import {
+import type {
 	AssignmentBlock,
 	AssignmentBlockType,
 	AssignmentContent,
@@ -16,7 +16,7 @@ import {
 	AssignmentContributorSchema,
 	AssignmentContributorInfoSchema,
 } from './assignment';
-import {
+import type {
 	LoginMessageSchema,
 	IdpTypeSchema,
 	LoginResponseSchema,
@@ -25,7 +25,7 @@ import {
 	LoginResponseLoggedInSchema,
 	LoginResponseLoggedOutSchema,
 } from './auth';
-import {
+import type {
 	CollectionContributorSchema,
 	CollectionFragment,
 	CollectionFragmentExternalId,
@@ -36,15 +36,15 @@ import {
 	RelationEntrySchema,
 	RelationTypeSchema,
 } from './collection';
-import {
+import type {
 	ContentPageLabelLinkSchema,
 	ContentPageLabelSchema,
 	ContentPageTypeSchema,
 	ContentPageSchema,
 	ContentWidthSchema,
 } from './content-page';
-import { ContentBlockSchema } from './content-blocks';
-import {
+import type { ContentBlockSchema } from './content-blocks';
+import type {
 	ContentTypeSchema,
 	ContentPickerTypeSchema,
 	MediaTypeSchema,
@@ -53,13 +53,13 @@ import {
 	BlockItemBaseSchema,
 	BlockItemTypeSchema,
 } from './core';
-import { ClientEducationOrganization } from './education-organizations';
-import { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
-import { ItemSchema, SubtitleSchema } from './item';
-import { MenuSchema } from './menu';
-import { NewsletterPreferences, NewsletterPreferenceKey } from './newsletter';
-import { OrganizationContactInfo, OrganizationData, OrganizationSchema } from './organization';
-import {
+import type { EducationOrganizationSchema } from './education-organizations';
+import type { ClientEvent, EventAction, EventObjectType, EventSubjectType } from './event-logging';
+import type { ItemSchema, SubtitleSchema } from './item';
+import type { MenuSchema } from './menu';
+import type { NewsletterPreferences, NewsletterPreferenceKey } from './newsletter';
+import type { OrganizationContactInfo, OrganizationData, OrganizationSchema } from './organization';
+import type {
 	EsIndexSchema,
 	EsIndexTypeSchema,
 	SearchDateRange,
@@ -74,9 +74,9 @@ import {
 	SearchResultItem,
 	SearchSchema,
 } from './search';
-import { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek';
-import { StatusSchema } from './status';
-import {
+import type { StamboekValidationStatuses, ValidateStamboekResponse } from './stamboek';
+import type { StatusSchema } from './status';
+import type {
 	BulkBlockUsersBodySchema,
 	BulkDeleteUsersBodySchema,
 	BulkTempAccessBodySchema,
@@ -89,17 +89,17 @@ import {
 	UserSchema,
 	UserTempAccess,
 } from './user';
-import { VideoStillInfo, VideoStillRequest } from './video-stills';
-import { SiteVariableSchema } from './site-variable';
-import {
+import type { VideoStillInfo, VideoStillRequest } from './video-stills';
+import type { SiteVariableSchema } from './site-variable';
+import type {
 	AssetInfoSchema,
 	AssetTypeSchema,
 	UploadAssetInfoSchema,
 	ZendeskFileInfoSchema,
 } from './file-upload';
-import { InteractiveTourSchema, StepSchema } from './interactive-tour';
-import { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
-import { LomFieldSchema, LomSchema } from './lom';
+import type { InteractiveTourSchema, StepSchema } from './interactive-tour';
+import type { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
+import type { LomFieldSchema, LomSchema } from './lom';
 
 export * from './enums';
 
@@ -167,7 +167,7 @@ export namespace Avo {
 	}
 
 	namespace EducationOrganization {
-		type Organization = ClientEducationOrganization;
+		type Organization = EducationOrganizationSchema;
 	}
 
 	namespace EventLogging {

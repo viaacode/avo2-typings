@@ -1,6 +1,6 @@
-import { CollectionFragmentType, CollectionSchema } from '../collection';
-import { AssignmentBlockType } from '../assignment';
-import { ItemSchema } from '../item';
+import type { CollectionFragmentType, CollectionSchema } from '../collection';
+import type { AssignmentBlockType } from '../assignment';
+import type { ItemSchema } from '../item';
 
 export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel';
 

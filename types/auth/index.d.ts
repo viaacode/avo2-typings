@@ -1,4 +1,4 @@
-import { CommonUserSchema, UserSchema } from '../user';
+import type { CommonUserSchema, UserSchema } from '../user';
 
 export type LoginResponseLoggedInSchema = {
 	message: 'LOGGED_IN';

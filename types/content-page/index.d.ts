@@ -1,6 +1,6 @@
-import { UserProfile } from '../user';
-import { ContentBlockSchema } from '../content-blocks';
-import { PickerItemSchema } from '../core';
+import type { UserProfile } from '../user';
+import type { ContentBlockSchema } from '../content-blocks';
+import type { PickerItemSchema } from '../core';
 
 export type ContentWidthSchema = 'REGULAR' | 'LARGE' | 'MEDIUM';
 

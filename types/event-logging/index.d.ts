@@ -1,4 +1,4 @@
-import { SearchDateRange } from '../search';
+import type { SearchDateRange } from '../search';
 
 export type EventAction =
 	| 'create'
