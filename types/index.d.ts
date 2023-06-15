@@ -15,6 +15,7 @@ import type {
 	Assignment_v2Schema,
 	AssignmentContributorSchema,
 	AssignmentContributorInfoSchema,
+	AssignmentQualityLabelSchema,
 } from './assignment';
 import type {
 	LoginMessageSchema,
@@ -98,7 +99,11 @@ import type {
 	ZendeskFileInfoSchema,
 } from './file-upload';
 import type { InteractiveTourSchema, StepSchema } from './interactive-tour';
-import type { DutchContentType, EnglishContentType, ContentType as ContentTypeDict } from 'content-type';
+import type {
+	DutchContentType,
+	EnglishContentType,
+	ContentType as ContentTypeDict,
+} from 'content-type';
 import type { LomFieldSchema, LomSchema } from './lom';
 
 export * from './enums';
@@ -119,6 +124,7 @@ export namespace Avo {
 		type Block = AssignmentBlock;
 		type Contributor = AssignmentContributorSchema;
 		type ContributorInfo = AssignmentContributorInfoSchema;
+		type QualityLabel = AssignmentQualityLabelSchema;
 	}
 
 	namespace Auth {
