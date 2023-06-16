@@ -46,6 +46,9 @@ export interface Assignment_v2Schema {
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 	loms?: LomSchema[];
+	briefing_id: string | null;
+	updated_by: UserProfile | null;
+	quality_labels: AssignmentQualityLabelSchema[] | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 }
 
@@ -107,4 +110,12 @@ export interface AssignmentContributorInfoSchema {
 	rights: ShareRightType;
 	profileId: string | null;
 	inviteToken: string | null;
+}
+
+export interface AssignmentQualityLabelSchema {
+	id: number | null;
+	label: string;
+	assignment_id: string;
+	created_at: string | null;
+	updated_at: string | null;
 }
