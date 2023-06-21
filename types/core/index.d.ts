@@ -2,7 +2,7 @@ import type { CollectionFragmentType, CollectionSchema } from '../collection';
 import type { AssignmentBlockType } from '../assignment';
 import type { ItemSchema } from '../item';
 
-export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel';
+export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel' | 'opdracht';
 
 export type ContentPickerTypeSchema =
 	| 'CONTENT_PAGE'
@@ -52,8 +52,8 @@ export interface BlockItemBaseSchema {
 	item_meta?: ItemSchema | CollectionSchema;
 
 	// Pupil collection / assignment response
-	fragment_id?: string | null,
-	assignment_response_id?: any
+	fragment_id?: string | null;
+	assignment_response_id?: any;
 
 	// Assignment block
 	assignment_id?: string;
