@@ -68,6 +68,7 @@ export interface CollectionContributorSchema {
 	updated_at: string;
 	invite_token?: string | null;
 	invite_email?: string | null;
+	profile?: UserProfile;
 }
 
 export interface CollectionLabelSchema {
