@@ -17,7 +17,7 @@ export type AssignmentRetrieveError = 'DELETED' | 'NOT_YET_AVAILABLE' | 'PAST_DE
 /** Typings for Assignments V2 tables */
 export interface Assignment_v2Schema {
 	id: string;
-	title: string;
+	title?: string | null;
 	description: string;
 	/**
 	 * @deprecated use lom_learning_resource_type instead
@@ -95,13 +95,13 @@ export type ShareRightType = 'VIEWER' | 'CONTRIBUTOR';
 
 export interface AssignmentContributorSchema {
 	id: string;
-	profile_id: string | null;
+	profile_id?: string | null;
 	assignment_id: string;
 	rights: ShareRightType;
 	created_at: string;
 	updated_at: string;
-	invite_token: string | null;
-	invite_email: string | null;
+	invite_token?: string | null;
+	invite_email?: string | null;
 	profile?: UserProfile;
 }
 

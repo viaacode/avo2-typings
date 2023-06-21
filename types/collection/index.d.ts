@@ -13,13 +13,13 @@ interface Aggregate {
 
 export interface CollectionSchema {
 	id: string;
-	avo1_id: string | null;
+	avo1_id?: string | null;
 	collection_fragments: CollectionFragment[];
-	collection_fragments_aggregate: Aggregate;
+	collection_fragments_aggregate?: Aggregate;
 	created_at: string;
 	updated_at: string;
 	is_public: boolean;
-	is_deleted: boolean;
+	is_deleted?: boolean;
 	publish_at: string | null;
 	published_at: string | null;
 	depublish_at: string | null;
@@ -36,7 +36,7 @@ export interface CollectionSchema {
 	organisation_id: string;
 	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
-	profile: UserProfile | null;
+	profile?: UserProfile | null;
 	updated_by_profile_id: string | null;
 	updated_by: UserProfile | null;
 	note: string | null;
@@ -48,26 +48,26 @@ export interface CollectionSchema {
 	type_id: number;
 	type: MediaTypeSchema | null;
 	briefing_id: string | null;
-	collection_labels: CollectionLabelSchema[] | null;
-	relations: RelationEntrySchema<CollectionSchema>[] | null;
 	is_managed: boolean;
 	management?: CollectionManagementSchema | null;
 	management_language_check?: CollectionManagementLanguageCheck[] | null;
 	last_user_edit_at?: string | null;
-	contributors: CollectionContributorSchema[] | null;
-	loms: LomSchema[] | null;
+	collection_labels?: CollectionLabelSchema[] | null;
+	relations?: RelationEntrySchema<CollectionSchema>[] | null;
+	contributors?: CollectionContributorSchema[] | null;
+	loms?: LomSchema[] | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the collections_overview table
 }
 
 export interface CollectionContributorSchema {
 	id: string;
-	profile_id: string | null;
+	profile_id?: string | null;
 	collection_id: string;
 	rights: ShareRightType;
 	created_at: string;
 	updated_at: string;
-	invite_token: string | null;
-	invite_email: string | null;
+	invite_token?: string | null;
+	invite_email?: string | null;
 }
 
 export interface CollectionLabelSchema {
