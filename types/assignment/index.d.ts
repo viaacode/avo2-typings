@@ -49,6 +49,7 @@ export interface Assignment_v2Schema {
 	briefing_id: string | null;
 	updated_by: UserProfile | null;
 	quality_labels: AssignmentQualityLabelSchema[] | null;
+	thumbnail_path: string | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 }
 
