@@ -105,6 +105,7 @@ import type {
 	ContentType as ContentTypeDict,
 } from 'content-type';
 import type { LomFieldSchema, LomSchema } from './lom';
+import { EditStatusInfoSchema, EditStatusResponseSchema } from 'edit-status';
 
 export * from './enums';
 
@@ -151,6 +152,8 @@ export namespace Avo {
 
 	namespace Share {
 		type Rights = ShareRightType;
+		type EditStatus = EditStatusInfoSchema;
+		type EditStatusResponse = EditStatusResponseSchema;
 	}
 
 	namespace ContentPage {
