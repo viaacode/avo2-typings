@@ -1,4 +1,5 @@
 import type { ContentTypeSchema } from '../core';
+import { AssignmentType } from '../assignment';
 
 export interface SearchDateRange {
 	gte: string | '' | undefined;
@@ -83,6 +84,7 @@ export interface SearchResultItem {
 	uid: string;
 	external_id: string;
 	administrative_external_id?: string;
+	lom_learning_resource_type?: AssignmentType[];
 	pid?: string;
 	table_name: string;
 	dc_title: string;

@@ -1,4 +1,6 @@
 export interface EditStatusInfoSchema {
+	subjectId: string;
+	subjectTitle: string;
 	editingUserId: string | null;
 	editingUserName: string | null;
 	editingUserLastActivity: string | null;
