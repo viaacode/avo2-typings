@@ -42,7 +42,13 @@ export interface SearchOptionProp {
 }
 
 export type SearchOrderDirection = 'asc' | 'desc';
-export type SearchOrderDirectionGraphql = 'asc' | 'asc_nulls_first' | 'asc_nulls_last' | 'desc' | 'desc_nulls_first' | 'desc_nulls_last';
+export type SearchOrderDirectionGraphql =
+	| 'asc'
+	| 'asc_nulls_first'
+	| 'asc_nulls_last'
+	| 'desc'
+	| 'desc_nulls_first'
+	| 'desc_nulls_last';
 
 export type SearchOrderProperty =
 	| 'relevance'
@@ -103,4 +109,13 @@ export interface SearchResultItem {
 	collection_labels?: string[];
 	created_at: string;
 	updated_at: string;
+	owner: SearchResultOwner | null;
+}
+
+export interface SearchResultOwner {
+	avatar_path: string | null;
+	company: string | null;
+	company_avatar_path: string | null;
+	firstname: string | null;
+	lastname: string | null;
 }
