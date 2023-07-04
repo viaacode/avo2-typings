@@ -50,6 +50,7 @@ export interface Assignment_v2Schema {
 	updated_by: UserProfile | null;
 	quality_labels: AssignmentQualityLabelSchema[] | null;
 	thumbnail_path: string | null;
+	note: string | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 }
 
