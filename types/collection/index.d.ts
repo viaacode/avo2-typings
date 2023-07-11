@@ -26,8 +26,7 @@ export interface CollectionSchema {
 	external_id: string | null;
 	description: string | null;
 	description_long: string | null;
-	lom_classification: string[] | null;
-	lom_context: string[] | null;
+	loms?: LomSchema[] | null;
 	lom_thema: string[] | null;
 	lom_typical_age_range: string[] | null;
 	lom_intendedenduserrole: string[] | null;
@@ -55,7 +54,6 @@ export interface CollectionSchema {
 	collection_labels?: CollectionLabelSchema[] | null;
 	relations?: RelationEntrySchema<CollectionSchema>[] | null;
 	contributors?: CollectionContributorSchema[] | null;
-	loms?: LomSchema[] | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the collections_overview table
 }
 

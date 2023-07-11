@@ -5,10 +5,19 @@ export interface LomFieldSchema {
 	broader?: string;
 }
 
-export interface LomSchema {
-	id: string | null;
+export type LomSchema = {
+	id?: string | null;
 	collection_id?: string | null;
+	lom_id: string | null;
+	lom?: LomFieldSchema;
+} | {
+	id?: string | null;
 	assignment_id?: string | null;
 	lom_id: string | null;
-	lom: LomFieldSchema;
+	lom?: LomFieldSchema;
+} | {
+	id?: string | null;
+	profile_id?: string | null;
+	lom_id: string | null;
+	lom?: LomFieldSchema;
 }
