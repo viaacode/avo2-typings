@@ -1,5 +1,6 @@
 import type { ContentTypeSchema } from '../core';
 import { AssignmentType } from '../assignment';
+import { LomSchema } from '../lom';
 
 export interface SearchDateRange {
 	gte: string | '' | undefined;
@@ -92,8 +93,14 @@ export interface SearchResultItem {
 	thumbnail_path: string;
 	original_cp: string | null;
 	original_cp_id: string | null;
+
+	// Only used for items
 	lom_context: string[];
 	lom_thema: string[];
+
+	// Used for collection, bundels and assignments
+	loms?: LomSchema[] | null;
+
 	lom_keywords: string[];
 	lom_languages: string[];
 	dcterms_issued: string;

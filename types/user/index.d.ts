@@ -2,6 +2,7 @@ import { PermissionName } from 'permissions/enums';
 import type { IdpTypeSchema } from '../auth';
 import type { OrganizationSchema } from '../organization';
 import { EducationOrganizationSchema } from '../education-organizations';
+import { LomSchema } from '../lom';
 
 export interface UserSchema {
 	first_name: string | null;
@@ -39,8 +40,7 @@ export interface UserProfile {
 	user: UserSchema;
 	userGroupIds: number[];
 	permissions: string[] | undefined;
-	educationLevels: string[];
-	subjects: string[];
+	loms?: LomSchema[] | null;
 	organizations: {
 		organizationName: string;
 		unitAddress?: string;
@@ -94,13 +94,9 @@ export interface BulkTempAccessBodySchema extends BulkBlockUsersBodySchema {
 
 export interface UpdateProfileValuesSchema {
 	userId: string; // User id of the user that you want to update
-	educationLevels: {
+	loms: {
 		profile_id: string;
-		key: string;
-	}[];
-	subjects: {
-		profile_id: string;
-		key: string;
+		lom_id: string;
 	}[];
 	organizations: {
 		profile_id: string;
@@ -171,8 +167,7 @@ export type CommonUserSchema = {
 	stamboek?: string;
 	organisation?: OrganizationSchema;
 	educationalOrganisations?: EducationOrganizationSchema[];
-	subjects?: string[];
-	educationLevels?: string[];
+	loms: LomSchema[];
 	isException?: boolean;
 	businessCategory?: string;
 	createdAt?: string;
