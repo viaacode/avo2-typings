@@ -2,7 +2,7 @@ export interface LomFieldSchema {
 	id: string;
 	label: string;
 	scheme?: string;
-	broader?: string;
+	broader?: string | null;
 }
 
 export type LomSchema = {
