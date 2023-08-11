@@ -41,6 +41,8 @@ export interface Assignment_v2Schema {
 	published_at?: string;
 	updated_by_profile_id?: string | null;
 	last_user_edit_at?: string | null;
+	last_user_edit_profile_id?: string | null;
+	last_user_edit_profile?: UserProfile | null;
 	blocks?: AssignmentBlock[];
 	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
 	responses?: AssignmentResponse_v2Schema[];
@@ -52,6 +54,7 @@ export interface Assignment_v2Schema {
 	thumbnail_path: string | null;
 	note: string | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
+	share_type_order?: number; // Only available when fetching assignments from the assignments_v2_overview table
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {

@@ -51,10 +51,13 @@ export interface CollectionSchema {
 	management?: CollectionManagementSchema | null;
 	management_language_check?: CollectionManagementLanguageCheck[] | null;
 	last_user_edit_at?: string | null;
+	last_user_edit_profile_id?: string | null;
+	last_user_edit_profile?: UserProfile | null;
 	collection_labels?: CollectionLabelSchema[] | null;
 	relations?: RelationEntrySchema<CollectionSchema>[] | null;
 	contributors?: CollectionContributorSchema[] | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the collections_overview table
+	share_type_order?: number; // Only available when fetching assignments from the collections_overview table
 }
 
 export interface CollectionContributorSchema {
