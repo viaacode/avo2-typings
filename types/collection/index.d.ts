@@ -49,7 +49,8 @@ export interface CollectionSchema {
 	briefing_id: string | null;
 	is_managed: boolean;
 	management?: CollectionManagementSchema | null;
-	management_language_check?: CollectionManagementLanguageCheck[] | null;
+	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
+	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: UserProfile | null;
@@ -102,19 +103,31 @@ export interface CollectionManagementQualityCheckSchema {
 	collection_id: string;
 	qc_label: string;
 	assignee_profile_id: string;
+	assignee?: {
+		profile_id: string;
+		full_name: string;
+		mail: string;
+	};
 	comment: string | null;
 	qc_status: boolean | null;
 	created_at: string;
 	updated_at: string;
 }
 
-export interface CollectionManagementLanguageCheck {
-	assignee_profile_id: string | null;
+export interface CollectionManagementLanguageCheckSchema {
+	id: number;
+	collection_id: string;
+	qc_label: string;
+	assignee_profile_id: string;
 	assignee?: {
 		profile_id: string;
 		full_name: string;
 		mail: string;
 	};
+	comment: string | null;
+	qc_status: boolean | null;
+	created_at: string;
+	updated_at: string;
 }
 
 type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';

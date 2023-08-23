@@ -94,10 +94,7 @@ export interface BulkTempAccessBodySchema extends BulkBlockUsersBodySchema {
 
 export interface UpdateProfileValuesSchema {
 	userId: string; // User id of the user that you want to update
-	loms: {
-		profile_id: string;
-		lom_id: string;
-	}[];
+	loms: LomSchema[];
 	organizations: {
 		profile_id: string;
 		organization_id: string;
