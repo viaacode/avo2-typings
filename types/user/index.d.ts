@@ -41,10 +41,7 @@ export interface UserProfile {
 	userGroupIds: number[];
 	permissions: string[] | undefined;
 	loms?: LomSchema[] | null;
-	organizations: {
-		organizationName: string;
-		unitAddress?: string;
-	}[];
+	organizations: EducationOrganizationSchema[];
 	company_id: string | null;
 	organisation: OrganizationSchema | null;
 	is_exception: boolean;
