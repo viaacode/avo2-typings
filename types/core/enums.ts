@@ -2,18 +2,3 @@ export enum DatabaseType {
 	avo = 'avo',
 	hetArchief = 'hetarchief',
 }
-
-export enum ContentPickerType {
-	CONTENT_PAGE = 'CONTENT_PAGE',
-	COLLECTION = 'COLLECTION',
-	ITEM = 'ITEM',
-	BUNDLE = 'BUNDLE',
-	ASSIGNMENT = 'ASSIGNMENT',
-	DROPDOWN = 'DROPDOWN',
-	INTERNAL_LINK = 'INTERNAL_LINK',
-	EXTERNAL_LINK = 'EXTERNAL_LINK',
-	SEARCH_QUERY = 'SEARCH_QUERY',
-	PROJECTS = 'PROJECTS',
-	ANCHOR_LINK = 'ANCHOR_LINK',
-	PROFILE = 'PROFILE'
-}
