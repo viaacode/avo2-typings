@@ -9,6 +9,7 @@ export type ContentPickerTypeSchema =
 	| 'COLLECTION'
 	| 'ITEM'
 	| 'BUNDLE'
+	| 'ASSIGNMENT'
 	| 'DROPDOWN'
 	| 'INTERNAL_LINK'
 	| 'EXTERNAL_LINK'
