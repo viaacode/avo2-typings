@@ -10,13 +10,18 @@ export type ContentPickerTypeSchema =
 	| 'ITEM'
 	| 'BUNDLE'
 	| 'ASSIGNMENT'
+	/**
+	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
+	 */
 	| 'DROPDOWN'
+	| 'CUSTOM_NAVIGATION_ELEMENTS'
 	| 'INTERNAL_LINK'
 	| 'EXTERNAL_LINK'
 	| 'SEARCH_QUERY'
 	| 'PROJECTS'
 	| 'ANCHOR_LINK'
-	| 'PROFILE';
+	| 'PROFILE'
+	| 'FILE';
 
 export type MediaTypeSchema = {
 	id: number;
