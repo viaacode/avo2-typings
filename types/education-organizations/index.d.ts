@@ -1,5 +1,6 @@
 export interface EducationOrganizationSchema {
-	organizationId: string;
+	organisationId: string;
+	organisationLabel: string;
 	unitId: string | null;
-	label: string; // org.name + ' - ' + unit.address
+	unitStreet: string | null;
 }
