@@ -6,7 +6,6 @@ import type {
 	AssignmentContentLabel,
 	AssignmentLabelType,
 	AssignmentLabel_v2Schema,
-	AssignmentLayout,
 	AssignmentResponse_v2Schema,
 	AssignmentRetrieveError,
 	AssignmentType,
@@ -111,7 +110,6 @@ export * from './enums';
 
 export namespace Avo {
 	namespace Assignment {
-		type Layout = AssignmentLayout;
 		type Assignment = Assignment_v2Schema;
 		type Content = AssignmentContent;
 		type ContentLabel = AssignmentContentLabel;

@@ -91,11 +91,6 @@ export interface AssignmentLabel_v2Schema {
 	type: AssignmentLabelType;
 }
 
-export enum AssignmentLayout {
-	OnlyPlayer = 0,
-	PlayerAndText = 1,
-}
-
 export type ShareRightType = 'VIEWER' | 'CONTRIBUTOR';
 
 export interface AssignmentContributorSchema {
