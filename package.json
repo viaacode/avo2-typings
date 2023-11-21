@@ -26,7 +26,7 @@
     "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
   ],
   "devDependencies": {
-    "bump-package-versions": "1.0.6",
+    "bump-package-versions": "^1.0.7",
     "dtslint": "^3.6.10",
     "rimraf": "3.0.2",
     "tslint": "5.16.0",

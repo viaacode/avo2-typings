@@ -4,6 +4,7 @@ import type { OrganizationSchema } from '../organization';
 import type { ShareRightType } from '../assignment';
 import type { LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
+import { UserSchema } from '../user';
 
 interface Aggregate {
 	aggregate: {
@@ -27,8 +28,6 @@ export interface CollectionSchema {
 	description: string | null;
 	description_long: string | null;
 	loms?: LomSchema[] | null;
-	lom_thema: string[] | null;
-	lom_typical_age_range: string[] | null;
 	lom_intendedenduserrole: string[] | null;
 	lom_keywords: string[] | null;
 	lom_languages: string[] | null;
@@ -47,10 +46,6 @@ export interface CollectionSchema {
 	type_id: number;
 	type: MediaTypeSchema | null;
 	briefing_id: string | null;
-	is_managed: boolean;
-	management?: CollectionManagementSchema | null;
-	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
-	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: UserProfile | null;
@@ -59,6 +54,33 @@ export interface CollectionSchema {
 	contributors?: CollectionContributorSchema[] | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the collections_overview table
 	share_type_order?: number; // Only available when fetching assignments from the collections_overview table
+	is_managed: boolean;
+
+	// Special overview views properties for avo admin dashboard
+	management?: CollectionManagementSchema | null;
+	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
+	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
+	mgmt_language_check?: boolean | null;
+	mgmt_quality_check?: boolean | null;
+	mgmt_current_status?: string | null;
+	mgmt_updated_at?: string | null;
+	mgmt_status_expires_at?: string | null;
+	mgmt_last_eindcheck_date?: string | null;
+	mgmt_eind_check_date?: string | null;
+	manager?: UserSchema | null;
+	channel_type?: string | null;
+	channel_name?: string | null;
+	last_marcom_date?: string | null;
+	klascement?: boolean;
+	owner?: UserSchema;
+	counts?: {
+		views: number;
+		bookmarks: number;
+		copies: number;
+		in_collection: number;
+		in_assignment: number;
+		quick_lane_links: number;
+	},
 }
 
 export interface CollectionContributorSchema {
