@@ -21,6 +21,7 @@ export interface OrganizationSchema {
 	or_id: string;
 	name: string;
 	logo_url?: string;
+	overlay?: boolean;
 	description?: string;
 	website?: string;
 	data: OrganizationData;
