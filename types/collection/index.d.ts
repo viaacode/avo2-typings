@@ -80,7 +80,8 @@ export interface CollectionSchema {
 		in_collection: number;
 		in_assignment: number;
 		quick_lane_links: number;
-	},
+		contributors: number;
+	};
 }
 
 export interface CollectionContributorSchema {
