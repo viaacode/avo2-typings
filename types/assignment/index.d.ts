@@ -56,6 +56,12 @@ export interface Assignment_v2Schema {
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 	share_type_order?: number; // Only available when fetching assignments from the assignments_v2_overview table
 	relations?: AssignmentRelationEntrySchema<Assignment_v2Schema>[] | null;
+	counts?: {
+		views: number;
+		bookmarks: number;
+		copies: number;
+		contributors: number;
+	};
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
