@@ -15,6 +15,8 @@ import type {
 	AssignmentContributorSchema,
 	AssignmentContributorInfoSchema,
 	AssignmentQualityLabelSchema,
+	AssignmentRelationEntrySchema,
+	AssignmentRelationTypeSchema,
 } from './assignment';
 import type {
 	LoginMessageSchema,
@@ -124,6 +126,8 @@ export namespace Avo {
 		type Contributor = AssignmentContributorSchema;
 		type ContributorInfo = AssignmentContributorInfoSchema;
 		type QualityLabel = AssignmentQualityLabelSchema;
+		type RelationEntry<T> = AssignmentRelationEntrySchema<T>;
+		type RelationType = AssignmentRelationTypeSchema;
 	}
 
 	namespace Auth {

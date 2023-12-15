@@ -55,6 +55,13 @@ export interface Assignment_v2Schema {
 	note: string | null;
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 	share_type_order?: number; // Only available when fetching assignments from the assignments_v2_overview table
+	relations?: AssignmentRelationEntrySchema<Assignment_v2Schema>[] | null;
+	counts?: {
+		views: number;
+		bookmarks: number;
+		copies: number;
+		contributors: number;
+	};
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
@@ -118,4 +125,20 @@ export interface AssignmentQualityLabelSchema {
 	assignment_id: string;
 	created_at: string | null;
 	updated_at: string | null;
+}
+
+export type AssignmentRelationTypeSchema =
+	| 'IS_COPY_OF'
+	| 'IS_REPLACED_BY'
+	| 'REPLACES'
+	| 'HAS_COPY';
+
+export interface AssignmentRelationEntrySchema<T> {
+	id: number;
+	object: string;
+	subject: string;
+	created_at: string;
+	updated_at: string;
+	predicate: AssignmentRelationTypeSchema;
+	object_meta?: T;
 }
