@@ -6,22 +6,23 @@ export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel' | 'op
 
 export type ContentPickerTypeSchema =
 	| 'CONTENT_PAGE'
+	| 'NL_CONTENT_PAGE_PARENT_ID'
 	| 'COLLECTION'
 	| 'ITEM'
 	| 'BUNDLE'
 	| 'ASSIGNMENT'
-	/**
-	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
-	 */
-	| 'DROPDOWN'
-	| 'CUSTOM_NAVIGATION_ELEMENTS'
 	| 'INTERNAL_LINK'
 	| 'EXTERNAL_LINK'
 	| 'SEARCH_QUERY'
 	| 'PROJECTS'
 	| 'ANCHOR_LINK'
 	| 'PROFILE'
-	| 'FILE';
+	| 'FILE'
+	| 'CUSTOM_NAVIGATION_ELEMENTS'
+	/**
+	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
+	 */
+	| 'DROPDOWN';
 
 export type MediaTypeSchema = {
 	id: number;

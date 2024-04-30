@@ -47,6 +47,7 @@ export interface UserProfile {
 	is_exception: boolean;
 	title: string | null;
 	business_category: string | null;
+	language: string;
 }
 
 export interface UserRole {
@@ -180,4 +181,5 @@ export type CommonUserSchema = {
 	alternativeEmail?: string;
 	updatedAt?: string;
 	companyId?: string;
+	language: string;
 };

@@ -47,6 +47,9 @@ export interface ContentPageSchema {
 	updated_at: string | null;
 	user_group_ids: number[] | null;
 	user_profile_id: string | null;
+	language: string;
+	nlParentPageId: number | string;
+	translatedPages: Pick<ContentPageSchema, 'id' | 'title' | 'path' | 'language'>
 }
 
 export type ContentPageTypeSchema =
