@@ -72,6 +72,7 @@ export interface AssignmentBlock extends BlockItemBaseSchema {
 	original_title: string | null;
 	original_description: string | null;
 	is_deleted: boolean;
+	color?: string;
 }
 
 export interface AssignmentResponse_v2Schema {
