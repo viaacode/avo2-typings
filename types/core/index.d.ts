@@ -5,16 +5,11 @@ import type { ItemSchema } from '../item';
 export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel' | 'opdracht';
 
 export type ContentPickerTypeSchema =
+	// BOTH
 	| 'CONTENT_PAGE'
 	| 'NL_CONTENT_PAGE_PARENT_ID'
-	| 'COLLECTION'
-	| 'ITEM'
-	| 'BUNDLE'
-	| 'ASSIGNMENT'
 	| 'INTERNAL_LINK'
 	| 'EXTERNAL_LINK'
-	| 'SEARCH_QUERY'
-	| 'PROJECTS'
 	| 'ANCHOR_LINK'
 	| 'PROFILE'
 	| 'FILE'
@@ -22,7 +17,19 @@ export type ContentPickerTypeSchema =
 	/**
 	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
 	 */
-	| 'DROPDOWN';
+	| 'DROPDOWN'
+
+	// AVO
+	| 'ITEM'
+	| 'COLLECTION'
+	| 'BUNDLE'
+	| 'ASSIGNMENT'
+	| 'SEARCH_QUERY'
+	| 'PROJECTS'
+
+	// HET_ARCHIEF
+	| 'IE_OBJECT';
+
 
 export type MediaTypeSchema = {
 	id: number;
