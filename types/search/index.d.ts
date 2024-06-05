@@ -36,6 +36,7 @@ export interface SearchFilters {
 	serie: string[];
 	provider: string[];
 	collectionLabel: string[];
+	elementary: boolean; // Should we limit results according to https://meemoo.atlassian.net/browse/AVO-3290
 }
 
 export interface SearchOptionProp {
