@@ -62,8 +62,8 @@ export interface Assignment_v2Schema {
 		copies: number;
 		contributors: number;
 	};
-	education_level_id: string;
-	education_level: LomFieldSchema;
+	education_level_id?: string | null;
+	education_level?: LomFieldSchema;
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
