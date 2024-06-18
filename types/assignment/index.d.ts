@@ -2,7 +2,7 @@ import type { ItemSchema } from '../item';
 import type { CollectionSchema } from '../collection';
 import type { UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema } from '../core';
-import type { LomSchema } from '../lom';
+import type { LomFieldSchema, LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
@@ -62,8 +62,8 @@ export interface Assignment_v2Schema {
 		copies: number;
 		contributors: number;
 	};
-	education_level_id: string;
-	education_level: LomSchema;
+	education_level_id?: string | null;
+	education_level?: LomFieldSchema;
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
@@ -72,6 +72,7 @@ export interface AssignmentBlock extends BlockItemBaseSchema {
 	original_title: string | null;
 	original_description: string | null;
 	is_deleted: boolean;
+	color?: string;
 }
 
 export interface AssignmentResponse_v2Schema {
