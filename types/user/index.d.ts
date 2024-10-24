@@ -9,9 +9,9 @@ export interface UserSchema {
 	last_name: string | null;
 	full_name: string | null;
 	profile: UserProfile | null;
-	external_uid: number | null;
-	role: UserRole | null;
-	role_id: number | null;
+	// external_uid: number | null; // Deprecated, use users.idp_map.idp_user_id instead
+	// role: UserRole | null; // Deprecated, use users.profile.group instead
+	// role_id: number | null; // Deprecated, use users.profile.group.id instead
 	uid: string;
 	created_at: string;
 	updated_at: string;
@@ -112,11 +112,16 @@ export interface UpdateProfileValuesSchema {
 }
 
 export enum Idp {
+	/** De B2C idp van VIAA: Hetarchief-account. */
 	HETARCHIEF = 'HETARCHIEF',
-	MEEMOO = 'MEEMOO',
-	SMARTSCHOOL = 'SMARTSCHOOL',
+	/** OAuth service van Klascement op oauth.klascement.be */
 	KLASCEMENT = 'KLASCEMENT',
-	VLAAMSEOVERHEID = 'VLAAMSEOVERHEID',
+	/** OAuth service van Smartschool op oauth.smartschool.be. */
+	SMARTSCHOOL = 'SMARTSCHOOL',
+	/** OAuth service van de Vlaamse Overheid: ACM-IDM using the ov_account_uuid id of the user */
+	VLAAMSEOVERHEID__ACCOUNT_ID = 'VLAAMSEOVERHEID__ACCOUNT_ID',
+	/** OAuth service van de Vlaamse Overheid: ACM-IDM using the sub id of the user */
+	VLAAMSEOVERHEID__SUB_ID = 'VLAAMSEOVERHEID__SUB_ID'
 }
 
 export interface UserGroupInfo {
