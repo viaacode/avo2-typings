@@ -65,9 +65,4 @@ export type EventObjectType =
 	| 'message'
 	| 'account'
 	| 'profile'
-// These event objects were present in this code, but are not available in the database
-// | 'password'
-// | 'mail'
-// | 'information'
-// | 'search'
-// | 'quick_lane';
+	| 'quick_lane';
