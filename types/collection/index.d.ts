@@ -1,10 +1,9 @@
-import type { UserProfile } from '../user';
+import type { UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import type { OrganizationSchema } from '../organization';
 import type { ShareRightType } from '../assignment';
 import type { LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
-import { UserSchema } from '../user';
 
 interface Aggregate {
 	aggregate: {
@@ -16,7 +15,6 @@ export interface CollectionSchema {
 	id: string;
 	avo1_id?: string | null;
 	collection_fragments: CollectionFragment[];
-	collection_fragments_aggregate?: Aggregate;
 	created_at: string;
 	updated_at: string;
 	is_public: boolean;
@@ -73,6 +71,8 @@ export interface CollectionSchema {
 	last_marcom_date?: string | null;
 	klascement?: boolean;
 	owner?: UserSchema;
+	item_count: number;
+	view_count: number;
 	counts?: {
 		views: number;
 		bookmarks: number;
