@@ -1,5 +1,5 @@
 import type { CollectionFragmentType, CollectionSchema } from '../collection';
-import type { AssignmentBlockType } from '../assignment';
+import type { Assignment_v2Schema, AssignmentBlockType } from '../assignment';
 import type { ItemSchema } from '../item';
 
 export type ContentTypeSchema = 'collectie' | 'video' | 'audio' | 'bundel' | 'opdracht';
@@ -29,7 +29,6 @@ export type ContentPickerTypeSchema =
 
 	// HET_ARCHIEF
 	| 'IE_OBJECT';
-
 
 export type MediaTypeSchema = {
 	id: number;
@@ -63,7 +62,7 @@ export interface BlockItemBaseSchema {
 	updated_at: string; // ISO date string
 
 	// This property won't be selectable from the database but has to be manually filled using the CollectionService.getCollectionWithItems or Assignment.getAssignmentWithContent
-	item_meta?: ItemSchema | CollectionSchema;
+	item_meta?: ItemSchema | CollectionSchema | (Assignment_v2Schema & { type_id: number });
 
 	// Pupil collection / assignment response
 	fragment_id?: string | null;

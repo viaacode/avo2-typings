@@ -153,7 +153,7 @@ export interface CollectionManagementLanguageCheckSchema {
 	updated_at: string;
 }
 
-type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION';
+type CollectionFragmentType = 'ITEM' | 'TEXT' | 'COLLECTION' | 'ASSIGNMENT';
 
 export interface CollectionFragment extends BlockItemBaseSchema {
 	collection_uuid: string;

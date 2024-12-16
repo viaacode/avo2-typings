@@ -34,9 +34,6 @@ export interface Assignment_v2Schema {
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
 	updated_at: string; // ISO date string
-	view_count?: {
-		count: number;
-	};
 	is_public?: boolean;
 	published_at?: string;
 	updated_by_profile_id?: string | null;
@@ -56,10 +53,13 @@ export interface Assignment_v2Schema {
 	share_type?: ShareWithColleagueType; // Only available when fetching assignments from the assignments_v2_overview table
 	share_type_order?: number; // Only available when fetching assignments from the assignments_v2_overview table
 	relations?: AssignmentRelationEntrySchema<Assignment_v2Schema>[] | null;
+	item_count: number;
+	view_count: number;
 	counts?: {
 		views: number;
 		bookmarks: number;
 		copies: number;
+		in_collection: number;
 		contributors: number;
 	};
 	education_level_id?: string | null;
