@@ -64,7 +64,6 @@ export interface CollectionSchema {
 	mgmt_updated_at?: string | null;
 	mgmt_status_expires_at?: string | null;
 	mgmt_last_eindcheck_date?: string | null;
-	mgmt_eind_check_date?: string | null;
 	manager?: UserSchema | null;
 	channel_type?: string | null;
 	channel_name?: string | null;
