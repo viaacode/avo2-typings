@@ -58,12 +58,7 @@ export interface CollectionSchema {
 	management?: CollectionManagementSchema | null;
 	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
 	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
-	mgmt_language_check?: boolean | null;
-	mgmt_quality_check?: boolean | null;
-	mgmt_current_status?: string | null;
-	mgmt_updated_at?: string | null;
-	mgmt_status_expires_at?: string | null;
-	mgmt_last_eindcheck_date?: string | null;
+	management_final_check?: CollectionManagementFinalCheckSchema[] | null;
 	manager?: UserSchema | null;
 	channel_type?: string | null;
 	channel_name?: string | null;
@@ -121,6 +116,22 @@ export interface CollectionManagementSchema {
 }
 
 export interface CollectionManagementQualityCheckSchema {
+	id: number;
+	collection_id: string;
+	qc_label: string;
+	assignee_profile_id: string;
+	assignee?: {
+		profile_id: string;
+		full_name: string;
+		mail: string;
+	};
+	comment: string | null;
+	qc_status: boolean | null;
+	created_at: string;
+	updated_at: string;
+}
+
+export interface CollectionManagementFinalCheckSchema {
 	id: number;
 	collection_id: string;
 	qc_label: string;
