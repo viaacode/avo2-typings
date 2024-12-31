@@ -136,6 +136,7 @@ export interface HetArchiefUserSchema {
 	firstName: string;
 	lastName: string;
 	email: string;
+	language: 'nl' | 'en';
 	acceptedTosAt: string;
 	groupId: string;
 	groupName: string;
