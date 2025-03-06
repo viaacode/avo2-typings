@@ -10,7 +10,8 @@ export type AssetTypeSchema =
 	| 'ITEM_SUBTITLE'
 	| 'ITEM_NOTE_IMAGE'
 	| 'INTERACTIVE_TOUR_IMAGE'
-	| 'ZENDESK_ATTACHMENT';
+	| 'ZENDESK_ATTACHMENT'
+	| 'KLASCEMENT_VIDEO_IMAGE';
 
 export interface UploadAssetInfoSchema {
 	filename: string;
