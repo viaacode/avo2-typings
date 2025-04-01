@@ -68,6 +68,7 @@ export interface Assignment_v2Schema {
 	};
 	education_level_id?: string | null;
 	education_level?: LomFieldSchema;
+	marcom_note?: AssignmentMarcomNoteSchema;
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
@@ -129,6 +130,14 @@ export interface AssignmentContributorInfoSchema {
 export interface AssignmentQualityLabelSchema {
 	id: number | null;
 	label: string;
+	assignment_id: string;
+	created_at: string | null;
+	updated_at: string | null;
+}
+
+export interface AssignmentMarcomNoteSchema {
+	id: number | null;
+	note: string;
 	assignment_id: string;
 	created_at: string | null;
 	updated_at: string | null;
