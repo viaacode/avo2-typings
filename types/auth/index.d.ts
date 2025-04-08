@@ -20,6 +20,7 @@ export type IdpTypeSchema =
 	| 'KLASCEMENT'
 	| 'VLAAMSEOVERHEID__SUB_ID'
 	| 'VLAAMSEOVERHEID__ACCOUNT_ID'
+	| 'BOOKWIDGETS'
 
 	// Deprecated, use VLAAMSEOVERHEID__SUB_ID instead
 	| 'VLAAMSEOVERHEID';
