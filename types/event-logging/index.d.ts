@@ -65,4 +65,5 @@ export type EventObjectType =
 	| 'message'
 	| 'account'
 	| 'profile'
-	| 'quick_lane';
+	| 'quick_lane'
+	| 'embed_code';
