@@ -69,6 +69,7 @@ export interface Assignment_v2Schema {
 	education_level_id?: string | null;
 	education_level?: LomFieldSchema;
 	marcom_note?: AssignmentMarcomNoteSchema;
+	is_managed?: boolean; // Determines if the marcom communication tab should be visible
 }
 
 export interface AssignmentBlock extends BlockItemBaseSchema {
