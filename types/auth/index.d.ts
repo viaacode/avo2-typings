@@ -20,7 +20,10 @@ export type IdpTypeSchema =
 	| 'KLASCEMENT'
 	| 'VLAAMSEOVERHEID__SUB_ID'
 	| 'VLAAMSEOVERHEID__ACCOUNT_ID'
-	| 'BOOKWIDGETS'
+
+	// LTI flows for embedding videos in external platforms
+	| 'LTI_BOOKWIDGETS'
+	| 'LTI_SMARTSCHOOL'
 
 	// Deprecated, use VLAAMSEOVERHEID__SUB_ID instead
 	| 'VLAAMSEOVERHEID';
