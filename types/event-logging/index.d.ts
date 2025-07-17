@@ -66,4 +66,5 @@ export type EventObjectType =
 	| 'account'
 	| 'profile'
 	| 'quick_lane'
-	| 'embed_code';
+	| 'embed_code'
+	| 'embed_failed';
