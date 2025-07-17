@@ -28,7 +28,8 @@ export type EventAction =
 	| 'assign'
 	| 'mail'
 	| 'deactivate'
-	| 'activate';
+	| 'activate'
+	| 'embed_failed';
 
 export interface ClientEvent {
 	action: EventAction;
@@ -66,5 +67,4 @@ export type EventObjectType =
 	| 'account'
 	| 'profile'
 	| 'quick_lane'
-	| 'embed_code'
-	| 'embed_failed';
+	| 'embed_code';
