@@ -22,6 +22,7 @@ export type EventAction =
 	| 'add'
 	| 'remove'
 	| 'request'
+	| 'request_failed'
 	| 'reset'
 	| 'authenticate'
 	| 'add_to'
