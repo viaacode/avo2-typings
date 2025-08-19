@@ -59,7 +59,7 @@ export interface CollectionSchema {
 	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
 	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
 	management_final_check?: CollectionManagementFinalCheckSchema[] | null;
-	manager?: UserSchema | null;
+	manager?: CommonUserSchema | null;
 	channel_type?: string | null;
 	channel_name?: string | null;
 	last_marcom_date?: string | null;
