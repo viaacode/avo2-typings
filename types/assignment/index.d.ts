@@ -39,7 +39,7 @@ export interface Assignment_v2Schema {
 	updated_by_profile_id?: string | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
-	last_user_edit_profile?: UserProfile | null;
+	last_user_edit_profile?: CommonUserSchema | null;
 	blocks?: AssignmentBlock[];
 	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
 	responses?: AssignmentResponse_v2Schema[];

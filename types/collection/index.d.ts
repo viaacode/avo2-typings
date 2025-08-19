@@ -46,7 +46,7 @@ export interface CollectionSchema {
 	briefing_id: string | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
-	last_user_edit_profile?: UserProfile | null;
+	last_user_edit_profile?: CommonUserSchema | null;
 	collection_labels?: CollectionLabelSchema[] | null;
 	relations?: RelationEntrySchema<CollectionSchema>[] | null;
 	contributors?: CollectionContributorSchema[] | null;
