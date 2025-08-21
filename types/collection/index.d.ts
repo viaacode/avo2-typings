@@ -1,4 +1,4 @@
-import type { UserProfile, UserSchema } from '../user';
+import type { CommonUserSchema, UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import type { OrganizationSchema } from '../organization';
 import type { ShareRightType } from '../assignment';
@@ -34,7 +34,7 @@ export interface CollectionSchema {
 	owner_profile_id: string;
 	profile?: UserProfile | null;
 	updated_by_profile_id: string | null;
-	updated_by: UserProfile | null;
+	updated_by: CommonUserSchema | null;
 	note: string | null;
 	redaction: boolean | null;
 	redaction_at: string | null;
@@ -46,7 +46,7 @@ export interface CollectionSchema {
 	briefing_id: string | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
-	last_user_edit_profile?: UserProfile | null;
+	last_user_edit_profile?: CommonUserSchema | null;
 	collection_labels?: CollectionLabelSchema[] | null;
 	relations?: RelationEntrySchema<CollectionSchema>[] | null;
 	contributors?: CollectionContributorSchema[] | null;
@@ -59,7 +59,7 @@ export interface CollectionSchema {
 	management_language_check?: CollectionManagementLanguageCheckSchema[] | null;
 	management_quality_check?: CollectionManagementQualityCheckSchema[] | null;
 	management_final_check?: CollectionManagementFinalCheckSchema[] | null;
-	manager?: UserSchema | null;
+	manager?: CommonUserSchema | null;
 	channel_type?: string | null;
 	channel_name?: string | null;
 	last_marcom_date?: string | null;
