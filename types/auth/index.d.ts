@@ -24,6 +24,7 @@ export type IdpTypeSchema =
 	// LTI flows for embedding videos in external platforms
 	| 'LTI_BOOKWIDGETS'
 	| 'LTI_SMARTSCHOOL'
+	| 'LTI_ANONYMOUS'
 
 	// Deprecated, use VLAAMSEOVERHEID__SUB_ID instead
 	| 'VLAAMSEOVERHEID';
