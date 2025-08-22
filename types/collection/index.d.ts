@@ -1,4 +1,4 @@
-import type { CommonUserSchema, UserProfile, UserSchema } from '../user';
+import type { CommonUserSchema } from '../user';
 import type { BlockItemBaseSchema, ContentTypeSchema, MediaTypeSchema } from '../core';
 import type { OrganizationSchema } from '../organization';
 import type { ShareRightType } from '../assignment';
@@ -32,7 +32,6 @@ export interface CollectionSchema {
 	organisation_id: string;
 	organisation: OrganizationSchema | null;
 	owner_profile_id: string;
-	profile?: UserProfile | null;
 	updated_by_profile_id: string | null;
 	updated_by: CommonUserSchema | null;
 	note: string | null;
@@ -64,7 +63,7 @@ export interface CollectionSchema {
 	channel_name?: string | null;
 	last_marcom_date?: string | null;
 	klascement?: boolean;
-	owner?: UserSchema;
+	owner?: CommonUserSchema;
 	item_count: number;
 	view_count: number;
 	counts?: {
@@ -87,7 +86,7 @@ export interface CollectionContributorSchema {
 	updated_at: string;
 	invite_token?: string | null;
 	invite_email?: string | null;
-	profile?: UserProfile;
+	profile?: CommonUserSchema;
 }
 
 export interface CollectionLabelSchema {

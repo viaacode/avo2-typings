@@ -1,6 +1,6 @@
 import type { ItemSchema } from '../item';
 import type { CollectionSchema } from '../collection';
-import type { CommonUserSchema, UserProfile, UserSchema } from '../user';
+import type { CommonUserSchema } from '../user';
 import type { BlockItemBaseSchema } from '../core';
 import type { LomFieldSchema, LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
@@ -28,8 +28,7 @@ export interface Assignment_v2Schema {
 	available_at?: string | null; // ISO date string
 	deadline_at?: string | null; // ISO date string
 	owner_profile_id: string;
-	owner?: Partial<UserSchema>;
-	profile?: UserProfile;
+	owner?: Partial<CommonUserSchema>;
 	is_deleted: boolean;
 	is_collaborative: boolean;
 	created_at: string; // ISO date string
@@ -87,7 +86,7 @@ export interface AssignmentResponse_v2Schema {
 	collection_title?: string | null;
 	assignment?: Partial<Assignment_v2Schema>;
 	owner_profile_id: string;
-	owner?: Partial<UserSchema>;
+	owner?: Partial<CommonUserSchema>;
 	created_at: string;
 	updated_at: string;
 	pupil_collection_blocks?: BlockItemBaseSchema[];
@@ -103,7 +102,7 @@ export interface AssignmentLabel_v2Schema {
 		label: string; // #FF0000
 		value: string; // BRIGHT_RED
 	};
-	profile?: UserProfile;
+	profile?: CommonUserSchema;
 	type: AssignmentLabelType;
 }
 
@@ -118,7 +117,7 @@ export interface AssignmentContributorSchema {
 	updated_at: string;
 	invite_token?: string | null;
 	invite_email?: string | null;
-	profile?: UserProfile;
+	profile?: CommonUserSchema;
 }
 
 export interface AssignmentContributorInfoSchema {
