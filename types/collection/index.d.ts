@@ -46,6 +46,7 @@ export interface CollectionSchema {
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: CommonUserSchema | null;
+	last_editor?: CommonUserSchema | null;
 	collection_labels?: CollectionLabelSchema[] | null;
 	relations?: RelationEntrySchema<CollectionSchema>[] | null;
 	contributors?: CollectionContributorSchema[] | null;
@@ -101,11 +102,7 @@ export interface CollectionManagementSchema {
 	id: number;
 	collection_id: string;
 	manager_profile_id: string | null;
-	manager?: {
-		profile_id: string;
-		full_name: string;
-		mail: string;
-	};
+	manager?: CommonUserSchema;
 	current_status: ManagementStatus | null;
 	status_valid_until: string | null;
 	note: string | null;
@@ -119,11 +116,7 @@ export interface CollectionManagementQualityCheckSchema {
 	collection_id: string;
 	qc_label: string;
 	assignee_profile_id: string;
-	assignee?: {
-		profile_id: string;
-		full_name: string;
-		mail: string;
-	};
+	assignee?: CommonUserSchema;
 	comment: string | null;
 	qc_status: boolean | null;
 	created_at: string;
@@ -135,11 +128,7 @@ export interface CollectionManagementFinalCheckSchema {
 	collection_id: string;
 	qc_label: string;
 	assignee_profile_id: string;
-	assignee?: {
-		profile_id: string;
-		full_name: string;
-		mail: string;
-	};
+	assignee?: CommonUserSchema;
 	comment: string | null;
 	qc_status: boolean | null;
 	created_at: string;
@@ -151,11 +140,7 @@ export interface CollectionManagementLanguageCheckSchema {
 	collection_id: string;
 	qc_label: string;
 	assignee_profile_id: string;
-	assignee?: {
-		profile_id: string;
-		full_name: string;
-		mail: string;
-	};
+	assignee?: CommonUserSchema;
 	comment: string | null;
 	qc_status: boolean | null;
 	created_at: string;
