@@ -24,7 +24,6 @@ export interface UserSchema {
 		idp: IdpTypeSchema;
 		idp_user_id: string;
 	}[];
-	temp_access: UserTempAccess | null;
 }
 
 export interface UserProfile {
@@ -48,6 +47,7 @@ export interface UserProfile {
 	title: string | null;
 	business_category: string | null;
 	language: string;
+	temp_access: UserTempAccess | null;
 }
 
 export interface UserRole {
@@ -61,8 +61,8 @@ export interface UserTempAccess {
 	updated_at?: string | null;
 	from?: string | null;
 	until?: string | null;
-	current?: {
-		status?: number | null;
+	has_currently_access?: {
+		status?: boolean | null;
 	} | null;
 }
 
