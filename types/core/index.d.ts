@@ -29,6 +29,7 @@ export type ContentPickerTypeSchema =
 
 	// AVO
 	| 'ITEM'
+	| 'ITEM_WITH_CUE_POINTS'
 	| 'COLLECTION'
 	| 'BUNDLE'
 	| 'ASSIGNMENT'
