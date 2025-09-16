@@ -5,7 +5,8 @@ export type EnglishContentType =
 	| 'video'
 	| 'audio'
 	| 'search'
-	| 'searchquery';
+	| 'searchquery'
+	| 'contentPage';
 
 export type DutchContentType =
 	| 'collectie'
@@ -14,7 +15,8 @@ export type DutchContentType =
 	| 'video'
 	| 'audio'
 	| 'zoek'
-	| 'zoekopdracht';
+	| 'zoekopdracht'
+	| 'contentPagina';
 
 export interface ContentType {
 	en: EnglishContentType;

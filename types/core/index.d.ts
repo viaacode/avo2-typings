@@ -14,6 +14,14 @@ export type ContentPickerTypeSchema =
 	| 'PROFILE'
 	| 'FILE'
 	| 'CUSTOM_NAVIGATION_ELEMENTS'
+
+	| 'CONTENT_PAGE_NEWS_ITEM'
+	| 'CONTENT_PAGE_PAGE'
+	| 'CONTENT_PAGE_PROJECT'
+	| 'CONTENT_PAGE_OVERVIEW'
+	| 'CONTENT_PAGE_DOMAIN_DETAIL'
+	| 'CONTENT_PAGE_EVENT_DETAIL'
+	| 'CONTENT_PAGE_SCREENCAST'
 	/**
 	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
 	 */
@@ -21,6 +29,7 @@ export type ContentPickerTypeSchema =
 
 	// AVO
 	| 'ITEM'
+	| 'ITEM_WITH_CUE_POINTS'
 	| 'COLLECTION'
 	| 'BUNDLE'
 	| 'ASSIGNMENT'
