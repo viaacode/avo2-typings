@@ -4,3 +4,4 @@ export * from './core/enums';
 export * from './lom/enums';
 export * from './shared/shared-with-colluegue-type-enum';
 export * from './auth/enums';
+export * from './labels-classes/enums';

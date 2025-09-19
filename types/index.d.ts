@@ -4,8 +4,6 @@ import type {
 	AssignmentBlockType,
 	AssignmentContent,
 	AssignmentContentLabel,
-	AssignmentLabelType,
-	AssignmentLabel_v2Schema,
 	AssignmentResponse_v2Schema,
 	AssignmentRetrieveError,
 	AssignmentType,
@@ -107,6 +105,7 @@ import type {
 } from 'content-type';
 import type { LomFieldSchema, LomSchema } from './lom';
 import { EditStatusInfoSchema, EditStatusResponseSchema } from 'edit-status';
+import { LabelClassColorSchema, LabelClassSchema, LabelClassType } from './labels-classes';
 
 export * from './enums';
 
@@ -117,17 +116,21 @@ export namespace Avo {
 		type ContentLabel = AssignmentContentLabel;
 		type Response = AssignmentResponse_v2Schema;
 		type RetrieveError = AssignmentRetrieveError;
-		type Label = AssignmentLabel_v2Schema;
 		type Type = AssignmentType;
 		type View = AssignmentView;
 		type BlockType = AssignmentBlockType;
-		type LabelType = AssignmentLabelType;
 		type Block = AssignmentBlock;
 		type Contributor = AssignmentContributorSchema;
 		type ContributorInfo = AssignmentContributorInfoSchema;
 		type QualityLabel = AssignmentQualityLabelSchema;
 		type RelationEntry<T> = AssignmentRelationEntrySchema<T>;
 		type RelationType = AssignmentRelationTypeSchema;
+	}
+
+	namespace LabelClass {
+		type LabelClassColor = LabelClassColorSchema
+		type LabelClass = LabelClassSchema;
+		type Type = LabelClassType;
 	}
 
 	namespace Auth {

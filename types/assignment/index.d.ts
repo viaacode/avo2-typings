@@ -4,13 +4,13 @@ import type { UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema } from '../core';
 import type { LomFieldSchema, LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
+import type { LabelClassSchema } from '../labels-classes';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = ItemSchema | CollectionSchema;
 export type AssignmentView = 'assignments' | 'finished_assignments';
 export type AssignmentBlockType = 'TEXT' | 'ITEM' | 'ZOEK' | 'BOUW';
-export type AssignmentLabelType = 'LABEL' | 'CLASS';
 
 export type AssignmentRetrieveError = 'DELETED' | 'NOT_YET_AVAILABLE' | 'PAST_DEADLINE';
 
@@ -41,7 +41,7 @@ export interface Assignment_v2Schema {
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: UserProfile | null;
 	blocks?: AssignmentBlock[];
-	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
+	labels?: { assignment_label: LabelClassSchema }[];
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 	loms?: LomSchema[];
@@ -91,20 +91,6 @@ export interface AssignmentResponse_v2Schema {
 	created_at: string;
 	updated_at: string;
 	pupil_collection_blocks?: BlockItemBaseSchema[];
-}
-
-export interface AssignmentLabel_v2Schema {
-	id: string;
-	label: string | null; // Wiskunde
-	color_enum_value: string; // BRIGHT_RED
-	color_override: string | null; // #FFFF00
-	owner_profile_id: string;
-	enum_color?: {
-		label: string; // #FF0000
-		value: string; // BRIGHT_RED
-	};
-	profile?: UserProfile;
-	type: AssignmentLabelType;
 }
 
 export type ShareRightType = 'VIEWER' | 'CONTRIBUTOR';
