@@ -1,6 +1,6 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "3.1.1",
+  "version": "3.3.0",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "types": "./types/index.d.ts",
   "main": "./types/enums.js",
@@ -16,7 +16,7 @@
     "copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
     "copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
     "copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
-    "bump": "bump-package-versions --part=patch --strategy=highest ./package.json"
+    "bump": "bump-package-versions --part=minor --strategy=highest ./package.json"
   },
   "publishConfig": {
     "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
