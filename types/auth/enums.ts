@@ -8,4 +8,5 @@ export enum Idp {
 	// LTI flows for embedding videos in external platforms
 	LTI_BOOKWIDGETS = 'LTI_BOOKWIDGETS',
 	LTI_SMARTSCHOOL = 'LTI_SMARTSCHOOL',
+	LTI_ANONYMOUS = 'LTI_ANONYMOUS',
 }

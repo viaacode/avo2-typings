@@ -1,6 +1,6 @@
 import type { ItemSchema } from '../item';
 import type { CollectionSchema } from '../collection';
-import type { UserProfile, UserSchema } from '../user';
+import type { CommonUserSchema, UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema } from '../core';
 import type { LomFieldSchema, LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
@@ -39,14 +39,14 @@ export interface Assignment_v2Schema {
 	updated_by_profile_id?: string | null;
 	last_user_edit_at?: string | null;
 	last_user_edit_profile_id?: string | null;
-	last_user_edit_profile?: UserProfile | null;
+	last_user_edit_profile?: CommonUserSchema | null;
 	blocks?: AssignmentBlock[];
 	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 	loms?: LomSchema[];
 	briefing_id: string | null;
-	updated_by: UserProfile | null;
+	updated_by: CommonUserSchema | null;
 	quality_labels: AssignmentQualityLabelSchema[] | null;
 	thumbnail_path: string | null;
 	note: string | null;
