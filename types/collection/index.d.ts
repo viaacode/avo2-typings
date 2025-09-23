@@ -4,6 +4,7 @@ import type { OrganizationSchema } from '../organization';
 import type { ShareRightType } from '../assignment';
 import type { LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
+import type { LabelOrClassSchema } from '../labels-classes';
 
 interface Aggregate {
 	aggregate: {
@@ -25,6 +26,7 @@ export interface CollectionSchema {
 	external_id: string | null;
 	description: string | null;
 	description_long: string | null;
+	collection_labels_classes?: { collection_label_class: LabelOrClassSchema }[];
 	loms?: LomSchema[] | null;
 	lom_intendedenduserrole: string[] | null;
 	lom_keywords: string[] | null;

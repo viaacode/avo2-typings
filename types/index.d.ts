@@ -105,7 +105,7 @@ import type {
 } from 'content-type';
 import type { LomFieldSchema, LomSchema } from './lom';
 import { EditStatusInfoSchema, EditStatusResponseSchema } from 'edit-status';
-import { LabelClassColorSchema, LabelClassSchema, LabelClassType } from './labels-classes';
+import { LabelOrClassColorSchema, LabelOrClassSchema, LabelOrClassType } from './labels-classes';
 
 export * from './enums';
 
@@ -127,10 +127,10 @@ export namespace Avo {
 		type RelationType = AssignmentRelationTypeSchema;
 	}
 
-	namespace LabelClass {
-		type LabelClassColor = LabelClassColorSchema
-		type LabelClass = LabelClassSchema;
-		type Type = LabelClassType;
+	namespace LabelOrClass {
+		type Color = LabelOrClassColorSchema
+		type LabelOrClass = LabelOrClassSchema;
+		type Type = LabelOrClassType;
 	}
 
 	namespace Auth {

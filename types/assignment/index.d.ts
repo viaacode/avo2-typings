@@ -4,7 +4,7 @@ import type { UserProfile, UserSchema } from '../user';
 import type { BlockItemBaseSchema } from '../core';
 import type { LomFieldSchema, LomSchema } from '../lom';
 import type { ShareWithColleagueType } from '../shared/shared-with-colluegue-type';
-import type { LabelClassSchema } from '../labels-classes';
+import type { LabelOrClassSchema } from '../labels-classes';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
@@ -41,7 +41,7 @@ export interface Assignment_v2Schema {
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: UserProfile | null;
 	blocks?: AssignmentBlock[];
-	labels?: { assignment_label: LabelClassSchema }[];
+	labels?: { assignment_label: LabelOrClassSchema }[];
 	responses?: AssignmentResponse_v2Schema[];
 	contributors?: AssignmentContributorSchema[];
 	loms?: LomSchema[];
