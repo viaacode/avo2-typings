@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"lib": ["es6"],
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": true,
+		"declaration": true,
+		"declarationDir": "./dist",
+		"emitDeclarationOnly": false,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"paths": {"avo2-types": ["."]}
+	}
+}

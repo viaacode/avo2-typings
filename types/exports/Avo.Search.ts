@@ -1,0 +1,16 @@
+export {
+	EsIndex,
+	EsIndexType,
+	Search,
+	SearchDateRange as DateRange,
+	SearchFilterOption as FilterOption,
+	SearchFilterOptions as FilterOptions,
+	SearchFilterProp as FilterProp,
+	SearchFilters as Filters,
+	SearchOptionProp as OptionProp,
+	SearchOrderDirection as OrderDirection,
+	SearchOrderDirectionGraphql as OrderDirectionGraphql,
+	SearchOrderProperty as OrderProperty,
+	SearchRequest as Request,
+	SearchResultItem as ResultItem,
+} from '../modules/search.js';

@@ -1,37 +1,51 @@
 {
-  "name": "@viaa/avo2-types",
-  "version": "3.3.0",
-  "description": "TypeScript types for the AVO2 NodeJS & React apps",
-  "types": "./types/index.d.ts",
-  "main": "./types/enums.js",
-  "scripts": {
-    "build": "tsc -p ./types/tsconfig.json",
-    "test": "dtslint types",
-    "lint": "tslint -p ./types",
-    "copy-to-avo-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/types  ../avo2-client/node_modules/.cache && cp -r types package.json ../avo2-client/node_modules/@viaa/avo2-types",
-    "copy-to-avo-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/types ../avo2-proxy/server/node_modules/.cache && cp -r types package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
-    "copy-to-hetarchief-client": "rimraf ../hetarchief-client/node_modules/@viaa/avo2-types/types ../hetarchief-client/node_modules/.cache && cp -r types package.json ../hetarchief-client/node_modules/@viaa/avo2-types",
-    "copy-to-hetarchief-proxy": "rimraf ../hetarchief-proxy/node_modules/@viaa/avo2-types/types ../hetarchief-proxy/node_modules/.cache && cp -r types package.json ../hetarchief-proxy/node_modules/@viaa/avo2-types",
-    "copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
-    "copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/types ../react-admin-core-module/.cache && cp -r types package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
-    "copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
-    "copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
-    "bump": "bump-package-versions --part=minor --strategy=highest ./package.json"
-  },
-  "publishConfig": {
-    "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
-  },
-  "author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
-  "contributors": [
-    "Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
-    "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
-  ],
-  "devDependencies": {
-    "bump-package-versions": "^1.0.7",
-    "dtslint": "^3.6.10",
-    "rimraf": "3.0.2",
-    "tslint": "5.16.0",
-    "tslint-config-airbnb": "5.11.1",
-    "typescript": "5.1.6"
-  }
+	"name": "@viaa/avo2-types",
+	"version": "3.3.0",
+	"description": "TypeScript types for the AVO2 NodeJS & React apps",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"typesVersions": {
+		"*": {
+			"*": [
+				"dist/index.d.ts"
+			]
+		}
+	},
+	"scripts": {
+    "build:rm-dist": "rimraf ./dist",
+		"build:esm": "tsc -p ./tsconfig.json --module esnext",
+		"build": "npm run build:rm-dist && npm run build:esm",
+		"lint": "npx @biomejs/biome format --write",
+		"copy-to-avo-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/dist  ../avo2-client/node_modules/.cache && cp -r dist package.json ../avo2-client/node_modules/@viaa/avo2-types",
+		"copy-to-avo-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/dist ../avo2-proxy/server/node_modules/.cache && cp -r dist package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
+		"copy-to-hetarchief-client": "rimraf ../hetarchief-client/node_modules/@viaa/avo2-types/dist ../hetarchief-client/node_modules/.cache && cp -r dist package.json ../hetarchief-client/node_modules/@viaa/avo2-types",
+		"copy-to-hetarchief-proxy": "rimraf ../hetarchief-proxy/node_modules/@viaa/avo2-types/dist ../hetarchief-proxy/node_modules/.cache && cp -r dist package.json ../hetarchief-proxy/node_modules/@viaa/avo2-types",
+		"copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
+		"copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
+		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
+		"copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
+		"bump": "bump-package-versions --part=minor --strategy=highest ./package.json"
+	},
+	"publishConfig": {
+		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
+	},
+	"author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
+	"contributors": [
+		"Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
+		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
+	],
+	"devDependencies": {
+		"@biomejs/biome": "2.3.3",
+		"bump-package-versions": "^1.0.7",
+		"cpx": "1.5.0",
+		"rimraf": "3.0.2",
+		"typescript": "5.1.6"
+	}
 }

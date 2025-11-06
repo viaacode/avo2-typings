@@ -1,0 +1,16 @@
+export {
+	Assignment,
+	AssignmentBlock as Block,
+	AssignmentBlockType as BlockType,
+	AssignmentContent as Content,
+	AssignmentContentLabel as ContentLabel,
+	AssignmentContributor as Contributor,
+	AssignmentContributorInfo as ContributorInfo,
+	AssignmentQualityLabel as QualityLabel,
+	AssignmentRelationEntry as RelationEntry,
+	AssignmentRelationType as RelationType,
+	AssignmentResponse as Response,
+	AssignmentRetrieveError as RetrieveError,
+	AssignmentType as Type,
+	AssignmentView as View,
+} from '../modules/assignment.js';
