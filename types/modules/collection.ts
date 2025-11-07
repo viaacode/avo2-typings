@@ -20,7 +20,6 @@ export interface Collection {
 	external_id: string | null;
 	description: string | null;
 	description_long: string | null;
-	collection_labels_classes?: { collection_label_class: LabelOrClass }[];
 	loms?: Lom[] | null;
 	lom_intendedenduserrole: string[] | null;
 	lom_keywords: string[] | null;
