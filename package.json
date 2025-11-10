@@ -1,23 +1,12 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "dist/index.d.ts"
-      ]
-    }
-  },
+  "exports": "./dist/index.d.ts",
   "scripts": {
     "build:rm-dist": "rimraf ./dist",
     "build:esm": "tsc -p ./tsconfig.json",
