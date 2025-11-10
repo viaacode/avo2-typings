@@ -1,7 +1,7 @@
 export {
 	ErrorActionButtonSchema as ErrorActionButton,
 	IdpLinkedSuccessQueryParamSchema as IdpLinkedSuccessQueryParam,
-	IdpTypeEnum as IdpType,
+	IdpType,
 	LoginMessageSchema as LoginMessage,
 	LoginResponseLoggedInSchema as LoginResponseLoggedIn,
 	LoginResponseLoggedOutSchema as LoginResponseLoggedOut,

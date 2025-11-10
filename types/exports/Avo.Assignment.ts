@@ -6,6 +6,8 @@ export {
 	AssignmentContentLabel as ContentLabel,
 	AssignmentContributor as Contributor,
 	AssignmentContributorInfo as ContributorInfo,
+	AssignmentLabel as Label,
+	AssignmentLabelType as LabelType,
 	AssignmentQualityLabel as QualityLabel,
 	AssignmentRelationEntry as RelationEntry,
 	AssignmentRelationType as RelationType,

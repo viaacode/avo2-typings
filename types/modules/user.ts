@@ -1,4 +1,4 @@
-import type { IdpTypeEnum } from './auth.js';
+import type { IdpType } from './auth.js';
 import type { EducationOrganization } from './education-organisation.js';
 import type { Lom } from './lom.js';
 import type { Organization } from './organisation.js';
@@ -19,9 +19,9 @@ export interface User {
 	expires_at: string | null;
 	mail: string;
 	is_blocked: boolean | null;
-	idpmaps: IdpTypeEnum[];
+	idpmaps: IdpType[];
 	idpmapObjects: {
-		idp: IdpTypeEnum;
+		idp: IdpType;
 		idp_user_id: string;
 	}[];
 }
@@ -111,19 +111,6 @@ export interface UpdateProfileValues {
 	business_category: string | null;
 }
 
-export enum Idp {
-	/** De B2C idp van VIAA: Hetarchief-account. */
-	HETARCHIEF = 'HETARCHIEF',
-	/** OAuth service van Klascement op oauth.klascement.be */
-	KLASCEMENT = 'KLASCEMENT',
-	/** OAuth service van Smartschool op oauth.smartschool.be. */
-	SMARTSCHOOL = 'SMARTSCHOOL',
-	/** OAuth service van de Vlaamse Overheid: ACM-IDM using the ov_account_uuid id of the user */
-	VLAAMSEOVERHEID__ACCOUNT_ID = 'VLAAMSEOVERHEID__ACCOUNT_ID',
-	/** OAuth service van de Vlaamse Overheid: ACM-IDM using the sub id of the user */
-	VLAAMSEOVERHEID__SUB_ID = 'VLAAMSEOVERHEID__SUB_ID',
-}
-
 export interface UserGroupInfo {
 	label: string;
 	name: string;
@@ -141,7 +128,7 @@ export interface HetArchiefUser {
 	groupId: string;
 	groupName: string;
 	permissions: PermissionName[];
-	idp: Idp;
+	idp: IdpType;
 	maintainerId?: string;
 	visitorSpaceSlug?: string;
 	isKeyUser: boolean;
@@ -163,7 +150,7 @@ export type CommonUser = {
 	fullName?: string;
 	avatar?: string;
 	acceptedTosAt?: string | null;
-	idp?: Idp;
+	idp?: IdpType;
 	permissions?: PermissionName[];
 	stamboek?: string;
 	organisation?: Organization;
@@ -180,7 +167,7 @@ export type CommonUser = {
 	unblockedAt?: string;
 	lastAccessAt?: string;
 	tempAccess?: UserTempAccess;
-	idps?: Partial<Record<Idp, string | null>>;
+	idps?: Partial<Record<IdpType, string | null>>;
 	alias?: string;
 	title?: string;
 	bio?: string;

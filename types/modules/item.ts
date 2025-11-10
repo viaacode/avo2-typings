@@ -8,6 +8,7 @@ export interface ItemCountSchema {
 	in_collection: number;
 	plays: number;
 	views: number;
+	quick_lane_links: number;
 }
 
 export interface Subtitle {

@@ -1,25 +1,27 @@
-export type EnglishContentType =
-	| 'text'
-	| 'item'
-	| 'collection'
-	| 'assignment'
-	| 'bundle'
-	| 'video'
-	| 'audio'
-	| 'search'
-	| 'searchquery'
-	| 'contentPage';
+export enum EnglishContentType {
+	TEXT = 'text',
+	ITEM = 'item',
+	COLLECTION = 'collection',
+	ASSIGNMENT = 'assignment',
+	BUNDLE = 'bundle',
+	VIDEO = 'video',
+	AUDIO = 'audio',
+	SEARCH = 'search',
+	SEARCHQUERY = 'searchquery',
+	CONTENTPAGE = 'contentPage',
+}
 
-export type DutchContentType =
-	| 'item'
-	| 'collectie'
-	| 'opdracht'
-	| 'bundel'
-	| 'video'
-	| 'audio'
-	| 'zoek'
-	| 'zoekopdracht'
-	| 'contentPagina';
+export enum DutchContentType {
+	ITEM = 'item',
+	COLLECTIE = 'collectie',
+	OPDRACHT = 'opdracht',
+	BUNDEL = 'bundel',
+	VIDEO = 'video',
+	AUDIO = 'audio',
+	ZOEK = 'zoek',
+	ZOEKOPDRACHT = 'zoekopdracht',
+	CONTENTPAGINA = 'contentPagina',
+}
 
 export interface ContentType {
 	en: EnglishContentType;

@@ -1,5 +1,5 @@
-import type { Assignment, AssignmentBlockType } from './assignment.js';
-import type { Collection, CollectionFragmentType } from './collection.js';
+import { type Assignment, AssignmentBlockType } from './assignment.js';
+import { type Collection, CollectionFragmentType } from './collection.js';
 import type { Item } from './item.js';
 
 export enum ContentType {
@@ -29,7 +29,14 @@ export interface PickerItem {
 
 // Blocks for collection and assignments:
 
-export type BlockItemType = CollectionFragmentType | AssignmentBlockType;
+export enum BlockItemType {
+	TEXT = 'TEXT',
+	ITEM = 'ITEM',
+	ZOEK = 'ZOEK',
+	BOUW = 'BOUW',
+	COLLECTION = 'COLLECTION',
+	ASSIGNMENT = 'ASSIGNMENT',
+}
 
 export interface BlockItemBase {
 	id: string | number; // Prefer string: uuid

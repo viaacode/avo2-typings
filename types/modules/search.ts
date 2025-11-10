@@ -46,7 +46,10 @@ export interface SearchOptionProp {
 	option_count: number;
 }
 
-export type SearchOrderDirection = 'asc' | 'desc';
+export enum SearchOrderDirection {
+	ASC = 'asc',
+	DESC = 'desc',
+}
 export type SearchOrderDirectionGraphql =
 	| 'asc'
 	| 'asc_nulls_first'

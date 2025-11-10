@@ -1,51 +1,53 @@
 {
-	"name": "@viaa/avo2-types",
-	"version": "3.3.0",
-	"description": "TypeScript types for the AVO2 NodeJS & React apps",
-	"type": "module",
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts"
-		}
-	},
-	"typesVersions": {
-		"*": {
-			"*": [
-				"dist/index.d.ts"
-			]
-		}
-	},
-	"scripts": {
+  "name": "@viaa/avo2-types",
+  "version": "4.0.0",
+  "description": "TypeScript types for the AVO2 NodeJS & React apps",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
     "build:rm-dist": "rimraf ./dist",
-		"build:esm": "tsc -p ./tsconfig.json",
-		"build": "npm run build:rm-dist && npm run build:esm",
-		"lint": "npx @biomejs/biome format --write",
-		"copy-to-avo-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/dist  ../avo2-client/node_modules/.cache && cp -r dist package.json ../avo2-client/node_modules/@viaa/avo2-types",
-		"copy-to-avo-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/dist ../avo2-proxy/server/node_modules/.cache && cp -r dist package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
-		"copy-to-hetarchief-client": "rimraf ../hetarchief-client/node_modules/@viaa/avo2-types/dist ../hetarchief-client/node_modules/.cache && cp -r dist package.json ../hetarchief-client/node_modules/@viaa/avo2-types",
-		"copy-to-hetarchief-proxy": "rimraf ../hetarchief-proxy/node_modules/@viaa/avo2-types/dist ../hetarchief-proxy/node_modules/.cache && cp -r dist package.json ../hetarchief-proxy/node_modules/@viaa/avo2-types",
-		"copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
-		"copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
-		"copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
-		"copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
-		"bump": "bump-package-versions --part=minor --strategy=highest ./package.json"
-	},
-	"publishConfig": {
-		"@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
-	},
-	"author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
-	"contributors": [
-		"Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
-		"Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
-	],
-	"devDependencies": {
-		"@biomejs/biome": "2.3.4",
-		"bump-package-versions": "^1.0.7",
-		"cpx": "1.5.0",
-		"rimraf": "6.1.0",
-		"typescript": "5.9.3"
-	}
+    "build:esm": "tsc -p ./tsconfig.json",
+    "build": "npm run build:rm-dist && npm run build:esm",
+    "lint": "npx @biomejs/biome format --write",
+    "copy-to-avo-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/dist  ../avo2-client/node_modules/.cache && cp -r dist package.json ../avo2-client/node_modules/@viaa/avo2-types",
+    "copy-to-avo-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/dist ../avo2-proxy/server/node_modules/.cache && cp -r dist package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
+    "copy-to-hetarchief-client": "rimraf ../hetarchief-client/node_modules/@viaa/avo2-types/dist ../hetarchief-client/node_modules/.cache && cp -r dist package.json ../hetarchief-client/node_modules/@viaa/avo2-types",
+    "copy-to-hetarchief-proxy": "rimraf ../hetarchief-proxy/node_modules/@viaa/avo2-types/dist ../hetarchief-proxy/node_modules/.cache && cp -r dist package.json ../hetarchief-proxy/node_modules/@viaa/avo2-types",
+    "copy-to-admin-core-ui": "rimraf ../react-admin-core-module/ui/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/ui/node_modules/@viaa/avo2-types",
+    "copy-to-admin-core-api": "rimraf ../react-admin-core-module/api/node_modules/@viaa/avo2-types/dist ../react-admin-core-module/.cache && cp -r dist package.json ../react-admin-core-module/api/node_modules/@viaa/avo2-types",
+    "copy-to-react-components": "rimraf ../react-components/node_modules/@viaa/avo2-types/dist ../react-components/node_modules/.cache && cp -r dist package.json ../react-components/node_modules/@viaa/avo2-types",
+    "copy-to-avo2-components": "rimraf ../avo2-components/node_modules/@viaa/avo2-types/dist ../avo2-components/node_modules/.cache && cp -r dist package.json ../avo2-components/node_modules/@viaa/avo2-types",
+    "copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api && npm run copy-to-react-components && npm run copy-to-avo2-components",
+    "copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
+    "bump": "bump-package-versions --part=patch --strategy=highest ./package.json"
+  },
+  "publishConfig": {
+    "@viaa:registry": "http://do-prd-mvn-01.do.viaa.be:8081/repository/npm-viaa/"
+  },
+  "author": "Bert Verhelst <bert.verhelst@studiohyperdrive.be>",
+  "contributors": [
+    "Benjamin Naesen <benjamin.naesen@studiohyperdrive.be>",
+    "Enzo Eghermanne <enzo.eghermanne@studiohyperdrive.be>"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.3.4",
+    "bump-package-versions": "^1.0.7",
+    "cpx": "1.5.0",
+    "rimraf": "6.1.0",
+    "typescript": "5.9.3"
+  }
 }

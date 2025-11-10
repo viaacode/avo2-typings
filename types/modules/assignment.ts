@@ -1,7 +1,6 @@
 import type { Collection } from './collection.js';
 import type { BlockItemBase } from './core.js';
 import type { Item } from './item.js';
-import type { LabelOrClass } from './labels-classes.js';
 import type { Lom, LomField } from './lom.js';
 import type { ShareWithColleagueType } from './shared-with-colluegue-type.js';
 import type { CommonUser, User, UserProfile } from './user.js';
@@ -10,8 +9,16 @@ export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
 export type AssignmentContentLabel = 'ITEM' | 'COLLECTIE' | 'ZOEKOPDRACHT';
 export type AssignmentContent = Item | Collection;
 export type AssignmentView = 'assignments' | 'finished_assignments';
-export type AssignmentBlockType = 'TEXT' | 'ITEM' | 'ZOEK' | 'BOUW';
-export type AssignmentLabelType = 'LABEL' | 'CLASS';
+export enum AssignmentBlockType {
+	TEXT = 'TEXT',
+	ITEM = 'ITEM',
+	ZOEK = 'ZOEK',
+	BOUW = 'BOUW',
+}
+export enum AssignmentLabelType {
+	LABEL = 'LABEL',
+	CLASS = 'CLASS',
+}
 
 export type AssignmentRetrieveError = 'DELETED' | 'NOT_YET_AVAILABLE' | 'PAST_DEADLINE';
 
@@ -42,7 +49,7 @@ export interface Assignment {
 	last_user_edit_profile_id?: string | null;
 	last_user_edit_profile?: CommonUser | null;
 	blocks?: AssignmentBlock[];
-	labels?: { assignment_label: AssignmentLabel_v2Schema }[];
+	labels?: { assignment_label: AssignmentLabel }[];
 	responses?: AssignmentResponse[];
 	contributors?: AssignmentContributor[];
 	loms?: Lom[];
@@ -94,7 +101,7 @@ export interface AssignmentResponse {
 	pupil_collection_blocks?: BlockItemBase[];
 }
 
-export interface AssignmentLabel_v2Schema {
+export interface AssignmentLabel {
 	id: string;
 	label: string | null; // Wiskunde
 	color_enum_value: string; // BRIGHT_RED
