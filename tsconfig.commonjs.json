@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
 		"lib": ["es6"],
 		"noImplicitAny": true,
 		"noImplicitThis": true,
@@ -9,11 +9,9 @@
 		"strictFunctionTypes": true,
 		"noUnusedLocals": false,
 		"noUnusedParameters": true,
-		"declaration": true,
-		"declarationDir": "./dist",
 		"emitDeclarationOnly": false,
 		"baseUrl": ".",
-		"outDir": "dist/esm",
+		"outDir": "dist/cjs",
 		"paths": {"avo2-types": ["."]}
 	}
 }
