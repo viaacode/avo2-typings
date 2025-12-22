@@ -23,7 +23,7 @@ export enum ContentPickerType {
 	CONTENT_PAGE_SCREENCAST = 'CONTENT_PAGE_SCREENCAST',
 
 	/**
-	 * @deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
+	 * deprecated use CUSTOM_NAVIGATION_ELEMENTS instead
 	 */
 	DROPDOWN = 'DROPDOWN',
 

@@ -7,7 +7,7 @@ export declare enum LomType {
     educationLevel = "educationLevel",
     educationDegree = "educationDegree",
     /**
-     * @deprecated use educationDegree instead
+     * deprecated use educationDegree instead
      */
     context = "context",
     subject = "subject",

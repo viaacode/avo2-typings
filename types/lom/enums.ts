@@ -9,7 +9,7 @@ export enum LomType {
 	educationDegree = "educationDegree",
 
 	/**
-	 * @deprecated use educationDegree instead
+	 * deprecated use educationDegree instead
 	 */
 	context = "context",
 
