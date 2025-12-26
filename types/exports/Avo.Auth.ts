@@ -7,3 +7,4 @@ export {
 	LoginResponseLoggedOutSchema as AvoAuthLoginResponseLoggedOut,
 	LoginResponseSchema as AvoAuthLoginResponse,
 } from '../modules/auth.js';
+export { PermissionName } from '../modules/permissions.js';

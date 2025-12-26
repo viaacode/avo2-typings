@@ -1,5 +1,5 @@
-import { type Assignment, AssignmentBlockType } from './assignment.js';
-import { type Collection, CollectionFragmentType } from './collection.js';
+import type { Assignment } from './assignment.js';
+import type { Collection } from './collection.js';
 import type { Item } from './item.js';
 
 export enum ContentType {

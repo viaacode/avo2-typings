@@ -1,4 +1,4 @@
-export { AssetType } from '../modules/assets.js';
+export { AssetType as AvoFileUploadAssetType } from '../modules/assets.js';
 export {
 	AssetInfo as AvoFileUploadAssetInfo,
 	UploadAssetInfo as AvoFileUploadUploadAssetInfo,
