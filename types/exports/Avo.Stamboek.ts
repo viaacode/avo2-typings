@@ -1,4 +1,4 @@
 export {
-	StamboekValidationStatuses as ValidationStatuses,
-	ValidateStamboekResponse as ValidateResponse,
+	StamboekValidationStatuses as AvoStamboekValidationStatuses,
+	ValidateStamboekResponse as AvoStamboekValidateResponse,
 } from '../modules/stamboek.js';

@@ -1,8 +1,8 @@
 export { ContentBlock as Block } from '../modules/content-blocks.js';
 export {
-	ContentPage as Page,
-	ContentPageLabel as Label,
-	ContentPageLabelLink as LabelLink,
-	ContentPageType as Type,
-	ContentWidth as Width,
+	ContentPage as AvoContentPagePage,
+	ContentPageLabel as AvoContentPageLabel,
+	ContentPageLabelLink as AvoContentPageLabelLink,
+	ContentPageType as AvoContentPageType,
+	ContentWidth as AvoContentPageWidth,
 } from '../modules/content-page.js';

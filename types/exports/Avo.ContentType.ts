@@ -1,5 +1,5 @@
 export {
-	ContentType as Dict,
-	DutchContentType as Dutch,
-	EnglishContentType as English,
+	ContentType as AvoContentTypeDict,
+	DutchContentType as AvoContentTypeDutch,
+	EnglishContentType as AvoContentTypeEnglish,
 } from '../modules/content-type.js';

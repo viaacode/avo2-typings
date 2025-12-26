@@ -1,4 +1,4 @@
 export {
-	VideoStillInfo as StillInfo,
-	VideoStillRequest as StillRequest,
+	VideoStillInfo as AvoStillsStillInfo,
+	VideoStillRequest as AvoStillsStillRequest,
 } from '../modules/video-stills.js';

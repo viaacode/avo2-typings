@@ -1,9 +1,9 @@
 export {
-	ErrorActionButtonSchema as ErrorActionButton,
-	IdpLinkedSuccessQueryParamSchema as IdpLinkedSuccessQueryParam,
-	IdpType,
-	LoginMessageSchema as LoginMessage,
-	LoginResponseLoggedInSchema as LoginResponseLoggedIn,
-	LoginResponseLoggedOutSchema as LoginResponseLoggedOut,
-	LoginResponseSchema as LoginResponse,
+	ErrorActionButtonSchema as AvoAuthErrorActionButton,
+	IdpLinkedSuccessQueryParamSchema as AvoAuthIdpLinkedSuccessQueryParam,
+	IdpType as AvoAuthIdpType,
+	LoginMessageSchema as AvoAuthLoginMessage,
+	LoginResponseLoggedInSchema as AvoAuthLoginResponseLoggedIn,
+	LoginResponseLoggedOutSchema as AvoAuthLoginResponseLoggedOut,
+	LoginResponseSchema as AvoAuthLoginResponse,
 } from '../modules/auth.js';

@@ -1,1 +1,1 @@
-export { Menu } from '../modules/menu.js';
+export { Menu as AvoMenuMenu } from '../modules/menu.js';

@@ -1,1 +1,1 @@
-export { SiteVariable } from '../modules/site-variable.js';
+export { SiteVariable as AvoSiteVariableSiteVariable } from '../modules/site-variable.js';

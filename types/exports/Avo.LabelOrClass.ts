@@ -1,5 +1,5 @@
 export {
-	LabelOrClass,
-	LabelOrClassColor as Color,
-	LabelOrClassType as Type,
+	LabelOrClass as AvoLabelOrClassLabelOrClass,
+	LabelOrClassColor as AvoLabelOrClassColor,
+	LabelOrClassType as AvoLabelOrClassType,
 } from '../modules/labels-classes.js';

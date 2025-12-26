@@ -1,6 +1,6 @@
 export {
-	ClientEvent as Event,
-	EventAction as Action,
-	EventObjectType as ObjectType,
-	EventSubjectType as SubjectType,
+	ClientEvent as AvoEventLoggingEvent,
+	EventAction as AvoEventLoggingAction,
+	EventObjectType as AvoEventLoggingObjectType,
+	EventSubjectType as AvoEventLoggingSubjectType,
 } from '../modules/event-logging.js';

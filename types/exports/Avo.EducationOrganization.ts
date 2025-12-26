@@ -1,1 +1,1 @@
-export { EducationOrganization as Organization } from '../modules/education-organisation.js';
+export { EducationOrganization as AvoEducationOrganizationOrganization } from '../modules/education-organisation.js';

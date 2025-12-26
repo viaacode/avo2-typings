@@ -1,5 +1,5 @@
 export {
-	Organization,
-	OrganizationContactInfo as ContactInfo,
-	OrganizationData as Data,
+	Organization as AvoOrganizationOrganization,
+	OrganizationContactInfo as AvoOrganizationContactInfo,
+	OrganizationData as AvoOrganizationData,
 } from '../modules/organisation.js';

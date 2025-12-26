@@ -1,4 +1,4 @@
 export {
-	NewsletterPreferenceKey as PreferencesKey,
-	NewsletterPreferences as Preferences,
+	NewsletterPreferenceKey as AvoNewsletterPreferencesKey,
+	NewsletterPreferences as AvoNewsletterPreferences,
 } from '../modules/newsletter.js';
