@@ -11,5 +11,14 @@ const originalPackageJsonPath = join(__dirname, '..', 'package.json');
 const packageJsonContent = readFileSync(originalPackageJsonPath, 'utf-8');
 const packageJson = JSON.parse(packageJsonContent);
 packageJson.type = 'commonjs';
+packageJson.main = packageJson.main.replace('/dist/', '/');
+packageJson.types = packageJson.types.replace('/dist/', '/');
+packageJson.exports = {
+	".": {
+		"import": packageJson.exports["."].import.replace('/dist/', '/'),
+		"require": packageJson.exports["."].require.replace('/dist/', '/'),
+		"types": packageJson.exports["."].types.replace('/dist/', '/')
+	}
+}
 const commonJsPackageJsonPath = join(__dirname, '../dist/cjs/package.json');
 writeFileSync(commonJsPackageJsonPath, JSON.stringify(packageJson, null, 2), 'utf-8');
