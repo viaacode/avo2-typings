@@ -1,4 +1,4 @@
-export { ContentBlock as Block } from '../modules/content-blocks.js';
+export { ContentBlock as AvoContentPageBlock } from '../modules/content-blocks.js';
 export {
 	ContentPage as AvoContentPagePage,
 	ContentPageLabel as AvoContentPageLabel,
