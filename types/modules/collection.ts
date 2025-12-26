@@ -34,6 +34,8 @@ export interface Collection {
 	redaction: boolean | null;
 	redaction_at: string | null;
 	thumbnail_path: string | null;
+	seo_title: string | null;
+	seo_description: string | null;
 	seo_image_path: string | null;
 	title: string;
 	type_id: number;

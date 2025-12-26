@@ -27,6 +27,9 @@ export interface Assignment {
 	id: string;
 	title?: string | null;
 	description: string;
+	seo_title: string | null;
+	seo_description: string | null;
+	seo_image_path: string | null;
 	/**
 	 * @deprecated use lom_learning_resource_type instead
 	 */

@@ -27,6 +27,7 @@ export interface Item {
 	created_at: string;
 	depublish_at: null;
 	description: string;
+
 	duration: string;
 	expiry_date: null;
 	external_id: string;
@@ -51,7 +52,9 @@ export interface Item {
 	depublish_reason: string | null;
 	series: string;
 	thumbnail_path: string;
-	seo_image_path: string;
+	seo_title: string | null;
+	seo_description: string | null;
+	seo_image_path: string | null;
 	title: string;
 	type: MediaType;
 	type_id: number;

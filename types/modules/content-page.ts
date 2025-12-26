@@ -40,6 +40,7 @@ export interface ContentPage {
 	profile: UserProfile;
 	publish_at: string | null;
 	published_at: string | null;
+	seo_title: string | null;
 	seo_description: string | null;
 	seo_image_path: string | null;
 	thumbnail_path: string | null;
@@ -52,10 +53,11 @@ export interface ContentPage {
 	translatedPages: Pick<ContentPage, 'id' | 'title' | 'path' | 'language'>;
 }
 
-export type ContentPageType =
-	| 'NIEUWS_ITEM'
-	| 'FAQ_ITEM'
-	| 'SCREENCAST'
-	| 'PAGINA'
-	| 'PROJECT'
-	| 'OVERZICHT';
+export enum ContentPageType {
+	NIEUWS_ITEM = 'NIEUWS_ITEM',
+	FAQ_ITEM = 'FAQ_ITEM',
+	SCREENCAST = 'SCREENCAST',
+	PAGINA = 'PAGINA',
+	PROJECT = 'PROJECT',
+	OVERZICHT = 'OVERZICHT',
+}
