@@ -3,14 +3,20 @@
   "version": "5.0.3",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "type": "module",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "scripts": {
     "build:rm-dist": "rimraf ./dist",
     "build:esm": "tsc -p ./tsconfig.json",
-    "build:cjs": "tsc -p ./tsconfig.commonjs.json",
-    "build": "npm run build:rm-dist && npm run build:esm && npm run build:cjs",
+    "build:cjs": "tsc -p ./tsconfig.commonjs.json && mv ./dist/cjs/index.js ./dist/cjs/index.cjs",
+    "build": "npm run build:rm-dist && npm run build:esm && npm run build:cjs && node scripts/rewrite-package-json-for-common-js.ts",
     "lint": "npx @biomejs/biome format --write",
     "copy-to-avo-client": "rimraf ../avo2-client/node_modules/@viaa/avo2-types/dist  ../avo2-client/node_modules/.cache && cp -r dist package.json ../avo2-client/node_modules/@viaa/avo2-types",
     "copy-to-avo-proxy": "rimraf ../avo2-proxy/server/node_modules/@viaa/avo2-types/dist ../avo2-proxy/server/node_modules/.cache && cp -r dist package.json ../avo2-proxy/server/node_modules/@viaa/avo2-types",
@@ -34,6 +40,7 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "2.3.4",
+    "@types/node": "24.10.4",
     "bump-package-versions": "^1.0.7",
     "cpx": "1.5.0",
     "rimraf": "6.1.0",

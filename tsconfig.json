@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"target": "ES2020",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"lib": ["es6"],
@@ -15,5 +16,6 @@
 		"baseUrl": ".",
 		"outDir": "dist/esm",
 		"paths": {"avo2-types": ["."]}
-	}
+	},
+	"include": ["types/**/*"],
 }
