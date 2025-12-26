@@ -1,14 +1,14 @@
 {
   "name": "@viaa/avo2-types",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "description": "TypeScript types for the AVO2 NodeJS & React apps",
   "type": "module",
-  "main": "./dist/cjs/index.cjs",
+  "main": "./dist/cjs/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs",
+      "require": "./dist/cjs/index.js",
       "types": "./dist/index.d.ts"
     }
   },
