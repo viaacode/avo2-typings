@@ -132,6 +132,7 @@ export interface HetArchiefUser {
 	maintainerId?: string;
 	visitorSpaceSlug?: string;
 	isKeyUser: boolean;
+	isEvaluator: boolean;
 	lastAccessAt: string;
 	createdAt: string;
 	organisationName: string | null;
@@ -175,4 +176,6 @@ export type CommonUser = {
 	updatedAt?: string;
 	companyId?: string;
 	language: string;
+	isKeyUser?: boolean;
+	isEvaluator?: boolean;
 };

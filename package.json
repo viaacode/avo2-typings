@@ -28,6 +28,7 @@
     "copy-to-avo2-components": "rimraf ../avo2-components/node_modules/@viaa/avo2-types/dist ../avo2-components/node_modules/.cache && cp -r dist package.json ../avo2-components/node_modules/@viaa/avo2-types",
     "copy": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api && npm run copy-to-react-components && npm run copy-to-avo2-components",
     "copy:avo": "npm run build && npm run copy-to-avo-client && npm run copy-to-avo-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
+    "copy:hetarchief": "npm run build && npm run copy-to-hetarchief-client && npm run copy-to-hetarchief-proxy && npm run copy-to-admin-core-ui && npm run copy-to-admin-core-api",
     "bump": "bump-package-versions --part=patch --strategy=highest ./package.json"
   },
   "publishConfig": {
