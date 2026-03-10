@@ -2,7 +2,7 @@ import type { Collection } from './collection.js';
 import type { BlockItemBase } from './core.js';
 import type { Item } from './item.js';
 import type { Lom, LomField } from './lom.js';
-import type { ShareWithColleagueType } from './shared-with-colluegue-type.js';
+import type { ContributorProfile, ShareWithColleagueType } from './shared-with-colluegue-type.js';
 import type { CommonUser, User, UserProfile } from './user.js';
 
 export type AssignmentType = 'ZOEK' | 'KIJK' | 'BOUW';
@@ -129,7 +129,7 @@ export interface AssignmentContributor {
 	updated_at: string;
 	invite_token?: string | null;
 	invite_email?: string | null;
-	profile?: UserProfile;
+	profile?: ContributorProfile;
 }
 
 export interface AssignmentContributorInfo {

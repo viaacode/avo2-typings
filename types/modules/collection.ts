@@ -3,7 +3,7 @@ import type { BlockItemBase, ContentType, MediaType } from './core.js';
 import type { LabelOrClass } from './labels-classes.js';
 import type { Lom } from './lom.js';
 import type { Organization } from './organisation.js';
-import type { ShareWithColleagueType } from './shared-with-colluegue-type.js';
+import type { ContributorProfile, ShareWithColleagueType } from './shared-with-colluegue-type.js';
 import type { CommonUser, User, UserProfile } from './user.js';
 
 export interface Collection {
@@ -84,7 +84,7 @@ export interface CollectionContributor {
 	updated_at: string;
 	invite_token?: string | null;
 	invite_email?: string | null;
-	profile?: UserProfile;
+	profile?: ContributorProfile;
 }
 
 export interface CollectionLabel {
