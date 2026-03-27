@@ -16,4 +16,11 @@ export interface ContributorProfile {
 	loms: {
 		lom_id: string;
 	}[];
+	// Legacy for queries that happen on the client:
+	user: {
+		first_name: string;
+		full_name: string;
+		last_name: string;
+		mail: string;
+	};
 }
