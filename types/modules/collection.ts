@@ -38,6 +38,9 @@ export interface Collection {
 	seo_description: string | null;
 	seo_image_path: string | null;
 	title: string;
+	/**
+	 * @deprecated use type.id instead
+	 */
 	type_id: ContentTypeId.COLLECTION | ContentTypeId.BUNDLE;
 	type: MediaType | null;
 	briefing_id: string | null;

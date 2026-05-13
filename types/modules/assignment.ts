@@ -81,6 +81,9 @@ export interface Assignment {
 	education_level?: LomField;
 	marcom_note?: AssignmentMarcomNote;
 	is_managed?: boolean; // Determines if the marcom communication tab should be visible
+	/**
+	 * @deprecated use type.id instead
+	 */
 	type_id: ContentTypeId.ASSIGNMENT;
 	type: {
 		id: ContentTypeId.ASSIGNMENT;

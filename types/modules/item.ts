@@ -56,6 +56,9 @@ export interface Item {
 	seo_description: string | null;
 	seo_image_path: string | null;
 	title: string;
+	/**
+	 * @deprecated use type.id instead
+	 */
 	type_id: ContentTypeId.VIDEO | ContentTypeId.AUDIO;
 	type: MediaType;
 	updated_at: string;
