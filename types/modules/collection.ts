@@ -1,5 +1,5 @@
 import type { ShareRightType } from './assignment.js';
-import type { BlockItemBase, ContentType, MediaType } from './core.js';
+import type { BlockItemBase, ContentType, ContentTypeId, MediaType } from './core.js';
 import type { LabelOrClass } from './labels-classes.js';
 import type { Lom } from './lom.js';
 import type { Organization } from './organisation.js';
@@ -38,7 +38,7 @@ export interface Collection {
 	seo_description: string | null;
 	seo_image_path: string | null;
 	title: string;
-	type_id: number;
+	type_id: ContentTypeId.COLLECTION | ContentTypeId.BUNDLE;
 	type: MediaType | null;
 	briefing_id: string | null;
 	last_user_edit_at?: string | null;

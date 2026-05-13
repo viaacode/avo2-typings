@@ -1,5 +1,5 @@
 import type { Collection } from './collection.js';
-import type { BlockItemBase } from './core.js';
+import type { BlockItemBase, ContentType, ContentTypeId } from './core.js';
 import type { Item } from './item.js';
 import type { Lom, LomField } from './lom.js';
 import type { ContributorProfile, ShareWithColleagueType } from './shared-with-colluegue-type.js';
@@ -81,6 +81,11 @@ export interface Assignment {
 	education_level?: LomField;
 	marcom_note?: AssignmentMarcomNote;
 	is_managed?: boolean; // Determines if the marcom communication tab should be visible
+	type_id: ContentTypeId.ASSIGNMENT;
+	type: {
+		id: ContentTypeId.ASSIGNMENT;
+		label: ContentType.ASSIGNMENT;
+	};
 }
 
 export interface AssignmentBlock extends BlockItemBase {

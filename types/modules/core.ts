@@ -3,15 +3,22 @@ import type { Collection } from './collection.js';
 import type { Item } from './item.js';
 
 export enum ContentType {
-	COLLECTIE = 'collectie',
-	VIDEO = 'video',
 	AUDIO = 'audio',
-	BUNDEL = 'bundel',
-	OPDRACHT = 'opdracht',
+	VIDEO = 'video',
+	COLLECTION = 'collectie',
+	BUNDLE = 'bundel',
+	ASSIGNMENT = 'opdracht',
+}
+export enum ContentTypeId {
+	AUDIO = 1,
+	VIDEO = 2,
+	COLLECTION = 3,
+	BUNDLE = 4,
+	ASSIGNMENT = 5,
 }
 
 export type MediaType = {
-	id: number;
+	id: ContentTypeId;
 	label: ContentType;
 };
 

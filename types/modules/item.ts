@@ -1,5 +1,5 @@
 import type { RelationEntry } from './collection.js';
-import type { MediaType } from './core.js';
+import type { ContentTypeId, MediaType } from './core.js';
 import type { Organization } from './organisation.js';
 
 export interface ItemCountSchema {
@@ -56,8 +56,8 @@ export interface Item {
 	seo_description: string | null;
 	seo_image_path: string | null;
 	title: string;
+	type_id: ContentTypeId.VIDEO | ContentTypeId.AUDIO;
 	type: MediaType;
-	type_id: number;
 	updated_at: string;
 	note: string | null;
 	views: null;
