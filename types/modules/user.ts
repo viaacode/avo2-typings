@@ -137,6 +137,10 @@ export interface HetArchiefUser {
 	createdAt: string;
 	organisationName: string | null;
 	organisationId: string | null;
+	organisationAddress: string | null;
+	organisationPostalCode: string | null;
+	organisationLocality: string | null;
+	organisationVAT: string | null;
 	sector: string | null;
 }
 
