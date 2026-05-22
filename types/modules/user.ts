@@ -28,8 +28,6 @@ export interface User {
 
 export interface UserProfile {
 	id: string;
-	alias: string | null;
-	alternative_email: string;
 	avatar: string | null;
 	created_at: string;
 	stamboek: string | null;
@@ -101,9 +99,7 @@ export interface UpdateProfileValues {
 	firstName: string;
 	lastName: string;
 	company_id: string | null;
-	alias: string;
 	title: string | null;
-	alternativeEmail: string;
 	avatar: string | null;
 	bio: string | null;
 	stamboek: string | null;
@@ -173,10 +169,8 @@ export type CommonUser = {
 	lastAccessAt?: string;
 	tempAccess?: UserTempAccess;
 	idps?: Partial<Record<IdpType, string | null>>;
-	alias?: string;
 	title?: string;
 	bio?: string;
-	alternativeEmail?: string;
 	updatedAt?: string;
 	companyId?: string;
 	language: string;
