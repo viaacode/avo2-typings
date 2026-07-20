@@ -112,4 +112,5 @@ export enum ContentPickerType {
 
 	// HET_ARCHIEF
 	IE_OBJECT = 'IE_OBJECT',
+	IE_OBJECT_THEME = 'IE_OBJECT_THEME',
 }
