@@ -44,7 +44,7 @@ export interface Item {
 	lom_intendedenduserrole: string[];
 	lom_keywords: string[];
 	lom_languages: string[];
-	lom_typical_age_range: string[];
+	lom_typicalagerange: string[];
 	org_id: string;
 	organisation: Organization;
 	publish_at: string | null;

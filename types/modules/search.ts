@@ -112,7 +112,7 @@ export interface SearchResultItem {
 	dcterms_issued: string;
 	dcterms_abstract: string | null;
 	lom_classification: string[];
-	lom_typical_age_range: string[];
+	lom_typical_age_range: string[]; // Careful, this naming is mismatched with the hasura naming: lom_typicalagerange
 	lom_intended_enduser_role: string[];
 	briefing_id: string[];
 	duration_time: string;
