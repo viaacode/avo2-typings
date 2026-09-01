@@ -9,6 +9,13 @@ export enum IeObjectType {
 	IMAGE = 'image', // Should never be used, but does seem to pop up some times
 }
 
+export enum SimpleIeObjectType {
+	VIDEO = 'video',
+	AUDIO = 'audio',
+	NEWSPAPER = 'newspaper',
+	IMAGE = 'image',
+}
+
 export enum IeObjectAccessThrough {
 	PUBLIC_INFO = 'PUBLIC_INFO',
 	VISITOR_SPACE_FULL = 'VISITOR_SPACE_FULL',

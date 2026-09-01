@@ -12,5 +12,6 @@ export {
 	IsPartOfCollection as AvoIsPartOfCollection,
 	IsPartOfKey as AvoIsPartOfKey,
 	Mention as AvoMention,
+	SimpleIeObjectType as AvoSimpleIeObjectType,
 	MentionHighlight as AvoMentionHighlight,
 } from '../modules/ie-object.js';
