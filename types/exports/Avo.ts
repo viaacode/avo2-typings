@@ -7,6 +7,7 @@ export * from './Avo.Core.js';
 export * from './Avo.EducationOrganization.js';
 export * from './Avo.EventLogging.js';
 export * from './Avo.FileUpload.js';
+export * from './Avo.IeObject.js';
 export * from './Avo.InteractiveTour.js';
 export * from './Avo.Item.js';
 export * from './Avo.LabelOrClass.js';
