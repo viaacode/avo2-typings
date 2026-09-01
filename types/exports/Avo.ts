@@ -21,3 +21,4 @@ export * from './Avo.Stamboek.js';
 export * from './Avo.Status.js';
 export * from './Avo.Stills.js';
 export * from './Avo.User.js';
+export * from './HetArchief.IeObject.js';

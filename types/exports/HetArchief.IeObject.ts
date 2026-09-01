@@ -1,0 +1,17 @@
+export {
+	IeObject as HetArchiefIeObject,
+	IeObjectAccessThrough as HetArchiefIeObjectAccessThrough,
+	IeObjectFile as HetArchiefIeObjectFile,
+	IeObjectLicense as HetArchiefIeObjectLicense,
+	IeObjectPage as HetArchiefIeObjectPage,
+	IeObjectRepresentation as HetArchiefIeObjectRepresentation,
+	IeObjectRightsInfo as HetArchiefIeObjectRightsInfo,
+	IeObjectSector as HetArchiefIeObjectSector,
+	IeObjectTheme as HetArchiefIeObjectTheme,
+	IeObjectType as HetArchiefIeObjectType,
+	IsPartOfCollection as HetArchiefIsPartOfCollection,
+	IsPartOfKey as HetArchiefIsPartOfKey,
+	Mention as HetArchiefMention,
+	MentionHighlight as HetArchiefMentionHighlight,
+	SimpleIeObjectType as HetArchiefSimpleIeObjectType,
+} from '../modules/ie-object.js';
