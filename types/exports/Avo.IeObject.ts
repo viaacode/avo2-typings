@@ -1,6 +1,16 @@
 export {
 	IeObject as AvoIeObject,
+	IeObjectAccessThrough as AvoIeObjectAccessThrough,
 	IeObjectFile as AvoIeObjectFile,
+	IeObjectLicense as AvoIeObjectLicense,
 	IeObjectPage as AvoIeObjectPage,
+	IeObjectRepresentation as AvoIeObjectRepresentation,
+	IeObjectRightsInfo as AvoIeObjectRightsInfo,
+	IeObjectSector as AvoIeObjectSector,
+	IeObjectTheme as AvoIeObjectTheme,
 	IeObjectType as AvoIeObjectType,
+	IsPartOfCollection as AvoIsPartOfCollection,
+	IsPartOfKey as AvoIsPartOfKey,
+	Mention as AvoMention,
+	MentionHighlight as AvoMentionHighlight,
 } from '../modules/ie-object.js';
