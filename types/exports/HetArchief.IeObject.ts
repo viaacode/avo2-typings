@@ -13,5 +13,7 @@ export {
 	IsPartOfKey as HetArchiefIsPartOfKey,
 	Mention as HetArchiefMention,
 	MentionHighlight as HetArchiefMentionHighlight,
+	PlayableDisplayIeObject as HetArchiefPlayableDisplayIeObject,
 	SimpleIeObjectType as HetArchiefSimpleIeObjectType,
+	UnsavedPlayableDisplayDataObject as HetArchiefUnsavedPlayableDisplayDataObject,
 } from '../modules/ie-object.js';
