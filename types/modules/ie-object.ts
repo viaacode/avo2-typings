@@ -61,8 +61,8 @@ export interface IeObjectFile {
 	name: string;
 	mimeType: string;
 	storedAt: string;
-	thumbnailUrl: string;
-	duration: string;
+	thumbnailUrl?: string;
+	duration: string | number | null;
 	edmIsNextInSequence: string;
 	createdAt: string;
 	mediaFragment: {
@@ -77,8 +77,8 @@ export interface IeObjectRepresentation {
 	schemaInLanguage: string;
 	schemaStartTime: string;
 	schemaEndTime: string;
-	schemaTranscript: string;
-	schemaTranscriptUrl: string | null;
+	schemaTranscript?: string;
+	schemaTranscriptUrl?: string | null;
 	edmIsNextInSequence: string;
 	updatedAt: string;
 	isMediaFragmentOf: string;
@@ -123,6 +123,8 @@ export interface IeObjectTheme {
 }
 
 export interface IsPartOfCollection {
+	iri?: string;
+	schemaIdentifier?: string;
 	name: string;
 	collectionType: IsPartOfKey;
 	// biome-ignore lint/suspicious/noExplicitAny: no typing yet
@@ -191,6 +193,13 @@ export interface IeObject {
 	thumbnailUrl: string;
 	sector?: IeObjectSector;
 	accessThrough?: IeObjectAccessThrough[];
+	/**
+	 * Whether the current user is allowed to see/play this object's essence (the thumbnail,
+	 * pages, mentions, transcript and rights info). Computed by the proxy from the licenses the
+	 * user can access, so it is independent of whether a thumbnail file actually exists.
+	 * Use this instead of checking `thumbnailUrl` for truthiness.
+	 */
+	hasAccessToEssence?: boolean;
 	ebucoreObjectType?: string | null;
 	meemoofilmContainsEmbeddedCaption?: boolean;
 	// biome-ignore lint/suspicious/noExplicitAny: we don't know the exact format of this field, since each organisation can enter it differently
@@ -241,4 +250,80 @@ export interface IeObject {
 	themes?: IeObjectTheme[];
 	pages?: IeObjectPage[];
 	mentions?: Mention[];
+}
+
+/**
+ * The subset of an ie-object returned for the parent/children of another object. Everything is
+ * optional in practice: the proxy censors each one against the current user's licenses.
+ */
+export type RelatedIeObject = Pick<
+	IeObject,
+	| 'dctermsAvailable'
+	| 'dctermsFormat'
+	| 'dateCreated'
+	| 'datePublished'
+	| 'description'
+	| 'duration'
+	| 'schemaIdentifier'
+	| 'licenses'
+	| 'maintainerId'
+	| 'maintainerName'
+	| 'maintainerSlug'
+	| 'name'
+	| 'thumbnailUrl'
+	| 'sector'
+	| 'accessThrough'
+	| 'hasAccessToEssence'
+	| 'transcript'
+	| 'iri'
+>;
+
+export interface RelatedIeObjects {
+	parent: Partial<RelatedIeObject> | null;
+	children: Partial<RelatedIeObject>[];
+}
+
+/**
+ * The trimmed-down ie-object a content block renders: enough to draw a tile, a player and a
+ * metadata panel, without the pages, rights and mentions of the full object.
+ */
+export interface PlayableDisplayIeObject {
+	schemaIdentifier: string;
+	name: string;
+	thumbnailUrl: string | null;
+	/**
+	 * Whether the current user is allowed to see/play this object's essence. Computed by the
+	 * proxy from the licenses the user can access. Use this instead of checking `thumbnailUrl`.
+	 */
+	hasAccessToEssence: boolean;
+	dctermsFormat: IeObjectType;
+	maintainerId: string;
+	/** Not resolved by the playable-display-data endpoint, which does not select the slug */
+	maintainerSlug?: string;
+	maintainerName: string;
+	maintainerLogo?: string;
+	maintainerOverlay: boolean;
+	/** Audio/video objects only: ready-to-play, signed URL for the file to feed directly into a player, or null if none is playable/accessible */
+	playableUrl?: string | null;
+	/** Audio/video objects only: mime type of the file playableUrl points to, so the client knows how to handle it */
+	mimeType?: string | null;
+	/** Audio/video objects only: peak/waveform sample data, for audio and audio fragments only - just the sample array, the rest of the peak file's metadata isn't used. Additive data for the waveform overlay, not a substitute for playableUrl */
+	peakfileData?: number[] | null;
+	/** Non audio/video objects only (e.g. newspapers): self-contained base64 data uri of the IIIF detail image, or null if none is accessible/couldn't be resolved. Use this directly as an <img src> */
+	newspaperImage?: string | null;
+	snipPoint?: {
+		start?: number;
+		end?: number;
+	};
+}
+
+/**
+ * One ie-object of a content block as the content page editor passes it to the proxy, in place of
+ * a block id it can't use there. Keep one entry per block element, with an empty schemaIdentifier
+ * for an element that has no object selected yet, so the response stays aligned with the elements.
+ */
+export interface UnsavedPlayableDisplayDataObject {
+	schemaIdentifier: string;
+	start?: number;
+	end?: number;
 }
