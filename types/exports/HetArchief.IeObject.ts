@@ -14,6 +14,8 @@ export {
 	Mention as HetArchiefMention,
 	MentionHighlight as HetArchiefMentionHighlight,
 	PlayableDisplayIeObject as HetArchiefPlayableDisplayIeObject,
+	RelatedIeObject as HetArchiefRelatedIeObject,
+	RelatedIeObjects as HetArchiefRelatedIeObjects,
 	SimpleIeObjectType as HetArchiefSimpleIeObjectType,
 	UnsavedPlayableDisplayDataObject as HetArchiefUnsavedPlayableDisplayDataObject,
 } from '../modules/ie-object.js';
