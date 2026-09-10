@@ -186,6 +186,7 @@ export interface IeObject {
 	maintainerOverlay: boolean | null;
 	maintainerIiifAgreement?: boolean | null;
 	name: string;
+	nameAi?: string | null;
 	// biome-ignore lint/suspicious/noExplicitAny: we don't know the exact format of this field, since each organisation can enter it differently
 	publisher: any;
 	spatial: string[];
@@ -225,6 +226,7 @@ export interface IeObject {
 		uri: string;
 	};
 	synopsis: string;
+	synopsisAi?: string | null;
 	collectionName?: string;
 	collectionId?: string;
 	collectionSeasonNumber?: string;
