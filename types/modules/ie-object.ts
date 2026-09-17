@@ -27,10 +27,12 @@ export enum IeObjectLicense {
 	// Object Licenses
 	PUBLIEK_METADATA_LTD = 'VIAA-PUBLIEK-METADATA-LTD',
 	PUBLIEK_METADATA_ALL = 'VIAA-PUBLIEK-METADATA-ALL',
+	PUBLIEK_METADATA_AI = 'VIAA-PUBLIEK-METADATA-AI',
 	PUBLIEK_CONTENT = 'VIAA-PUBLIEK-CONTENT',
 	BEZOEKERTOOL_METADATA_ALL = 'BEZOEKERTOOL-METADATA-ALL',
 	BEZOEKERTOOL_CONTENT = 'BEZOEKERTOOL-CONTENT',
 	INTRA_CP_METADATA_ALL = 'VIAA-INTRA_CP-METADATA-ALL',
+	INTRA_CP_METADATA_AI = 'VIAA-INTRA_CP-METADATA-AI',
 	INTRA_CP_METADATA_LTD = 'VIAA-INTRA_CP-METADATA-LTD',
 	INTRA_CP_CONTENT = 'VIAA-INTRA_CP-CONTENT',
 
@@ -201,6 +203,12 @@ export interface IeObject {
 	 * Use this instead of checking `thumbnailUrl` for truthiness.
 	 */
 	hasAccessToEssence?: boolean;
+	/**
+	 * Whether the sector logic (IE_OBJECT_METADATA_SET_BY_OBJECT_AND_USER_SECTOR) handed the user
+	 * fewer INTRA_CP licenses than the object actually carries. Used to withhold AI metadata, which
+	 * is never disclosed across a sector restriction.
+	 */
+	limitedBySectorLogic?: boolean;
 	ebucoreObjectType?: string | null;
 	meemoofilmContainsEmbeddedCaption?: boolean;
 	// biome-ignore lint/suspicious/noExplicitAny: we don't know the exact format of this field, since each organisation can enter it differently
