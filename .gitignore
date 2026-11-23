@@ -247,3 +247,4 @@ jspm_packages
 types/**/*.js
 types/*.js
 dist
+.openidea/
