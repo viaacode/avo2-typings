@@ -103,6 +103,9 @@ export interface IeObjectRightsInfo {
 	reuseCategoryId?: string | null;
 	reuseCategoryLabel?: string | null;
 	reuseCategoryGroup?: string | null;
+	/** Link to the usage label page in Dutch / English. Pick the one matching the UI language. See ARC-4215 */
+	reuseCategoryLinkNl?: string | null;
+	reuseCategoryLinkEn?: string | null;
 	licenseDistributor?: string | null;
 	broadcastingOrganization?: string | null;
 }
