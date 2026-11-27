@@ -99,7 +99,6 @@ export interface IeObjectPage {
 
 export interface IeObjectRightsInfo {
 	reuseLabel: string;
-	reuseCategoryUrl?: string | null;
 	reuseCategoryId?: string | null;
 	reuseCategoryLabel?: string | null;
 	reuseCategoryGroup?: string | null;
