@@ -100,7 +100,9 @@ export interface IeObjectPage {
 export interface IeObjectRightsInfo {
 	reuseLabel: string;
 	reuseCategoryId?: string | null;
-	reuseCategoryLabel?: string | null;
+	/** Label of the usage label in Dutch / English. Pick the one matching the UI language. See ARC-4215 */
+	reuseCategoryLabelNl?: string | null;
+	reuseCategoryLabelEn?: string | null;
 	reuseCategoryGroup?: string | null;
 	/** Link to the usage label page in Dutch / English. Pick the one matching the UI language. See ARC-4215 */
 	reuseCategoryLinkNl?: string | null;
